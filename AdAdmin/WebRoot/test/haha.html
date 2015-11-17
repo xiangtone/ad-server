@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>/title>
+<!-- 加载样式文件 -->
+<link rel="stylesheet" type="text/css"
+	href="/srum/js/toolbox/omui/default/om-default.css" />
+<link rel="stylesheet" type="text/css" href="/srum/css/sysCss/style.css" />
+<!-- 加载必需的JS文件 -->
+<script type="text/javascript"
+	src="/srum/js/toolbox/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript"
+	src="/srum/js/toolbox/omui/operamasks-ui.min.js"></script>
+<script type="text/javascript" src="/srum/js/common/nav.js"></script>
+</head>
+<body>
+	<div id="layout">
+		<div id="header">
+			<div id="topHeader">
+				<!-- 系统以及工具栏等信息 -->
+				<div id="top_line"></div>
+				<span style="float: right">
+
+
+
+					<style>
+.switchTab {
+	width: 193px;
+	height: 230px;
+	background: url(/srum/css/GuangZ/images/switchTabBg.png) no-repeat;
+	position: absolute;
+	top: 0px;
+	right: 29px;
+	z-index: 999999999999;
+	display: none;
+	font-size: 12px;
+	text-align: left;
+}
+
+.mainX {
+	width: 190px;
+	height: 185px;
+	overflow: hidden;
+	overflow-y: auto;
+	float: left;
+}
+
+.mainX p {
+	padding-left: 5px;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	width: 185px;
+}
+
+.mainX p a {
+	width: 185px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	display: block;
+	font-weight: normal;
+	background: url(/srum/css/GuangZ/images/SwitchTabA.png) top repeat-x;
+	border-top: 1px solid #517ecf;
+	font-size: 14px;
+}
+
+.mainX p a span {
+	float: left;
+	width: 159px;
+	height: 30px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.mainX p a em {
+	float: left;
+	display: block;
+	height: 24px;
+	width: 24px;
+	background: #e1e1e1;
+	margin: 2px 0 2px 0px;
+	overflow: hidden;
+	font-size: 9px;
+	border: 1px solid #4b84cc;
+	text-indent: -99999em;
+}
+
+/* 各个系统的图标*/
+.mainX p a em.buesiness {
+	background: #fff
+		url(/srum/css/icons/sysIcons/smallIcons/hjslSysIcon.png) no-repeat;
+}
+
+.mainX p a em.supervision {
+	background: #fff
+		url(/srum/css/icons/sysIcons/smallIcons/zhjgSysIcon.png) no-repeat;
+}
+
+.mainX p a em.monitor {
+	background: #fff
+		url(/srum/css/icons/sysIcons/smallIcons/spjkSysIcon.png) no-repeat;
+}
+
+.mainX p a em.adv {
+	background: #fff
+		url(/srum/css/icons/sysIcons/smallIcons/hwggSysIcon.png) no-repeat;
+}
+
+.mainX p a em.uphold {
+	background: #fff
+		url(/srum/css/icons/sysIcons/smallIcons/yywhSysIcon.png) no-repeat;
+}
+
+.mainX p a em.cover {
+	background: #fff url(/srum/css/icons/sysIcons/smallIcons/jgSysIcon.png)
+		no-repeat;
+}
+
+.mainX p a em.sanitation {
+	background: #fff
+		url(/srum/css/icons/sysIcons/smallIcons/hwbjSysIcon.png) no-repeat;
+}
+
+.mainX p a em.gas {
+	background: #fff url(/srum/css/icons/sysIcons/smallIcons/rqSysIcon.png)
+		no-repeat;
+}
+
+.mainX p a em.vender {
+	background: #fff
+		url(/srum/css/icons/sysIcons/smallIcons/ldsfSysIcon.png) no-repeat;
+}
+
+.mainX p a em.envgps {
+	background: #fff url(/srum/css/icons/sysIcons/smallIcons/GpsSysIcon.png)
+		no-repeat;
+}
+
+.mainX p a em.residue {
+	background: #fff
+		url(/srum/css/icons/sysIcons/smallIcons/ynztSysIcon.png) no-repeat;
+}
+
+.mainX p a em.assessment {
+	background: #fff url(/srum/css/icons/sysIcons/smallIcons/kpSysIcon.png)
+		no-repeat;
+}
+
+/* 各个系统的图标*/
+.mainX p a:hover {
+	background: url(/srum/css/GuangZ/images/SwitchTabAH.png) top repeat-x;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+p.backChoice {
+	height: 30px;
+	width: 30px;
+	padding: 0 0 0 143px;
+	float: left;
+}
+
+p.backChoice a {
+	width: 25px;
+	height: 30px;
+	dispaly: block;
+	float: left;
+	text-indent: -9999em;
+}
+</style> 
+					
+					<div class="block_hf" id="block_hf" style="display: none;">
+						<span id="block_hf_title" style="width: 100%;"><a
+							href="javascript:void(0)" title="关闭">关闭</a> </span>
+						<p>
+							<a href="javascript:void(0)" id="GuangZ" title="蓝色" class="blue">蓝色</a>
+							<a href="javascript:void(0)" id="YueY" title="绿色" class="blue">绿色</a>
+							<a href="javascript:void(0)" id="blue" title="紫色" class="purple">紫色</a>
+						</p>
+					</div>
+					<style>
+p.announce em {
+	font-style: normal;
+	color: #ff6c00;
+	font-size: 11px;
+}
+
+#usrNameArea {
+	margin-left: 30px;
+	float: left;
+	width: 95px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-icab-text-overflow: ellipsis;
+	-khtml-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+}
+
+#dd1,#dd2 {
+	width: 5px;
+}
+</style>
+
+					<p class="announce" style="z-index: 99; width: 297px;">
+						<span style="float: right; width: 150px;" id="depart"> <em
+							style="float: right; padding-right: 8px;">所在部门：&#19978;&#39286;&#24066;&#30417;&#30563;&#25351;&#25381;&#20013;&#24515;</em>
+							<input type="button" id="dd2" class="txt" style="float: right" />
+						</span> <span id="usrNameArea"> <input type="button" id="dd1"
+							class="txt" style="float: right;" /> <em>&#31649;&#29702;&#21592;</em>
+						</span>
+
+					</p>
+
+					<form id="role_form" method="post" action="/srum/chgRole.action">
+						<div class="sub_announce" id="role_content">
+							<ul>
+
+							</ul>
+							<p>
+								<span style="float: right;"> <input type="button"
+									class="sub_btn3" value="保存刷新" onclick="chgRole()" /> <input
+									type="button" class="sub_btn1" value="取消" id="closeRolesDiv" />
+								</span> <input type="button" class="sub_btn1" value="全选 " id="selAll" />
+								<input type="button" class="sub_btn2" value="全不选" id="emptyAll" />
+								<input type="button" class="sub_btn1" value="反选 "
+									id="reverseAll" />
+							</p>
+						</div>
+					</form>
+
+					<div class="sub_right_annouce">
+						<h2>
+							<span>您好！&#31649;&#29702;&#21592;</span>2013-06-17
+						</h2>
+						<p>
+							今日立案<em id="lian">0</em>宗；今日结案数<em id="jiean">0</em>宗；
+						</p>
+						<p>
+							在线采集员<em id="obs_online">0</em>人；在线操作员<em id="op_online">0</em>人；
+						</p>
+						<p>
+							我的待办案件<em id="todo_evt">0</em>宗；
+						</p>
+						<p>
+							我要处理的领导批示案件<em id="leader_evt">0</em>件；
+						</p>
+					</div> </span>
+				<!-- 地方特征信息 -->
+				<div>
+					<div id="addFeatures"></div>
+				</div>
+				<div id="rightShine"></div>
+			</div>
+			<div class="nav"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/srum/js/uphold/mainMake.js"></script>
+
+</body>
+</html>

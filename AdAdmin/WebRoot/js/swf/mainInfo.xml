@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<main>
+	<img thumbFolder="swf/pro_thumb/img" imgFolder="swf/pro_img/img" thumbFormat=".png" imgFormat=".png" speed="2.5">
+		<link imgUrl="http://www.lanrentuku.com/" winTarget="_blank"/>
+		<link imgUrl="http://www.lanrentuku.com/" winTarget="_blank"/>
+		<link imgUrl="http://www.lanrentuku.com/" winTarget="_blank"/>
+		<link imgUrl="http://www.lanrentuku.com/" winTarget="_blank"/>
+		<link imgUrl="http://www.lanrentuku.com/" winTarget="_blank"/>
+		<link imgUrl="http://www.lanrentuku.com/" winTarget="_blank"/>
+	</img>
+	
+</main>

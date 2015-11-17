@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 刷新平台配置文件表 -->
+	<bean id="refreshEscoreConfigTask" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass">
+			<value>
+				cn.adwalker.ad.task.RefreshEscoreConfig
+			</value>
+		</property>
+	</bean>
+
+	<!--定时数据监控 -->
+	<bean id="dataMonitorTask" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass">
+			<value>
+				cn.adwalker.ad.task.DataMonitorTask
+			</value>
+		</property>
+		<property name="jobDataAsMap">
+			<map>
+				<!-- <entry key="adManagerService"> <ref bean="adManagerService" /> </entry> -->
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="iosDataTask" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass">
+			<value>
+				cn.adwalker.ad.task.IosDataTask
+			</value>
+		</property>
+		<property name="jobDataAsMap">
+			<map>
+				<!-- <entry key="adManagerService"> <ref bean="adManagerService" /> </entry> -->
+			</map>
+		</property>
+	</bean>
+	
+	<!-- ################################触发器配置 ########################################### -->
+	<bean id="refreshEscoreConfigTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="refreshEscoreConfigTask" />
+		</property>
+		<property name="cronExpression">
+			<value>0 0/2 * * * ?</value>
+		</property>
+	</bean>
+
+	<bean id="dataMonitorTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="dataMonitorTask" />
+		</property>
+		<property name="cronExpression">
+			<value>0 */10 * * * ?</value>
+		</property>
+	</bean>
+	
+	<bean id="iosDataTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="iosDataTask" />
+		</property>
+		<property name="cronExpression">
+			<value>0 0/2 * * * ?</value>
+		</property>
+	</bean>
+	
+	
+
+	<!--调度任务列表 -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!--<ref local="refreshEscoreConfigTaskTrigger" />
+				 <ref local="dataMonitorTaskTrigger" /> 
+				<ref local="iosDataTaskTrigger" />-->
+			</list>
+		</property>
+	</bean>
+</beans>

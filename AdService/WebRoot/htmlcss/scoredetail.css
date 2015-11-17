@@ -1,0 +1,447 @@
+body {
+	background-color: #f5f5f5;
+}
+
+.detailcontent {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 45px;
+}
+
+.content {
+	width: 100%;
+	height: 80px;
+	background: transparent;
+}
+
+.leftcontent {
+	width: 20%;
+	float: left;
+	text-align: center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.otherleftcontent {
+	width: 25%;
+	float: left;
+	text-align: center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.logo {
+	width: 50px;
+	height: 50px;
+	margin-top: 15px;
+}
+
+.middlecontent {
+	width: 40%;
+	float: left;
+}
+
+.rightcontent {
+	width: 40%;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.rightcontent img {
+	width: 18px;
+	height: 18px;
+}
+
+.title {
+	margin-top: 20px;
+	font-size: 18px;
+	font: bold;
+	width: 100%;
+	color: #000000;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.catagory {
+	font-size: 14px;
+	width: 100%;
+	margin-top: 5px;
+	white-space: nowrap;
+	color: #737373
+}
+
+.desc {
+	margin-top: 5px;
+	font-size: 14px;
+	width: 100%;
+	color: #737373;
+	font-size: 12px;
+	white-space: nowrap;
+	display: none;
+}
+
+.renzheng {
+	color: #737373
+}
+
+.rzword {
+	vertical-align: 40%;
+	font-size: 14px;
+}
+
+.update_version {
+	white-space: nowrap;
+	margin-top: 5px;
+}
+
+.detailinfo {
+	padding-left: 12%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 14px;
+	background-image: url("../images/android_jfsm.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.divider {
+	height: 1px;
+	width: 100%;
+	background: #c9c9c9
+}
+
+.divider2 {
+	text-align: center;
+	background: transparent;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.softdesc {
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.extendImage {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	width: 100%;
+}
+
+.extend {
+	float: right;
+	margin-right: 5px;
+	margin-top: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.desccontent {
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-top: 5px;
+	background: transparent;
+}
+
+.textereacontent {
+	width: 100%;
+	height: 75px;
+	background: transparent;
+	border: 0;
+	overflow: hidden;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.othercontent {
+	width: 100%;
+	height: 85px;
+	background: transparent;
+}
+
+.other {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.otherimage {
+	width: 65px;
+	height: 65px;
+	margin-top: 10px;
+	vertical-align: middle;
+}
+
+.downloadlogo {
+	margin-right: 10px;
+}
+
+.downloadword {
+	vertical-align: 5%;
+}
+
+.banner {
+	width: 100%;
+	height: 191px;
+	background: #313131;
+	text-align: center;
+	color: white;
+}
+
+.item1 {
+	float: left;
+	width: 33.3%;
+	height: 181px;
+	text-align: center;
+	margin-top: 5px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.item2 {
+	float: left;
+	width: 33.3%;
+	height: 181px;
+	text-align: center;
+	margin-top: 5px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.item3 {
+	float: left;
+	width: 33.3%;
+	height: 181px;
+	text-align: center;
+	margin-top: 5px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.itemicon {
+	width: 90%;
+	height: 181px;
+}
+
+#bottomId {
+	background-color: #313131;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 60px;
+	text-align: center;
+	z-index: 2;
+}
+
+#bottomId2 {
+	background-color: #313131;
+	width: 100%;
+	height: 50px;
+	margin-top: 20px;
+	padding-top: 20px;
+	position: relative;
+}
+
+.bigdownload2 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 40px;
+	margin-top: 15px;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 25%;
+	color: white;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background-image: url("../images/android_downbutton.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.downbgroung2 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 40px;
+	margin-top: 15px;
+	text-align: center;
+	background: #3489e4;
+	margin-left: 25%;
+	color: white;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.downsecond2 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 40px;
+	margin-top: 15px;
+	text-align: center;
+	background: #6ca00a;
+	margin-left: 25%;
+	color: white;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.shareDiv2 {
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.bigdownload {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 40px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 25%;
+	color: white;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background-image: url("../images/android_downbutton.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.downbgroung {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 40px;
+	margin-top: 10px;
+	text-align: center;
+	background: #88c89a;
+	margin-left: 25%;
+	color: white;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.downsecond {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 40px;
+	margin-top: 10px;
+	text-align: center;
+	background: #88c89a;
+	margin-left: 25%;
+	color: white;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.shareDiv {
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 10px;
+	margin-right: 15px;
+}
+
+.download {
+	color: white;
+	text-align: center;
+}
+
+.toptitle {
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 50px;
+	background-color: #88c89a;
+	text-align: center;
+	z-index: 2;
+	color: white;
+}
+
+.backtop {
+	float: left;
+	width: 20%;
+	height: 37px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	z-index: 3;
+	margin-top: 10px;
+}
+
+.backtitle {
+	width: 60px;
+	height: 30px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background-image: url("../images/android_goback.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.wordtitle {
+	float: left;
+	width: 60%;
+	height: 50px;
+	margin-top: 13px;
+	text-align: center;
+	color: white;
+	font-size: 20px
+}
+
+.nexttitle {
+	float: right;
+	width: 20%;
+	height: 30px;
+	margin-top: 10px;
+	z-index: 3;
+}
+
+.next {
+	width: 60px;
+	height: 30px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background-image: url("../images/android_go_next.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.big_image {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	z-index: 5;
+	text-align: center;
+}
+
+#largeImage {
+	width: 100%;
+	height: 100%;
+}

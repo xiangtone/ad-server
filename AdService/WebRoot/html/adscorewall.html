@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>积分墙</title>
+<script src="../javascript/LazyLoad.js?v=20140411"></script>
+<script type="text/javascript">
+ 	LazyLoad.css('../htmlcss/adscorewall.css?v=20140901',null); 
+ 	LazyLoad.js( '../javascript/global.js?v=20140901',null); 
+ 	LazyLoad.js( '../javascript/adscorewall.js?v=20140901', function () {  
+ 		window.record.recoreTime('load main end'); 
+ 		loadData(); 
+ 	}); 
+ </script> 
+</head>
+<body>
+<!-- 头 部分-->
+<div id="listheader" class="header">
+	<div class="head_top">
+		<div class="header_divider_top"> </div>
+		<div id="free_bonus" class="free_bonus">免费获取奖励</div>
+		<div class="header_divider_bottom"> </div>
+	</div>
+	
+	<div class="head_bottom">
+		<div id="left" class="head_bottom_left" onclick="switchChange(true)">
+			<div class="head_word">奖励任务</div>
+			<div id="item_bottom" class="item_bottom">
+				<img class="head_image" src="../images/android_header_arrow.png">
+				<div class="header_item_divier"> </div>
+			</div>
+		</div>
+		<div id="right" class="head_bottom_right" onclick="switchChange(false)">
+			<div class="head_word">签到簿<span id="num" class="num">0</span><img id="news" class="news" src="../images/android_notice.png"></div>
+			<div id="item_bottom_notify" class="item_bottom">
+				<img class="head_image" src="../images/android_header_arrow.png">
+				<div class="header_item_divier"> </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="head_div">
+     <img class="head_logo" >
+</div>
+<!-- 奖励任务部分 -->
+<div id="wallList" class="wall_list">
+	<div class="divider" id="divider0"> </div>
+</div>
+<div id="wallList2" class="wall_list">
+	<div class="divider" id="divider02"> </div>
+</div>
+
+<div class="itemtitle1" id="itemtitle1" style="display: none">
+			暂无可奖励任务... 
+</div>
+<div class="itemtitle1" id="itemtitle2" style="display: none">
+			暂无可签到任务... 
+</div>
+</body>
+</html>

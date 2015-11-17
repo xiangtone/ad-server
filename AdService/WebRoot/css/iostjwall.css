@@ -1,0 +1,277 @@
+.box {
+	height: 64px;
+	z-index: 1
+}
+
+.boxL {
+	width: 25%;
+	float: left;
+	height: 64px;
+	text-align: center;
+}
+
+.logo {
+	width: 54px;
+	height: 54px;
+	margin-top: 5px;
+}
+
+.boxM {
+	width: 50%;
+	float: left;
+	height: 64px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxLM{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxR {
+	width: 25%;
+	float: left;
+	height: 64px;
+	background-color:#fa9619;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxR1 {
+	width: 25%;
+	float: left;
+	height: 64px;
+	background-color:#fa8c19;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+.boxR2 {
+	width: 25%;
+	float: left;
+	height: 64px;
+	background-color:#fa8219;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxR3 {
+	width: 25%;
+	float: left;
+	height: 64px;
+	background-color:#fa7819;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxR4 {
+	width: 25%;
+	float: left;
+	height: 64px;
+	background-color:#fa6e19;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxR5 {
+	width: 25%;
+	float: left;
+	height: 64px;
+	background-color:#fa6419;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxR6 {
+	width: 25%;
+	float: left;
+	height: 64px;
+	background-color:#fa5a19;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+.title {
+	margin-top: 3px;
+/* 	margin-left: 5px; */
+	font-size: 14px;
+	font: bold;
+	width: 100%;
+	color: black;
+	white-space: nowrap;
+	margin-right: 2px;
+}
+
+.catagory {
+	font-size: 10px;
+	width: 100%;
+/* 	margin-left: 5px; */
+	white-space: nowrap;
+	color: gray;
+	margin-right: 2px;
+}
+
+.catagory img{
+	height: 10px;
+}
+
+.catagory span{
+	margin-left: 5px;
+}
+.desc {
+		font-size: 12px;
+		width: 100%;
+		color: #cdcdcd;
+		margin-right: 2px;
+		word-break:break-all
+	}
+
+.plus {
+	font: bold;
+	font-size: 25px;
+	margin-top: 10px;
+	margin-left: 2px;
+	position: absolute;
+}
+
+.recolist {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0
+}
+
+.preload {
+	position: absolute;
+	z-index: 1;
+}
+
+
+
+.download01{
+	vertical-align: middle;
+	margin-left: 3px
+}
+
+
+.downjifen{
+	font-size: 30px;
+	color: #3be4bd
+}
+
+.downjinbi{
+	font-size: 2px;
+	color: #3be4bd
+}
+
+.bookword{
+	vertical-align: middle;
+	color: white;
+	size: 18px;
+}
+
+.listcontent {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 44px;
+}
+
+.toptitle {
+			position:fixed;
+			width: 100%;
+			left: 0;
+			top: 0;
+			height: 44px;
+			background-color:#f5f5f5;
+			text-align:center;
+			z-index: 1
+		}
+#sss{
+	margin-top:44px;
+	height:2px;
+	background: red;
+}		
+		.backtitle {
+			float:left;
+			width: 25%;
+			height: 44px;
+			margin-top:10px;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+		
+		.backtitle span{
+			color: #fa6e19;
+			font-size: 16px;
+			vertical-align: 40%;
+			margin-left: 5px;
+		}
+		
+		.backtitle img{
+			height: 25px;
+		}
+		
+		.wordtitle {
+			float:left;
+			width: 50%;
+			height: 44px;
+			margin-top: 15px;
+			text-align: center;
+			color: black;
+			font-size: 16px
+		}
+		
+		.nexttitle{
+			float: right;
+			height: 44px;
+			width: 25%;
+			text-align: center;
+			margin-top:10px;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+		
+		.nexttitle img{
+			height: 24px;
+		}
+		
+.freeword{
+	vertical-align: middle;
+	color: white;
+	font-size: 12px
+}
+
+.downlogo {
+	width: 100%;
+	height: 64px;
+	text-align: center;
+	color: white;
+	
+}
+
+.downlogoimg img{
+	margin-top:5px;
+	height: 30px
+}
+
+.downlogoword span{
+	font-size: 12px
+}
+
+.downloadplus{
+	font-weight: bold;
+	color: #3be4bd;
+	font-size: 20px; 
+	vertical-align: 40%;
+}
+
+.downTop{
+	white-space: nowrap;
+}
+
+
+.divider {
+	height: 1px;
+	background-color: #dedede;
+	text-align: center;
+}
+
+.dividerup{
+	height: 1px;
+	background-color: #afafaf;
+	text-align: center;
+}

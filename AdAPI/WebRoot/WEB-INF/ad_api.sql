@@ -1,0 +1,11 @@
+-- ALTER TABLE t_ios_activite_log ADD  ssid varchar(500) DEFAULT NULL COMMENT 'wifi name'
+-- ALTER TABLE t_ios_activite_log ADD bssid varchar(500) DEFAULT NULL COMMENT 'wifi 地址'
+-- ALTER TABLE t_ios_activite_log ADD phoneName varchar(500) DEFAULT NULL COMMENT '电话名称'
+-- ALTER TABLE t_ios_activite_log ADD latitude varchar(40) DEFAULT NULL COMMENT '纬度'
+-- ALTER TABLE t_ios_activite_log ADD longitude varchar(40) DEFAULT NULL COMMENT '经度'
+
+-- ALTER TABLE t_ios_action_log ADD  ssid varchar(500) DEFAULT NULL COMMENT 'wifi name'
+-- ALTER TABLE t_ios_action_log ADD bssid varchar(500) DEFAULT NULL COMMENT 'wifi 地址'
+-- ALTER TABLE t_ios_action_log ADD phoneName varchar(500) DEFAULT NULL COMMENT '电话名称'
+-- ALTER TABLE t_ios_action_log ADD latitude varchar(40) DEFAULT NULL COMMENT '纬度'
+-- ALTER TABLE t_ios_action_log ADD longitude varchar(40) DEFAULT NULL COMMENT '经度'

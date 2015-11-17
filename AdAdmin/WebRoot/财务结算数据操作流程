@@ -1,0 +1,10 @@
+1、结算数据录入。T_CAMPAIGN_CONFIRM
+2、结算数据提交：
+	a、更新T_CAMPAIGN_CONFIRM状态，并生成计算数据同预确认数据关联表T_FINANCE_BALANCE_INCOME_REL（预确认收入）。
+	b、计算活动的投放记录（平台大媒体）、渠道T_FINANCE_BALANCE_CAMPAIN（成本）。
+3、对账根据2中投放记录进行成本对账操作
+	a、平台--（大媒体不单独对账）存平台成本T_FINANCE_COST_PLATFORM，并生成与平台成本T_FINACE_DEV_INCOM_CONFIRM对应的关系数据T_BALANCE_PLATFORM_REL
+	b、渠道--生成渠道成本T_FINANCE_COST_CHANNEL，并生成与渠道成本对应的关系数据T_BALANCE_CHANNEL_REL
+
+4、对账确认。更新状态，汇总数据
+5、回滚操作，结算数据状态重置为未提交，中间数据删除。

@@ -1,0 +1,39 @@
+﻿/* --- calendar --- */
+.calendarlayer{width:100px;margin:0;padding:0;border:0;}
+.calendarlayer .calinput{width:100%;height:16px;line-height:16px;margin:0;padding-right:0;border:1px solid #B0BFBF;border-right:0;}
+.calendarlayer .calbutton{display:block;width:19px;height:18px;margin:0;padding:0;border:1px solid #B0BFBF;border-left:0;background:url(images/calico_view.gif) no-repeat 3px 1px;cursor:pointer;overflow:hidden;}
+.calendarlayer .caltdbutton{width:18px;}
+.calendarcontain_iframe{display:none;position:absolute;z-index:0;width:234px;height:181px;}
+.calendarcontain_filter{display:none;position:absolute;z-index:1;width:228px;height:179px;margin:0;padding:0;border:0;background:#000000;opacity:0.1;-moz-opacity:0.1;box-shadow:0px 0px 2px 2px #000,0px 0px 2px 2px #000;-moz-box-shadow:0px 0px 2px 2px #000,0px 0px 2px 2px #000;-webkit-box-shadow:0px 0px 2px 2px #000,0px 0px 2px 2px #000;filter:progid:DXImageTransform.Microsoft.alpha(opacity=30) progid:DXImageTransform.Microsoft.Blur(pixelradius=3);}
+.calendarcontain{display:none;position:absolute;z-index:2;width:228px;height:179px;background:#ffffff;overflow:hidden;clear:both;}
+.calendarcontain .calymlayer{display:none;width:226px;height:0px;border:1px solid #718BB7;background:#ffffff;font-family:simsun;font-size:13px;color:#163061;overflow:hidden;}
+.calendarcontain .calymlayer span{display:block;float:left;width:53px;height:18px;margin:2px 0 0 2px;_margin-left:1px;padding:4px 0 0 0;overflow:hidden;text-align:center;cursor:pointer;overflow:hidden;}
+.calendarcontain .calymlayer span.curr{width:51px;height:17px;padding:3px 0 0 0;border:1px solid #8DB2E3;background:url(images/calbottom_bg.gif) repeat-x bottom left;}
+.calendarcontain .calymlayer .month{float:left;width:112px;height:148px;padding-top:1px;border-right:1px solid #A3BAD9;}
+.calendarcontain .calymlayer .year{float:left;width:113px;height:148px;padding-top:1px;}
+.calendarcontain .calymlayer .year .divlayer{height:20px;padding:4px 22px 0 20px;}
+.calendarcontain .calymlayer .year .btnleft{float:left;width:15px;height:15px;border:0;margin:0;padding:0;background:url(images/calbtn_bg.gif) no-repeat 0px -45px;overflow:hidden;cursor:pointer;}
+.calendarcontain .calymlayer .year .btnright{float:right;width:15px;height:15px;border:0;margin:0;padding:0;background:url(images/calbtn_bg.gif) no-repeat 0px -60px;overflow:hidden;cursor:pointer;}
+.calendarcontain .calymlayer .calfooter{height:24px;padding-top:4px;border-top:1px solid #A3BAD9;background:url(images/calbottom_bg.gif) repeat-x bottom left;text-align:center;clear:both;}
+.calendarcontain .caldaylayer{border:1px solid #718BB7;font-family:simsun;font-size:13px;}
+.calendarcontain .caldaylayer .calheader{height:23px;padding:7px 8px 0 8px;background:#163061 url(images/caltop_bg.gif) repeat-x top left;text-align:center;}
+.calendarcontain .caldaylayer .calheader .btnleft{width:15px;height:15px;border:0;margin:0;padding:0;background:url(images/calbtn_bg.gif) no-repeat 0px -15px;overflow:hidden;cursor:pointer;}
+.calendarcontain .caldaylayer .calheader .textinfo{width:111px;height:15px;line-height:15px;border:0;margin:0;padding:0;background:url(images/caltop_bg.gif) repeat-x 0px -7px;color:#ffffff;text-align:right;vertical-align:top;font-family:Verdana;font-size:13px;}
+.calendarcontain .caldaylayer .calheader .textspace{width:0;height:0;border:0;margin:0;padding:0;padding-left:23px;background:url(images/caltop_bg.gif) repeat-x 0px -9px;}
+.calendarcontain .caldaylayer .calheader .btndown{width:15px;height:15px;border:0;margin:0;padding:0;background:url(images/calbtn_bg.gif) no-repeat 0px 0px;overflow:hidden;cursor:pointer;}
+.calendarcontain .caldaylayer .calheader .btnright{width:15px;height:15px;border:0;margin:0;padding:0;background:url(images/calbtn_bg.gif) no-repeat 0px -30px;overflow:hidden;cursor:pointer;}
+.calendarcontain .caldaylayer .calweekbar{height:20px;background:url(images/calbottom_bg.gif) repeat-x bottom left;color:#163061;clear:both;}
+.calendarcontain .caldaylayer .calweekbar ul{margin:0;padding:0;}
+.calendarcontain .caldaylayer .calweekbar li{float:left;width:21px;height:16px;padding:4px 0 0 11px;list-style:none;text-decoration:none;}
+.calendarcontain .caldaylayer .calcontainer{height:96px;padding:1px;border-top:1px solid #A3BAD9;border-bottom:1px solid #A3BAD9;color:#163061;clear:both;}
+.calendarcontain .caldaylayer .calcontainer ul{margin:0;padding:0;font-family:Arial;font-size:11px;}
+.calendarcontain .caldaylayer .calcontainer li{float:left;width:32px;height:15px;padding-top:1px;list-style:none;background:#F8F8F8;text-align:center;text-decoration:none;cursor:pointer;overflow:hidden;}
+.calendarcontain .caldaylayer .calcontainer li.currday{width:30px;height:14px;padding-top:0;background:url(images/calbottom_bg.gif) repeat-x bottom left;border:1px solid #8DB2E3;font-weight:bold;font-size:12px;}
+.calendarcontain .caldaylayer .calcontainer li.wtoday{width:30px;height:14px;padding-top:0;border:1px solid #8DB2E3;font-weight:bold;font-size:12px;color:#ff0000;}
+.calendarcontain .caldaylayer .calcontainer li.today{width:30px;height:14px;padding-top:0;background:url(images/calbottom_bg.gif) repeat-x bottom left;border:1px solid #8DB2E3;font-weight:bold;font-size:12px;color:#ff0000;}
+.calendarcontain .caldaylayer .calfooter{height:23px;padding-top:4px;background:url(images/calbottom_bg.gif) repeat-x bottom left;text-align:center;clear:both;}
+.calendarcontain .caltomonth{width:41px;height:19px;border:0;background:url(images/caltomonth.gif) no-repeat top left;background-color:transparent;cursor:pointer;}
+.calendarcontain .caltoday{width:41px;height:19px;border:0;background:url(images/caltoday.gif) no-repeat top left;background-color:transparent;cursor:pointer;}
+.calendarcontain .calsubmit{width:41px;height:19px;border:0;background:url(images/calsubmit.gif) no-repeat top left;background-color:transparent;cursor:pointer;}
+.calendarcontain .calclean{width:41px;height:19px;border:0;background:url(images/calclean.gif) no-repeat top left;background-color:transparent;cursor:pointer;}
+.calendarcontain .calbtnhover:hover{background-position:left -19px;}

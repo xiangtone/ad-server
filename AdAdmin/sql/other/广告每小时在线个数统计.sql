@@ -1,0 +1,2 @@
+select ad.type_id,a.static_hour,count(a.ad_id) from (SELECT  ad_id,static_hour  from   T_STATIC_AD_BYHOUR where static_date='2013-10-25' GROUP  by ad_id,static_hour) a   LEFT  JOIN T_AD ad on a.ad_id=ad.id  LEFT  JOIN  T_PLACEMENT p  on ad.PLACEMENT_id=p.id where p.os='android'  GROUP BY 
+ad.type_id,a.static_hour order by ad.type_id,a.static_hour

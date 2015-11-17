@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 刷新行云广告配置文件表 -->
+	<bean id="refreshAdwalkerConfigTask" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass">
+			<value>
+				cn.adwalker.ad.task.RefreshAdwalkerConfig
+			</value>
+		</property>
+	</bean>
+	<bean id="refreshAdwalkerConfigTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="refreshAdwalkerConfigTask" />
+		</property>
+		<property name="cronExpression">
+			<value>0 0/2 * * * ?</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!-- <ref local="refreshAdwalkerConfigTaskTrigger" /> -->
+			</list>
+		</property>
+	</bean>
+</beans>

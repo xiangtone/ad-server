@@ -1,0 +1,167 @@
+.header{
+	width: 100%;
+	height: 45px;
+	background-color: #88c89a ;
+	position:fixed;
+	left: 0;
+	top: 0;
+	text-align: center;
+	z-index: 2;
+}
+.head_top{
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: #88c89a ;
+	font-weight:bold;
+	color: #fff;
+	font-size: 20px;
+}
+.head_div{
+	width:100%;
+	height:45px;
+	margin-right:10px;
+	line-height: 45px;
+	position: fixed;
+	right:0;
+	top:0;
+	z-index: 10;
+	float:right;
+	text-align::right;
+}
+.head_logo{
+	width:55px;
+	height:16px;
+	margin-right:10px;
+	line-height: 45px;
+	position: fixed;
+	top:13px;
+	right:0;
+	z-index: 10;
+	float:right;
+	text-align::right|center;
+}
+
+
+.divider{
+	height: 1px;
+	width:100%;
+	background-color:#cdeed6;
+	text-align: center;
+}
+
+
+.wall_list{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 45px;
+}
+.box {
+	background: #ffffff;
+	height: 64px;
+	width: 100%;
+}
+
+.boxLM{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxL {
+	margin-left:15px;
+	float: left;
+	height: 64px;
+	text-align: center;
+}
+
+.logo {
+	width: 54px;
+	height: 54px;
+	margin-top: 5px;
+}
+
+.boxM {
+	margin-left:10px;
+	float: left;
+	height: 64px;
+	width:50% ;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.boxR {
+	margin-right:0px;
+	float: right;
+	height: 64px;
+	width:60px ;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.title {
+	margin-top:8px;
+	font-weight:bold;
+	font-size: 14px;
+	font: bold;
+	width: 100%;
+	color:  #000000;
+	white-space: nowrap;
+	margin-right: 2px;
+	font-style:inherit;
+}
+
+.desc {
+	margin-top: 6px;
+	font-size: 12px;
+	width: 100%;
+	color:  #000000;
+	margin-right:2px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break:break-all;
+}
+
+.vertical_divider{
+	width: 1px;
+	height: 60px;
+ 	position: absolute; 
+ 	float: left; 
+	text-align: center;
+	margin-top: 2px;
+}
+
+.downBottom{ 
+ 	text-align: center; 
+ 	position:relative;
+	height: 64px;
+	width:60px ;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ } 
+ .downIconbgroung{
+ 	position:relative;
+ 	margin-top: 11px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	height:22px;	
+ 	width: 22px;
+ 	background:url(../images/downIcon.png);
+	background-size:100% 100%;
+ }
+ .downbgroung{
+ 	position:relative;
+ 	text-align: center;
+ 	margin-top: 5px;
+ 	height: 22px;	
+	background-size:100% 100%;
+ }
+ .freeword{ 
+ 	vertical-align: middle; 
+	color: #88c89a; 
+ 	font-size: 12px
+ }
+ .downsecond{
+ 	position:absolute;
+ 	left:1px;
+ 	top:1px;
+ 	height: 22px;	
+/*   	width: 80%;  */
+ 	margin-left: 10%;
+ 	background-color: gray;
+ }

@@ -1,0 +1,181 @@
+/*
+Theme Name:GuangZKingdom
+Theme URI:http://suchiva.com
+Description:2.6.0���԰汾
+Version:2.6.0 betal
+Author:suchiva
+Author URI:http://suchiva.com
+Tags:szkingdom,suchiva,���ֳ�����ҵ��
+*/
+
+/*********************������ʽ*******************************/
+/*html {
+	color:#000;
+	background:#FFF;
+}*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img {
+	border:0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style:normal;
+	font-weight:400;
+}
+li {
+	list-style:none;
+}
+caption, th {
+	text-align:center;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:400;
+}
+q:before, q:after {
+	content:'';
+}
+abbr, acronym {
+	border:0;
+	font-variant:normal;
+}
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+input, textarea, select {
+	font-family:inherit;
+	font-weight:inherit;
+	font-size:100%;
+}
+legend {
+	color:#000;
+}
+a{
+	outline: none;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+html,body,html#oHtml{
+	font-family: font-family:Arial, Helvetica, sans-serif;
+	scrollbar-arrow-color: #fd2a00;  /*图6,三角箭头的颜色*/
+	scrollbar-face-color: #b3d2f1;  /*图5,立体滚动条的颜色*/
+	/*scrollbar-3dlight-color: #82a7ff;  /*图1,立体滚动条亮边的颜色*/
+	scrollbar-highlight-color: #fff;  /*图2,滚动条空白部分的颜色*/
+	/*scrollbar-shadow-color: #82a7ff;  图3,立体滚动条阴影的颜色*/
+	scrollbar-darkshadow-color: #fff;  /*图4,立体滚动条强阴影的颜色*/
+	/*scrollbar-track-color: #e6edff; 图7,立体滚动条背景颜色*/	
+	scrollbar-base-color:#82a7ff;  /*滚动条的基本颜色*/
+	/*Cursor:url(mouse.cur);  /*自定义个性鼠标*/
+	font-size:12px;
+	
+}
+
+/*********************������ʽ*******************************/
+.tel_contr{ background:url(images/zt_bg.png) top no-repeat; width:167px; line-height:24px; height:68px; padding:40px 20px 10px 20px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/zt_bg.png ); position:absolute; top:17px; right:113px; z-index:99999; display:none;}
+.tel_contr span{ float:left; display:block; width:60px; padding-left:20px; height:24px; cursor:pointer;}
+.tel_contr  span.fjsm{ background:url(images/zt_dot.png) left -6px no-repeat;}
+.tel_contr  span.fjsx{ background:url(images/zt_dot.png) left -70px no-repeat;}
+.tel_contr  span.djbh{ background:url(images/zt_dot.png) left -26px no-repeat;}
+.tel_contr  span.thzy{ background:url(images/zt_dot.png) left -97px no-repeat;}
+.tel_contr  span.dhjt{ background:url(images/zt_dot.png) left -52px no-repeat;}
+.tel_contr  span.ccbd{ background:url(images/zt_dot.png) left -122px no-repeat;}
+/**暂无数据记录**/
+.main_right table td.noDataTd{
+	color: red;
+	font-weight: bold;
+	background: #fff;
+}
+
+/*******按钮********/
+
+
+.btnNormal {
+	width:60px;
+	padding:0;
+	margin:0 1px;
+	text-align:center;
+	line-height:22px;
+	background: url(images/btnNormalBg.png) no-repeat;
+	border:0;
+	color:#222;
+	height:22px;
+	text-align:center;
+	font-size:12px;
+	cursor:pointer;
+}
+.btnNormalL {
+	width:80px;
+	padding:0;
+	margin:0 1px;
+	text-align:center;
+	line-height:22px;
+	background: url(images/btnNormalBgL.png) no-repeat;
+	border:0;
+	color:#222;
+	height:22px;
+	text-align:center;
+	font-size:12px;
+	cursor:pointer;
+}
+/*.btnNormalClick{
+	background: url(images/btnNormalClickBg.png) no-repeat;
+}
+*/
+
+
+.btnNormalS {
+	width:22px;
+	padding:0;
+	border: 0;
+	margin:0 1px;
+	text-align:center;
+	line-height:22px;
+	background: url(images/btnNormalBgS.png) no-repeat;
+	border:0;
+	color:#065bae;
+	height:22px;
+	text-align:center;
+	font-size:12px;
+	cursor:pointer;
+	font-weight: bold;
+}
+
+
+.btnNormalL {
+	width:80px;
+	padding:0;
+	margin:0 1px;
+	text-align:center;
+	line-height:22px;
+	background: url(images/btnNormalBgL.png) no-repeat;
+	border:0;
+	color:#222;
+	height:22px;
+	text-align:center;
+	font-size:12px;
+	cursor:pointer;
+}
+
+.maxWidth{
+	height: 98%;
+}
+.btnNormalHover{
+	background: url(images/btnNormalHoverBg.png) no-repeat;
+}
+.btnNormalHoverL{
+	background: url(images/btnNormalHoverBgL.png) no-repeat;
+}
+.btnNormalHoverS{
+	background: url(images/btnNormalBgSHover.png) no-repeat;
+}

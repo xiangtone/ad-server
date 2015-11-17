@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+}
+
+li {
+	list-style:none;
+}
+background: #e0eaf7;
+.tab_block2, .tab_block2 li {
+	float: left;
+}
+.tab_block2 {
+	height: 21px;
+	float: left;
+	padding:0;
+	margin: 0;
+	width: 100%;
+	background: url(../images/ico/tab_block2Bg.gif) bottom repeat-x;
+	padding-bottom: 1px;
+}
+.tab_block2 li {
+	height: 21px;
+	padding-right: 17px;
+	float: left;
+}
+.tab_block2 li.click {
+	background: url(../images/ico/tabRBgr.gif) right top no-repeat;	
+}
+.tab_block2 li a {
+	height: 21px;
+	color: #222;
+	padding-left: 17px;
+	float: left;
+}
+.tab_block2 li a.click {
+	background: url(../images/ico/tabLBgr.gif) left top no-repeat;	
+}
+.tab_block2 li a span {
+	line-height: 21px;
+	width: 100px;
+	text-align: center;
+	height: 21px;
+	display: block;
+	float: left;
+}
+.tab_block2 li a span.click {
+	background:url(../images/ico/tabBg.gif) top repeat-x;	
+	font-weight: bold;
+}

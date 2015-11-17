@@ -1,0 +1,212 @@
+###############################SDK服务端0522上线内容。
+
+
+-----message.properties
+4004=\u6FC0\u6D3B\u6570\u8D85\u8FC7\u516D\u4E2A\uFF0C\u65E0\u6CD5\u83B7\u53D6\u79EF\u5206
+
+
+---spring
+<context:component-scan base-package="com.adwalker.*.service" />
+<context:component-scan base-package="com.adwalker.*.dao" />
+<context:component-scan base-package="com.adwalker.*.cache" />
+
+
+------webmvc-config.xml
+<context:component-scan base-package="com.adwalker.ssp.controller" />
+
+
+
+
+
+
+-----config.proterties
+#SSP查询几率
+android_banner_probability=0
+android_plaque_probability=0
+ios_banner_probability=0
+ios_plaque_probability=0
+
+#lomark的地址
+lomark_url=http://apitest.lomark.cn/v2/get
+lomark_key=1000
+lomark_price=0.00
+
+#延迟发放积分时间
+delay_time=30
+
+
+#每天激活限制
+ac_limit=6
+
+
+
+
+
+-----------------------------------log4j
+# AdbannerAc4Logger Log
+log4j.additivity.com.adwalker.escore.logger.PageShowLogger=false
+log4j.logger.com.adwalker.escore.logger.PageShowLogger=info,PageShowLogger
+log4j.appender.PageShowLogger=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.PageShowLogger.DatePattern='.'yyyy-MM-dd-HH
+log4j.appender.PageShowLogger.File=/usr/local/escore/logs/pageshow/page.log
+log4j.appender.PageShowLogger.layout = org.apache.log4j.PatternLayout
+log4j.appender.PageShowLogger.layout.ConversionPattern=%m%n
+log4j.appender.PageShowLogger.encoding=UTF-8
+
+# AdbannerAc4Logger Log
+log4j.additivity.com.adwalker.escore.logger.AdShowInfoLogger=false
+log4j.logger.com.adwalker.escore.logger.AdShowInfoLogger=info,AdShowInfoLogger
+log4j.appender.AdShowInfoLogger=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.AdShowInfoLogger.DatePattern='.'yyyy-MM-dd-HH
+log4j.appender.AdShowInfoLogger.File=/usr/local/escore/logs/adshow/adShow.log
+log4j.appender.AdShowInfoLogger.layout = org.apache.log4j.PatternLayout
+log4j.appender.AdShowInfoLogger.layout.ConversionPattern=%m%n
+log4j.appender.AdShowInfoLogger.encoding=UTF-8
+
+
+
+
+
+
+
+
+------数据库更新
+
+
+create table T_USER_FEED_BACK(
+  id             number,
+  app_id         number,
+  uuid           varchar2(50),
+  version    varchar2(50),
+  user_Feed_back varchar2(2000),
+  emailAddr      varchar2(200)
+);
+comment on column T_USER_FEED_BACK.app_id is '广告id';
+comment on column T_USER_FEED_BACK.version  is 'SDK版本';
+comment on column T_USER_FEED_BACK.user_Feed_back  is '反馈内容';
+comment on column T_USER_FEED_BACK.emailAddr  is '邮箱';
+
+
+create sequence SEQ_T_USER_FEED_BACK minvalue 1 maxvalue 999999999999999999999999999 start with 37 increment by 1 nocache;
+
+
+alter table T_USER add IMSI VARCHAR2(100);
+
+
+
+create table T_AD_SSP(
+  ID       NUMBER,
+  KEY      VARCHAR2(200),
+  ADV_SSP  VARCHAR2(200),
+  NAME     VARCHAR2(200),
+  AD_TYPE  NUMBER,
+  PAY_TYPE VARCHAR2(200),
+  PRICE    NUMBER(10,2)
+)
+
+
+create table T_AD_SSP_REPORT(
+  ID          NUMBER,
+  APPID       VARCHAR2(200),
+  APP_DATE    VARCHAR2(200),
+  DEVICETYPE  NUMBER,
+  CLIENT      NUMBER,
+  ADSPACETYPE NUMBER,
+  REQUEST     NUMBER,
+  IMPRESSION  NUMBER,
+  CLICK       NUMBER
+)
+
+
+
+create sequence SEQ_AD_SSP minvalue -99999999999999999 maxvalue -1 start with -1000 increment by -1 nocache;
+
+
+create sequence SEQ_T_AD_SSP_REPORT minvalue 1 maxvalue 999999999999999999999999999 start with 37 increment by 1 nocache;
+
+
+
+
+
+insert into t_sys_config (ID, CONFIG_TYPE, CONFIG_VALUE, CREATE_TIME)values (5, 'SIGN_STATUS', '2', to_date('14-05-2013 14:42:14', 'dd-mm-yyyy hh24:mi:ss'));
+insert into t_sys_config (ID, CONFIG_TYPE, CONFIG_VALUE, CREATE_TIME)values (6, 'SIGN_FIRST', '7', to_date('14-05-2013 14:42:14', 'dd-mm-yyyy hh24:mi:ss'));
+insert into t_sys_config (ID, CONFIG_TYPE, CONFIG_VALUE, CREATE_TIME)values (7, 'SIGN_SECOND', '2', to_date('14-05-2013 14:42:14', 'dd-mm-yyyy hh24:mi:ss'));
+insert into t_sys_config (ID, CONFIG_TYPE, CONFIG_VALUE, CREATE_TIME)values (8, 'SIGN_THIRD', '1', to_date('14-05-2013 14:42:14', 'dd-mm-yyyy hh24:mi:ss'));
+
+
+
+
+
+create table T_USER_SCORE(
+  ID          NUMBER(38) not null,
+  UUID        VARCHAR2(128) not null,
+  CREATE_TIME DATE default sysdate,
+  APP_ID      NUMBER(38) not null,
+  SCORE       NUMBER(8)
+)
+
+
+
+
+-- Add comments to the columns 
+comment on column T_USER_SCORE.ID  is '主键';
+comment on column T_USER_SCORE.UUID  is '用户id';
+comment on column T_USER_SCORE.CREATE_TIME  is '创建时间';
+comment on column T_USER_SCORE.APP_ID  is '应用id';
+comment on column T_USER_SCORE.SCORE  is '用户积分';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table T_USER_SCORE
+  add constraint SCORE_PIR primary key (UUID, APP_ID)
+  using index 
+  tablespace ESCORE
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 320K
+    next 320K
+    minextents 1
+    maxextents unlimited
+    pctincrease 0
+  );
+ 
+ 
+-- Create sequence 
+create sequence SEQ_USER_SCORE minvalue 1 maxvalue 999999999999 start with 126 increment by 1 nocache;
+ 
+ 
+add constraint SCORE_PIR primary key (UUID, APP_ID);
+alter table T_USER_AD_REL add sign_num number default 1; 
+alter table T_USER add app_Id number; 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

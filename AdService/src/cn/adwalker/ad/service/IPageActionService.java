@@ -1,0 +1,1 @@
+package cn.adwalker.ad.service;import cn.adwalker.ad.param.AcParam;/** * * <p>Title: IPageActionService</p>* <p>Description:TODO</p>* <p>Company: adwalker</p> * @author   lichuang* @date       2013-2-28 */ public interface IPageActionService {		public void adMotion(AcParam vo,String os);}

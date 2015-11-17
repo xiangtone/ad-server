@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+<<<<<<< .mine
+  name="AdAPI"
+=======
+  name="Ad_API"
+>>>>>>> .r286
+  id="myeclipse.1322551070356"
+  context-root="/EScore_business"
+  j2ee-spec="5.0"
+<<<<<<< .mine
+  archive="AdAPI.war">
+=======
+  archive="Ad_API.war">
+>>>>>>> .r286
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

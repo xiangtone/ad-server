@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<description>escore</description>
+	<display-name>escore taglib</display-name>
+	<tlib-version>1.1</tlib-version>
+	<short-name>escore</short-name>
+	<uri>http://www.adwalker.com/tool</uri>
+	<!--将spring bean 存入到pageContext当中 -->
+	<tag>
+		<name>springBean</name>
+		<tag-class>cn.adwalker.core.tag.SpringBeanTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>springId</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>saveId</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+
+	<!-- 数字格式化 -->
+	<tag>
+		<name>formatNumber</name>
+		<tag-class>cn.adwalker.core.tag.FormatNumberTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>maxFractionDigits</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<!-- 金额格式化 -->
+	<tag>
+		<name>formatMoney</name>
+		<tag-class>cn.adwalker.core.tag.FormatMoneyTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>maxFractionDigits</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	
+	<tag>
+		<name>subStr</name>
+		<tag-class>cn.adwalker.core.tag.SubStringTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>len</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	
+	<tag>
+		<description>系统权限标签</description>
+		<name>security</name>
+		<tag-class>cn.adwalker.core.tag.SecurityTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>type</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	
+	
+	
+
+	<!--从配置文件里读取图片预览地址 -->
+	<tag>
+		<name>loadImg</name>
+		<tag-class>cn.adwalker.core.tag.LoadImgTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+	<!--从配置文件里读取file down地址 -->
+	<tag>
+		<name>downloadFile</name>
+		<tag-class>cn.adwalker.core.tag.DownloadFileTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+</taglib>

@@ -1,0 +1,1 @@
+package cn.adwalker.ad.control.task;import cn.adwalker.ad.control.util.HttpClientUtils;public class ClearCacheTask implements Runnable {	private String url;	public ClearCacheTask(String url) {		this.url = url;	}	public void run() {		try {			Thread.sleep(20000);		} catch (InterruptedException e) {			e.printStackTrace();		}		HttpClientUtils.sendGet(url);	}}

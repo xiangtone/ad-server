@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>赚钱列表</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.dg2{
+			background-color:#fff;
+			width: 293px;
+			height:310px;
+			z-index: 10000;
+			position: absolute;
+			top: 240px;
+			left: 0;
+			border-radius:18px;
+			opacity: 1;
+		}
+		.dg2 .c{
+				display: block;
+				position:absolute;
+				height: 30px;
+				width: 30px;
+				right:0px;
+				background-image: url(ioswall/c.png);
+				background-repeat: no-repeat;
+				z-index: 10001;
+		}
+		
+		.dg2 .keyword{
+			display: block;
+			position: absolute;
+			top: 95px;
+			z-index: 10001;
+			width: 100%;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		 
+		 function dg_c2() {
+				document.getElementById("dg2").style.display = "none";
+				document.getElementById("b").style.display = "none";
+		}
+	</script>
+</head>
+<body>
+	<div id="b" style="background-color: #333333;width: 100%;height: 100%;display: block;position: absolute;top: 0px;opacity: 0.7;">
+	</div>
+	<div id="dg2" class="dg2">
+		<div class="box" id="box0">
+			<div class="boxLM" id="boxLM0">
+				<div class="boxL" id="boxL">
+					<img id="logo_b" class="logo" src="">
+				</div>
+				<div class="boxM" id="boxM">
+					<div id="ad_name_b" class="title">cccc</div>
+					<div id="desc0" class="desc">下载注册，试玩两分钟获取积分</div>
+				</div>
+			</div>
+		</div>
+		<div class="divider_up"></div>
+		<div style="background-color: #fff;line-height: 30px; padding-left: 30px;">
+			<span style="font-size: 14px;">赚取条件：</span>
+			<span style="font-size: 14px;text-align: center;vertical-align: middle;color:#EB6100;">按照以下步骤完成以下任务</span>
+		</div>
+		<div style="width: 100%;height: 50px;left: 50px;display: block;">
+			<img alt="" src="ioswall/l_b.png" style="width: 100%;">
+		</div>
+		<div style="width: 100%;height: 138px;">
+				<span style="width: 290px;height: 80px;display: block;margin-left: 30px;padding-top: 20px;">
+					<span style="font-size: 14px;color: #EF8133;">任务步骤新手教程：</span><br>
+					<span style="font-size: 12px;line-height: 20px;" id="weixin_desc">
+					<!--  
+						1.在APP Store搜索关键词“XX”<br>
+						2.“XX”排在第10位左右<br>
+						3.首次下载，注册账户<br>
+						4.试用3分钟以上<br>
+						-->
+					</span>
+				</span>
+		</div>
+		<HR style="border:1 dashed #987cb9" width="100%" color=#987cb9 SIZE=1 />
+		<div style="height: 50px;width:150px;text-align: center;margin-left:60px;">
+			<span style="color: #EB6100;font-size: 12px;">复制关键字开始赚取奖励吧</span>
+		</div>
+		<!-- 最外层 加一个div 别的东西不能复制，取消按钮在过滤层上边-->
+		<div style="height:400px;width: 293px;position: absolute;top: 0px;border-radius:18px;">
+			<div class="c" style="cursor: pointer;" onclick="dg_c2();"></div>
+			<div class="keyword">
+				<span id="code_b" style="margin-left:auto;margin-right:auto;height: 50px;width: 120px;display: block;text-align: center;line-height: 50px;" oncopy="keywordcopy();">
+				</span>
+			</div>
+		</div>
+		
+	</div>
+</body>
+	<script type="text/javascript">
+		//位置=(屏幕宽度-div宽度)/2
+		document.getElementById("dg2").style.left=(document.body.clientWidth-293)/2+"px";
+		document.getElementById("dg2").style.top=(window.screen.availHeight-400)/2+"px";
+		
+	</script>
+</html>

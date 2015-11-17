@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>推荐墙</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="js/base64.js"></script>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/canvasloader-min.js"></script>
+<script src="js/global.js"></script>
+<style type="text/css">
+	.box {
+	background: #ffffff;
+	height: 85px
+}
+
+.boxL {
+	width: 25%;
+	float: left;
+	height: 85px;
+	text-align: center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.logo {
+	width: 65px;
+	height: 65px;
+	margin-top: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxM {
+	width: 50%;
+	float: left;
+	height: 85px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxLM{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxR {
+	width: 25%;
+	float: left;
+	height: 85px;
+	background: #fb5240;
+	overflow: hidden;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxRB {
+	width: 25%;
+	float: left;
+	height: 85px;
+	background: #0080ff;
+	overflow: hidden;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.boxRG {
+	width: 25%;
+	float: left;
+	height: 85px;
+	background: #36c77b;
+	overflow: hidden;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.title {
+	margin-top: 5px;
+	font-size: 18px;
+	font: bold;
+	width: 100%;
+	color: #434343;
+}
+
+.catagory {
+	font-size: 10px;
+	width: 100%;
+	margin-top: 5px;
+	white-space: nowrap;
+	color: #959595;
+}
+
+.desc {
+	margin-top: 5px;
+	font-size: 14px;
+	width: 100%;
+	color: #959595;
+	font-size: 12px;
+	margin-right: 2px
+}
+
+.score {
+	font: bold;
+	font-size: 35px;
+	text-align: center;
+	line-height: 65px;
+	margin-left: 12px;
+}
+
+.plus {
+	font: bold;
+	font-size: 25px;
+	margin-top: 10px;
+	margin-left: 2px;
+	position: absolute;
+}
+
+.divider {
+	height: 1px;
+	text-align: center;
+	background: #c9c9c9
+}
+
+.divider2 {
+	height: 1px;
+	width:100%;
+	text-align: center;
+	background: #c9c9c9
+}
+
+.leftcontentR {
+	position: absolute;
+	width: 6px;
+	height: 85px;
+	background: #d32614
+}
+
+.leftcontentB {
+	position: absolute;
+	width: 6px;
+	height: 85px;
+	background: #0053a5
+}
+
+.leftcontentG {
+	position: absolute;
+	width: 6px;
+	height: 85px;
+	background: #169452
+}
+
+.downloadcontent {
+	position: absolute;
+ 	display: none; 
+ 	overflow: hidden; 
+ 	width: 75%
+}
+
+.downloadLeft {
+	width: 5%;
+	float: left;
+	height: 85px;
+	line-height: 90px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.downloadRight {
+	width: 95%;
+	height:85px;
+	float: left;
+}
+
+a {
+	TEXT-DECORATION: none;
+}
+
+.downtitle {
+	margin-top: 10px;
+	font-size: 22px;
+	font: bold;
+}
+
+.downcontent {
+	margin-top: 15px;
+	width: 100%;
+}
+
+.star {
+	width: 10px;
+	height: 10px;
+}
+
+.downloadlogo {
+	height: 10px;
+}
+
+.listcontent {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 50px;
+}
+
+.recolist {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0
+}
+
+.preload {
+	position: absolute;
+	z-index: 1;
+}
+
+.downlogo {
+	width: 100%;
+	height: 85px;
+	text-align: center;
+	margin-top: 15px
+}
+
+.toptitle {
+	position:fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 50px;
+	background-color: #0080ff;
+	text-align:center;
+	z-index: 1
+}
+
+.backtitle {
+	position:absolute;
+	width: 20%;
+	height: 50px;
+	padding-top:10px;
+	text-align:center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.wordtitle {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	font-size: 26px
+}
+
+
+.downcontent span{
+	font-size: 12px;
+	color: white;
+}
+
+body{
+	background: #4d5967;
+}
+</style>
+<script type="text/javascript">
+var index = 0;
+var isDown = false;
+var ids = "";
+var isShow = true;
+var isExtend = true;
+var tempIndex = 0;
+var newIndex = 0;
+var currentPage = 1;
+function downEffect(){
+	isDown = true;
+}
+function downUneffect(){
+	isDown = false;
+}
+function getBoxR(boxM,boxR,title,catagory,desc,downlogo,downcontent,detail,download){
+	if(!isDown){
+		isExtend = false;
+		var percentR = 75;
+		var precentM = 0;	
+		$(title).hide();
+		$(catagory).hide();
+		$(desc).hide();
+		$(boxM).show();
+		var run = setInterval(function(){
+			precentM += 5;
+			percentR -= 5;
+			var valueM = precentM + "%";
+			var valueR = percentR + "%";
+			$(boxM).css("width",valueM);
+			$(boxR).css("width",valueR);
+			if(percentR == 45){
+				$(detail).hide();
+			}
+			if(percentR == 60){
+				
+				$(download).hide();
+				$(downcontent).hide();
+			}
+// 			alert("percentR = "+percentR);
+			if(percentR == 25){
+				$(title).show();
+				$(desc).show();
+				$(catagory).show();
+				$(downlogo).show();
+				clearInterval(run);
+			}
+			
+		},10);
+	}
+}
+
+function manualBack(){
+	if(index > 0){
+		var boxM = "#boxM"+newIndex;
+		var boxR = "#boxR"+newIndex;
+		var catagory = "#catagory"+newIndex;
+		var title = "#title"+newIndex;
+		var desc = "#desc"+newIndex;
+		var detail = "#detail"+newIndex;
+		var download = "#download"+newIndex;
+		var downlogo = "#downlogo"+newIndex;
+		var downcontent = "#downloadcontent"+newIndex;
+		var percentR = 75;
+		var precentM = 0;
+		
+		$(title).hide();
+		$(catagory).hide();
+		$(desc).hide();
+		$(boxM).show();
+		var run = setInterval(function(){
+			precentM += 5;
+			percentR -= 5;
+			var valueM = precentM + "%";
+			var valueR = percentR + "%";
+			$(boxM).css("width",valueM);
+			$(boxR).css("width",valueR);
+			if(percentR == 45){
+				$(detail).hide();
+			}
+			if(percentR == 60){
+				
+				$(download).hide();
+				$(downcontent).hide();
+			}
+			if(percentR == 25){
+				$(title).show();
+				$(desc).show();
+				$(catagory).show();
+				$(downlogo).show();
+				clearInterval(run);
+			}
+			
+		},10);
+	}
+}
+function setBoxR(boxM,boxR,title,catagory,desc,downlogo,downcontent,detail,download,order){
+	tempIndex = order;
+	if(tempIndex != newIndex){
+		if(!isExtend){
+			isExtend = true;
+		}else{
+			manualBack();
+		}
+	}else if(tempIndex == newIndex && !isExtend){
+		isExtend = true;
+	}else{
+		return;
+	}
+	newIndex = order;
+	var isFirst = true;
+	var percentR = 25;
+	var precentM = 50;
+	$(title).hide();
+	$(catagory).hide();
+	$(desc).hide();
+	var _timer = setInterval(function(){
+		$(title).hide();
+		$(catagory).hide();
+		$(desc).hide();
+		if(isFirst){
+			percentR -= 20;
+			precentM += 20;
+			isFirst = false;
+		}else{
+			$(downlogo).hide();
+			
+			precentM -= 5;
+			percentR += 5;
+		}
+		var valueM = precentM + "%";
+		var valueR = percentR + "%";
+		$(boxM).css("width",valueM);
+		$(boxR).css("width",valueR);
+		if(percentR == 45){
+			$(downcontent).show();
+		}
+		if(percentR >= 75){
+			$(boxM).hide();
+		}
+		if(percentR > 70){
+			
+			$(boxM).hide();
+			$(detail).show();
+			$(download).show();
+			clearInterval(_timer);
+		}
+		
+	},10);
+}
+
+
+
+function getMore(pageCount,pageSize){
+	if(currentPage <= pageCount){
+		requestData(currentPage,pageSize);
+	}else{
+		loading();
+	}
+		
+}
+// function animateToDetail(adId,adType,adUrl){		
+//       if(adType == 0 && adUrl != null){
+// 			var ad_id = BASE64.encode(adId);
+// 			var uuid = BASE64.encode(document.getElementById("uuid").value);
+// 			var version = BASE64.encode(document.getElementById("version").value);
+// 			var appId = BASE64.encode(document.getElementById("appId").value);
+// 			var channel = BASE64.encode(document.getElementById("channel").value);
+// 			var terminalType = document.getElementById("terminalType").value;
+// 			var imsi = document.getElementById("imsi").value;
+// 			if(terminalType != ''){
+// 				terminalType = BASE64.encode(terminalType);
+// 			}
+// 			if(imsi != ''){
+// 				imsi = BASE64.encode(imsi);
+// 			}
+			
+// 			var isWap = document.getElementById("isWap").value;
+// 			var url = serverUrl + "/h5ad_detailsE.do?uuid="+uuid+"&adId="+ad_id+"&version="+version+"&appId="+appId+"&channel="+channel+"&imsi="+imsi+"&terminalType="+terminalType+"&pageType=1&phoneType=android&isWap="+isWap;
+// 		      $("html").animate({opacity: 0}, 1000,function () {
+// 		    	  document.body.scrollTop = 0;
+// 		    	  window.location.href = url;
+// 	          });
+// 		}else{
+// 			 $("html").animate({opacity: 0}, 1000,function () {
+// 				 document.body.scrollTop = 0;
+// 				 window.location.href = adUrl;
+// 	          });
+// 		}
+// }
+
+function boxMClick(boxM,boxR,title,catagory,desc,downlogo,downcontent,detail,download,order,adId,adType,adUrl){
+	var isSlide = document.getElementById("isSlide").value;
+	if(isSlide == 0){
+		setBoxR(boxM, boxR, title, catagory, desc, downlogo, downcontent, detail, download, order);
+	}else{
+		animateToDetail(adId, adType, adUrl);
+	}
+}
+
+function downloadFile(resourceUrl,id,title,packageName,resouceSize){
+	var pageType = document.getElementById("pageType").value;
+	var isWap = document.getElementById("isWap").value;
+	if(isWap == 'true'){
+		window.location.href = resourceUrl;
+	}else{
+		window.wall.clickOnAndroid(resourceUrl,id,title,packageName,pageType,resouceSize);
+	}
+}
+
+var pageType = BASE64.encode("1");
+var imageType = BASE64.encode("1");
+var version = BASE64.encode("androidV3.1.4");
+var appId = BASE64.encode("777");
+var channel = BASE64.encode("sdk 3.1.3");
+
+function requestData(nextPage,page_size){
+//alert("requestData..................");
+	$.ajax({
+        type: "POST",//使用get方法访问后台
+        url: serverUrl + "/h5page_adlistMore.do",//要访问的服务器的地址
+			data: {
+        	   pageNo:nextPage,
+        	   pageSize:page_size,
+        	   page_type:pageType,
+        	   image_type:imageType,
+        	   version:version,
+        	   appId:appId,
+        	   channel:channel,
+        	   phoneType:'android'
+        	   },
+        dataType: "json",//返回json格式的数据
+        complete:function(data){
+        },
+        success: function(data){//msg为返回的数据，在这里做数据绑定
+        	var list = data.data.adList;
+//	            	alert("555555");
+			
+			ids = "";
+//alert("length = "+list);
+            $.each(list, function(i,item){                 	
+                var index = (nextPage - 1) * page_size + i + 1;
+//	                alert("index = "+index);
+               //创建item最外层的box
+                var boxDiv = document.createElement("div");
+               
+                var boxLMDiv = document.createElement("div");
+                boxLMDiv.setAttribute("class", "boxLM");
+                boxLMDiv.setAttribute("id", "boxLM"+index);
+               
+                //创建item的图片模块
+                var boxLDiv = document.createElement("div");
+                boxLDiv.setAttribute("class", "boxL");
+                boxLDiv.setAttribute("id", "boxL"+index);
+                var boxLImage = document.createElement("img");
+                boxLImage.setAttribute("class", "logo");
+                boxLImage.setAttribute("src", item.general.wall_icon_Url);
+                //将创建的img元素加入boxLDiv中
+                boxLDiv.appendChild(boxLImage);
+              	//加入到box当中
+                boxLMDiv.appendChild(boxLDiv);
+                
+                //创建中间的模块
+                var boxMDiv = document.createElement("div");
+                boxMDiv.setAttribute("class", "boxM");
+                boxMDiv.setAttribute("id", "boxM"+index);
+                boxMDiv.innerHTML = "<div id='title"+index+"' class='title'>"+item.title+"</div><div id='catagory"+index+"' class='catagory'>所属类别："+item.category+" | "+item.general.wall_left_third.substring(3)+"</div><div id='desc"+index+"' class='desc'>"+item.general.wall_desc+"</div>";			
+            	var boxM = "#boxM" + index;
+            	var boxR = "#boxR" + index;
+            	var title = "#title" + index;
+            	var catagory = "#catagory" + index;
+            	var desc = "#desc" + index;
+            	var downlogo = "#downlogo" + index;
+            	var downloadcontent = "#downloadcontent" + index;
+            	var detail = "#detail" + index;
+            	var download = "#download" + index;
+                boxLMDiv.addEventListener('click', function() {
+                	boxMClick(boxM,boxR,title,catagory,desc,downlogo,downloadcontent,detail,download,index,item.id,item.ad_type,item.ad_url);
+                }, false);
+                //加入到box当中
+                boxLMDiv.appendChild(boxMDiv);
+                boxDiv.appendChild(boxLMDiv);
+                
+                var leftcontentR = document.createElement("div");
+                var rightcontentR = document.createElement("div");
+			
+				//创建右边的模块
+				var boxRDiv = document.createElement("div");
+				if(index % 3 == 1){
+					boxRDiv.setAttribute("class", "boxR");
+					leftcontentR.setAttribute("class","leftcontentR");
+					rightcontentR.setAttribute("class","rightcontentR");
+				}else if(index % 3 == 2){
+					boxRDiv.setAttribute("class", "boxRB");
+					leftcontentR.setAttribute("class","leftcontentB");
+					rightcontentR.setAttribute("class","rightcontentB");
+				}else if(index % 3 == 0){
+					boxRDiv.setAttribute("class", "boxRG");
+					leftcontentR.setAttribute("class","leftcontentG");
+					rightcontentR.setAttribute("class","rightcontentG");
+				}
+				
+				
+				
+				boxRDiv.setAttribute("id", "boxR"+index);
+				
+				
+				//正常显示部分
+				var downloadLogo = document.createElement("div");
+				downloadLogo.setAttribute("class", "downlogo");
+				downloadLogo.setAttribute("id", "downlogo"+index);
+				
+				var downLogoDiv = document.createElement("div");
+				downLogoDiv.innerHTML = "<img src='images/download01.png'>";
+				var downLogoInfo = document.createElement("div");
+				downLogoInfo.innerHTML = "<font color='white' size='2'>免费下载</font>";
+				downloadLogo.appendChild(downLogoDiv);
+				downloadLogo.appendChild(downLogoInfo);
+				
+				downloadLogo.addEventListener("click", function(){
+					downloadFile(item.resourceUrl,item.id,item.title,item.packageName,item.resouceSize);
+				}, false);
+				
+				//将正常部分和抽屉部分加入到模块中
+				rightcontentR.appendChild(downloadLogo);
+				
+				//抽屉部分的模块
+				var downloadContent = document.createElement("div");
+				downloadContent.setAttribute("class", "downloadcontent");
+				downloadContent.setAttribute("id", "downloadcontent"+index);
+				
+				downloadContent.addEventListener("click", function(){
+					getBoxR(boxM,boxR,title,catagory,desc,downlogo,downloadcontent,detail,download);
+				}, false);
+				var downloadLeft = document.createElement("div");
+				downloadLeft.setAttribute("class", "downloadLeft");
+				
+				var trangleImage = document.createElement("img");
+				trangleImage.setAttribute("id", "dd"+index);
+				trangleImage.src="images/sanjiao.png";
+				
+				downloadLeft.appendChild(trangleImage);
+				downloadContent.appendChild(downloadLeft);
+				
+				var downloadRight = document.createElement("div");
+				downloadRight.setAttribute("class", "downloadRight");
+				
+				var downTitleDiv = document.createElement("div");
+				downTitleDiv.setAttribute("class", "downtitle");
+				downTitleDiv.innerHTML = "<font color='white'>"+item.title+"</font>";
+				
+				
+				downloadRight.appendChild(downTitleDiv);
+	
+				var star;
+				if(item.star_level == 1){
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;";
+				}else if(item.star_level == 1.5){
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star03.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;";
+				}else if(item.star_level == 2){
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;";
+				}else if(item.star_level == 2.5){
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star03.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;";
+				}else if(item.star_level == 3){
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;";
+				}else if(item.star_level == 3.5){
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star03.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;";
+				}else if(item.star_level == 4){
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star02.png'>&nbsp;";
+				}else if(item.star_level == 4.5){
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star03.png'>&nbsp;";
+				}else if(item.star_level == 5){
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;";
+				}else{
+					star = "<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;<img class='star' src='images/star01.png'>&nbsp;";
+				}
+				var word = "<span>"+item.star_level+"</span>&nbsp;&nbsp;&nbsp;&nbsp;";
+				var detaillLink = "<a href='#' id='detail"+index+"' class='detail' onmouseover='downEffect()' onmouseout='downUneffect()' onclick=\"animateToDetail('"+item.id+"','"+item.ad_type+"','"+item.ad_url+"');return false;\"><span>查看详情></span></a>&nbsp;&nbsp;&nbsp;&nbsp;";
+				var downloadLink = "<a href='#' id='download"+index+"' class='download' onmouseover='downEffect()' onmouseout='downUneffect()' onclick=\"downloadFile('"+item.resourceUrl+"','"+item.id+"','"+item.title+"','"+item.packageName+"','"+item.resouceSize+"');return false;\"><span>点击下载</span><img class='downloadlogo' src='images/download02.png'></a>";
+
+				
+				var downcontentDiv = document.createElement("div");
+				downcontentDiv.setAttribute("class","downcontent");
+			    var content = star + word + detaillLink + downloadLink;
+			    
+				downcontentDiv.innerHTML = content;
+				downloadRight.appendChild(downcontentDiv);
+
+				
+				
+				downloadContent.appendChild(downloadRight);
+				
+				rightcontentR.appendChild(downloadContent);
+				
+				boxRDiv.appendChild(leftcontentR);
+				boxRDiv.appendChild(rightcontentR);
+				
+				//将模块加入到box当中
+				boxDiv.appendChild(boxRDiv);
+                
+
+                var dividerId = "divider" + (index - 1);
+
+                var	previousFocus = document.getElementById(dividerId);
+
+                boxDiv.setAttribute("class","box");
+                boxDiv.setAttribute("id","box"+index);
+				var boxId = "#box"+index;
+				
+				var divider = document.createElement("div");
+				divider.setAttribute("class","divider");
+				divider.setAttribute("id","divider"+index);
+				if(nextPage == 1 && i == 0){
+					var listcontent = document.getElementById("listcontent");
+					listcontent.appendChild(boxDiv);
+					$(divider).insertAfter(boxId);
+				}else{
+					$(boxDiv).insertAfter(previousFocus);
+	                $(divider).insertAfter(boxId);
+				}
+              //将id的值存储在本地，index为key，id值为value
+                storageData(item.id,item.title +","+item.general.wall_icon_Url+ ","+item.ad_type+","+item.ad_url+","+index);
+            }); 
+            loading();
+            currentPage++;
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { 
+         	alert("请求错误....."); 
+        	loading();
+      } 
+        });
+}
+window.onload = function(){
+	alert("onload..............");
+	loading();
+	requestData(1, 10);
+};
+$(window).scroll(function(){
+	if( $(document).height() -( $(window).height()+$(document).scrollTop()) == 0) { 
+		var pageSize = document.getElementById("pageSize").value;
+		var pageCount = document.getElementById("pageCount").value;
+		if(currentPage <= pageCount){
+				loading();			
+				getMore(pageCount,pageSize);
+	     }
+	}
+});
+
+function goBack(){
+	history.go(-1);
+}
+</script>
+</head>
+<body>
+	<div id="recolist">
+		<div class="toptitle">
+			<div class="backtitle">
+				<img id="backlogo" class="backlogo" alt="backlogo"
+					src="images/back.png" onclick="goBack()">
+			</div>
+			<div class="wordtitle">
+				精品推荐
+			</div>
+			<div class="divider2" id="divider"></div>
+		</div>
+		<div id="listcontent" class="listcontent">
+			
+
+	    </div>
+</div>
+	<!-- Create a div which will be the canvasloader wrapper -->
+	<div class="preload">
+		<div id="canvasloader-container" class="wrapper"></div>
+		<script type="text/javascript">
+			var cl = new CanvasLoader('canvasloader-container');
+		</script>
+	</div>
+</body>
+</html>

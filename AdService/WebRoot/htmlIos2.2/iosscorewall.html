@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<title>免费获取奖励</title>
+		<link rel="stylesheet" type="text/css"
+		href="../htmlIos2.2/iosscorewall.css?v=20141215" />
+		<script src="../htmlIos2.2/global.js?v=20141215"></script>
+		<script src="../htmlIos2.2/iosscorewall.js?v=2014121522" charset="utf-8"></script>
+
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.dg2 {
+				background-color: #FFFFFF;
+				width: 293px;
+				height: 310px;
+				margin-left: auto;
+				margin-right: auto;
+				z-index: 10000;
+				position: absolute;
+				left: 0;
+				border-radius: 18px;
+				opacity: 1;
+			}
+			.dg2 .c {
+				display: block;
+				position: absolute;
+				height: 30px;
+				width: 30px;
+				right: 0px;
+				background-image: url(../htmlIos2.2/close.png);
+				background-repeat: no-repeat;
+				z-index: 10001;
+			}
+
+			.dg2 .keyword {
+				display: block;
+				position: absolute;
+				top: 95px;
+				z-index: 10001;
+				width: 100%;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function dg_c2() {
+				document.getElementById("dg2").style.display = "none";
+				document.getElementById("alertback").style.display = "none";
+			}
+		</script>
+
+	</head>
+	<body>
+		<!-- 头 部分-->
+		<div class="head_div">
+			<div class="headertitle">
+				免费获取奖励
+			</div>
+			<img class="head_back" id="head_back" onclick="homeback(this)"
+			src="../images/home_back.png">
+		</div>
+
+		<!-- 奖励任务部分 -->
+		<div class="mbody">
+			<div class="wall_list" id="wall_list">
+				<div class="divider" id="divider0"> </div>
+			</div>
+			
+			
+			<!-- <div class="itemtitle1" id="itemtitle1" style="display: none" >
+				暂无积分应用...
+			</div>
+			<div class="itemtitle2" id="itemtitle2">
+				你也可能喜欢（以下推荐无奖励)
+			</div>
+			<div class="wall_list2" id="wall_list2">
+
+			</div>
+			<div class="itemtitle1" id="itemtitle6" style="display: none" >
+				暂无推荐应用...
+			</div> -->
+			
+			
+			
+			<div class="wall_list3" id="wall_list3">
+				<p class="itemtitle4" id="itemtitle4" onclick="help(this)">
+					获取帮助
+				</p>
+				<p class="itemtitle5" id="itemtitle5" onclick="feedback(this)">
+					问题反馈
+				</p>
+			</div>
+		</div>
+
+		<div id="alertback" style="background-color: #333333;width: 100%;height:
+		1000px;display: none; position:absolute ; z-index:100;top: 0px;opacity: 0.7;"> </div>
+		<div id="dg2" class="dg2"  style="display: none">
+			<div class="box" id="box0">
+				<div class="boxLM" id="boxLM0">
+					<div class="boxL" id="boxL">
+						<img id="logo_b" class="logo" >
+					</div>
+					<div class="boxM" id="boxM">
+						<div id="ad_name_b" class="title" id="alerttitle">
+
+						</div>
+						<div id="desc0" class="desc">
+							下载注册，试玩两分钟获取积分
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="divider_up"> </div>
+			<div style="background-color: #fff;line-height: 30px; padding-left: 30px;">
+				<span style="font-size: 14px;">赚取条件：</span>
+				<span style="font-size: 14px;text-align: center;vertical-align: middle;color:#EB6100;">按照以下步骤完成以下任务</span>
+			</div>
+			<div style="width: 100%;height: 50px;left: 50px;display: block;">
+				<img alt="" src="../htmlIos2.2/l_b.png" style="width:100%;">
+			</div>
+			<div style="width: 100%;height: 138px;">
+				<span style="width: 290px;height: 80px;display: block;margin-left: 30px;padding-top: 20px;"> <span style="font-size: 14px;color: #EF8133;">任务步骤新手教程：</span>
+					<br>
+					<span style="font-size: 12px;line-height: 20px;" id="weixin_desc"> 1.在APP Store搜索关键词“XX”
+						<br>
+						2.“XX”排在第10位左右
+						<br>
+						3.首次下载，注册账户
+						<br>
+						4.试用3分钟以上
+						<br>
+					</span> </span>
+			</div>
+			<HR style="border:1 dashed #987cb9" width="100%" color=#987cb9 SIZE=1 >
+			</HR>
+
+			<div style="height: 50px;width:150px;text-align: center;margin-left:60px;">
+				<span style="color: #EB6100;font-size: 12px;">复制关键字开始赚取奖励吧</span>
+			</div>
+			<!-- 最外层 加一个div 别的东西不能复制，取消按钮在过滤层上边-->
+			<div style="height:400px;width: 293px;position: absolute;top: 0px;border-radius:18px;">
+				<div class="c" style="cursor: pointer;" onclick="dg_c2();"> </div>
+				<div class="keyword">
+					<span id="code_b" style="margin-left:auto;margin-right:auto;height: 50px;width: 120px;display: block;text-align: center;line-height: 50px;" oncopy="keywordcopy();"> </span>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+		//位置=(屏幕宽度-div宽度)/2
+		document.getElementById("dg2").style.left = (document.body.clientWidth - 293) / 2 + "px";
+		document.getElementById("dg2").style.top = (window.screen.availHeight - 400) / 2 + "px";
+	</script>
+</html>

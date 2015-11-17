@@ -1,0 +1,146 @@
+
+
+
+
+#应用
+ALTER TABLE t_application ADD CONSTRAINT FK_application_developer FOREIGN KEY(dev_id) REFERENCES t_developer(id);
+
+
+
+#墙
+ALTER TABLE t_page ADD CONSTRAINT fk_page_application FOREIGN KEY(app_id) REFERENCES t_application(id);
+
+
+#用户权限
+ALTER TABLE t_sys_permission_res_rel ADD CONSTRAINT fk_permission_res FOREIGN KEY(resource_id) REFERENCES t_sys_permission(id);
+
+ALTER TABLE t_sys_permission_res_rel ADD CONSTRAINT fk_res_permission FOREIGN KEY(resource_id) REFERENCES t_sys_resource(id);
+
+
+#资源用户
+ALTER TABLE t_sys_resource_user_rel ADD CONSTRAINT fk_resource_user FOREIGN KEY(resource_id) REFERENCES t_sys_resource(id);
+
+
+ALTER TABLE t_sys_resource_user_rel ADD CONSTRAINT fk_user_resource FOREIGN KEY(user_id) REFERENCES t_sys_user(id);
+
+#t_sys_role_permission
+
+ALTER TABLE t_sys_role_permission ADD CONSTRAINT fk_role_permission FOREIGN KEY(role_id) REFERENCES t_sys_role(id);
+
+ALTER TABLE t_sys_role_permission ADD CONSTRAINT fk_permission_role FOREIGN KEY(permission_id) REFERENCES t_sys_permission(id);
+
+
+
+#t_sys_role_permission
+
+ALTER TABLE t_sys_role_permission ADD CONSTRAINT fk_sys_role_permission FOREIGN KEY(role_id) REFERENCES t_sys_role(id);
+
+ALTER TABLE t_sys_role_permission ADD CONSTRAINT fk_sys_permission_role FOREIGN KEY(permission_id) REFERENCES t_sys_permission(id);
+
+
+
+
+#投放包
+ALTER TABLE t_placement_package ADD CONSTRAINT FK_placement_package_placement FOREIGN KEY(PLACEMENT_ID) REFERENCES T_PLACEMENT(ID);
+
+
+
+#投放 banner
+ALTER TABLE T_PLACEMENT_RES_BANNER ADD CONSTRAINT fk_placement_res_banner_placement FOREIGN KEY(PLACEMENT_ID) REFERENCES T_PLACEMENT(ID);
+
+
+#投放插屏
+ALTER TABLE T_PLACEMENT_RES_CHARTBOOST ADD CONSTRAINT FK_PLACEMENT_RES_CHARTBOOST FOREIGN KEY(PLACEMENT_ID) REFERENCES T_PLACEMENT(ID);
+
+
+
+#投放 推荐墙
+ALTER TABLE T_PLACEMENT_RES_WALL_LIST ADD CONSTRAINT FK_PLACEMENT_RES_WALL_LIST FOREIGN KEY(PLACEMENT_ID) REFERENCES T_PLACEMENT(ID);
+
+#投放 积分墙
+ALTER TABLE T_PLACEMENT_RES_WALL_SCORE ADD CONSTRAINT FK_PLACEMENT_RES_WALL_SCORE FOREIGN KEY(PLACEMENT_ID) REFERENCES T_PLACEMENT(ID);
+
+
+
+#投放应用截图
+ALTER TABLE T_PLACEMENT_SCREENSHOT ADD CONSTRAINT FK_PLACEMENT_SCREENSHOT FOREIGN KEY(PLACEMENT_ID) REFERENCES T_PLACEMENT(ID);
+
+
+
+
+
+
+
+
+#广告--投放
+ALTER TABLE T_AD ADD CONSTRAINT FK_AD_PLACEMENT FOREIGN KEY(PLACEMENT_ID) REFERENCES T_PLACEMENT(ID);
+
+
+
+#广告--广告形式
+ALTER TABLE T_AD ADD CONSTRAINT FK_AD_TYPE FOREIGN KEY(TYPE_ID) REFERENCES T_TYPE(ID);
+
+
+
+
+
+#android录数包效果数明细表
+ALTER TABLE t_package_activate_detail ADD CONSTRAINT FK_package_activate_detail FOREIGN KEY(parent_ID) REFERENCES T_TYPE(ID);
+
+
+
+#android录数包效果数明细表
+ALTER TABLE t_package_activate ADD CONSTRAINT FK_package_activate_ FOREIGN KEY(package_id) REFERENCES t_placement_package(ID);
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+   
+   
+
+
+----新外键关系
+
+
+
+
+
+
+
+
+#活动分类
+ALTER TABLE T_CAMPAIGN_CATEGORY_REL ADD CONSTRAINT FK_CAMPAIGN_CATEGORY_REL FOREIGN KEY(CATEGORY_ID) REFERENCES T_CAMPAIGN_CATEGORY(ID);
+
+
+
+
+
+
+
+ALTER TABLE T_CAMPAIGN_PLACEMENT_REL ADD CONSTRAINT FK_000007 FOREIGN KEY(PLACEMENT_ID) REFERENCES T_PLACEMENT(ID);
+
+
+
+
+
+
+ALTER TABLE T_CAMPAIGN_PLACEMENT_REL ADD CONSTRAINT FK_000009 FOREIGN KEY(CAMPAIGN_ID) REFERENCES T_CAMPAIGN(ID);
+
+
+
+
+
+#结算数据
+ALTER TABLE T_FINANCE_BALANCE_INCOME_REL ADD CONSTRAINT FK_FINANCE_BALANCE_INCOME_REL_DETAIL_ID FOREIGN KEY(detail_id) REFERENCES T_PACKAGE_ACTIVATE(ID);
+ 

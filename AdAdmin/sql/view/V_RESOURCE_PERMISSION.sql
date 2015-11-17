@@ -1,0 +1,2 @@
+CREATE OR REPLACE VIEW V_RESOURCE_PERMISSION AS
+SELECT  res."ID",res."NAME",res."URL",res."PARENT_ID",res."NOTE",res."ORDER_NUM",res."CREATE_TIME",res."STAT_REPORT_ID",res."STATUS",res."TYPE",res."CREATE_USER",res."UPDATE_TIME",res."UPDATE_USER",rel.permission_id  FROM  T_SYS_RESOURCE res LEFT  JOIN  T_SYS_PERMISSION_RES_REL  rel on res.id=rel.resource_id;

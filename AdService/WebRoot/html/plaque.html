@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>插屏广告</title>
+<script src="../js/jquery-1.7.1.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="../css/plaque.css" /> -->
+<style type="text/css">
+		#plaque{ 
+  				position:absolute;    
+ 				width:100%;  
+  				height:100%;  
+ 				left:0;    
+  	  	  		top:0;   
+  	  	  		-webkit-tap-highlight-color:rgba(0,0,0,0);
+  	  	  		overflow: hidden;
+ 		   } 
+		   
+		.plaquelogo{
+ 			width: 100%; 
+ 			height: 100%; 
+		}
+		
+		.downloadcontent{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left:0;    
+  	  	  	top:0; 
+  	  	  	display:none;
+			background:rgba(0,0,0,0.7);
+ 			text-align:center; 
+			z-index: 2;
+			overflow: hidden;
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+		}
+ 		body{ 
+  			overflow: hidden;  
+ 		} 
+		
+		.two{
+			position: absolute;
+			right:0;
+			bottom: 0;
+			z-index: 1;
+		}
+		
+		.two img{
+			vertical-align: bottom;
+		}
+		
+		.downloadButton{
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+ 			margin-top: 35%; 
+		}
+</style>
+<script type="text/javascript">
+var isDown = false;
+var ids;
+function downEffect(){
+	isDown = true;
+}
+	
+function downUneffect(){
+	isDown = false;
+}
+
+function hiddenDiv(){
+	 if(!isDown){
+		$('#download').hide();
+	 }
+}
+
+function showDiv(adId,adType,adUrl,packageName,resourceUrl,title,resourceSize){	
+	if(adType == 0){
+		//详情页
+		window.plaques.jumpToDetail(adUrl);	
+	}else if(adType == 1){
+		//表单注册
+		window.plaques.jumpToDetail(adUrl);	
+	}else if(adType == 3){
+		//直接下载
+		if(window.plaqueinstalled.isInstalled(packageName)){
+			window.plaqueopen.openApp(packageName);
+		}else{
+			window.plaque.clickOnAndroid(resourceUrl,adId,title,resourceSize,packageName,5);	
+		}
+	}else if(adType == 2){
+		//弹出下载按钮
+		$("#download").show();
+	}
+	return;
+}
+
+function requestLogData(id,ids,ac,pageType){
+	var params = window.pvparam.pvParam(id,ids,ac,pageType);
+	$.ajax({
+        type: "POST",//使用get方法访问后台
+        url:  "http://172.16.43.215:8081/AdService/android/uuid_actionlogE.do",//要访问的服务器的地址
+		data: {
+  				m:params,
+        	   },
+        dataType: "json",//返回json格式的数据
+        complete:function(data){
+        },
+        success: function(data){//msg为返回的数据，在这里做数据绑定
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { 
+        } 
+    });
+}
+
+$(document).ready(function(){
+ 	//用来执行统计数据的ajax请求，暂未实现
+ 	window.show.showButton();
+ });
+
+function requestData(){
+	var params = window.dataparam.wallParam(10,1,5,0);
+	$.ajax({
+        type: "POST",//使用get方法访问后台
+        url: "http://172.16.43.215:8081/AdService/android/page_adlistE.do",//要访问的服务器的地址
+	    data: {
+  				m:params
+        	   },
+        dataType: "json",//返回json格式的数据
+        complete:function(data){
+        	requestLogData("",ids,6,5);
+        },
+        success: function(data){//msg为返回的数据，在这里做数据绑定
+        	var list = data.data.adList;
+        	if(list.length > 0){
+       		 $.each(list, function(i,item){ 
+       			 ids = item.id;
+				 var plaquelogo = document.getElementById("plaquelogo");
+				 plaquelogo.src = item.adimage_url;
+				 $("#plaque").unbind('click') .bind('click', function(){ 
+					 showDiv(item.id,item.ad_type,item.ad_url,item.packageName,item.resourceUrl,item.title,item.resourceSize);
+			     });  
+       		 }); 
+        	}
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { 
+        	alert("请求错误.");
+        } 
+    });
+}
+
+window.onload = function(){
+	requestData();
+};
+</script>
+</head>
+<body>
+	<div id="plaque" class="plaquecontent"  >
+		<img id="plaquelogo" class="plaquelogo">
+	</div>
+	<div class="two">
+			<img id="watermark" class="watermark" alt="watermark" src="../images/watermark.png">
+	</div>
+	<div id="download" class="downloadcontent"  onclick="hiddenDiv()">
+	  	<img alt="downloadbutton" src="../images/downbutton.png" id="downloadButton" class="downloadButton"  onmouseover="downEffect()" onmouseout="downUneffect()">
+	</div>
+</body>
+</html>

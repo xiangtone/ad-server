@@ -1,0 +1,4 @@
+create or replace view v_ad as
+(select ad."ID",ad."PLACEMENT_ID",ad."BUDGET_DAY",ad."BUDGET_DAY_UNIT",ad.COST_DAY,ad.BUDGET_TYPE,ad."BLANCE_PRICE",ad."BLANCE_MODE",ad."TYPE_ID",ad."MEDIA_ID",ad."CREATE_TIME",ad."PACKAGE_ID",ad."STATUS",ad."START_TIME",ad."END_TIME",ad."CREATE_USER",ad."UPDATE_TIME",ad."AD_TYPE",ad."ONLINE_TIME",ad."OFFLINE_TIME",channel.id midia_id,channel.name media_name,null as os from T_AD ad  
+ LEFT JOIN  T_CHANNEL channel   on  ad.media_id=channel.id  where ad_type=1)union all(
+select ad."ID",ad."PLACEMENT_ID",ad."BUDGET_DAY",ad."BUDGET_DAY_UNIT",ad.COST_DAY,ad.BUDGET_TYPE,ad."BLANCE_PRICE",ad."BLANCE_MODE",ad."TYPE_ID",ad."MEDIA_ID",ad."CREATE_TIME",ad."PACKAGE_ID",ad."STATUS",ad."START_TIME",ad."END_TIME",ad."CREATE_USER",ad."UPDATE_TIME",ad."AD_TYPE",ad."ONLINE_TIME",ad."OFFLINE_TIME",app.id midia_id,app.name media_name,app.os from T_AD ad   LEFT JOIN  T_APPLICATION app  on  ad.media_id= app.id  where ad_type=0 );

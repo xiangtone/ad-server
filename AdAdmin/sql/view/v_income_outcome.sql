@@ -1,0 +1,21 @@
+create or replace view v_income_outcome as
+select 
+	`t1`.`id` AS `ID`,
+	'android' AS `os`,
+	`cmp`.`campaign_name` AS `CAMPAIGN_name`,
+	(case when (`v`.`TYPE` = 0) then '平台' when (`v`.`TYPE` = 1) then '渠道' end) AS `type`,
+	`v`.`NAME` AS `meia_name`,
+	`t1`.`static_date` AS `STATIC_DATE`,
+	`t1`.`sys_activate` AS `SYS_ACTIVATE`,
+	`t1`.`media_id` AS `MEDIA_ID`,
+	`t1`.`type_id` AS `TYPE_ID`,
+	`t1`.`package_id` AS `PACKAGE_ID`,
+	`t1`.`confirm_num` AS `CONFIRM_NUM`,
+	`a`.`in_price` AS `IN_PRICE`,
+	`t1`.`sys_cost` AS `SYS_COST`,
+	`t1`.`confirm_amount` AS `CONFIRM_AMOUNT`,
+	`t1`.`out_price` AS `out_price`,
+	`t1`.`blance_mode` AS `blance_mode`,
+	`rel`.`CAMPAIGN_ID` AS `CAMPAIGN_ID`,
+	`cmp`.`profit_rate` AS `profit_rate`,
+	`cmp`.`adv_id` AS `adv_id` from ((((`t_package_activate_detail` `t1` left join `t_package_activate` `a` on((`t1`.`parent_id` = `a`.`id`))) left join `v_media` `v` on((`t1`.`media_id` = `v`.`ID`))) left join `v_package_campaign_rel` `rel` on((`t1`.`package_id` = `rel`.`ID`))) left join `t_campaign` `cmp` on((`rel`.`CAMPAIGN_ID` = `cmp`.`id`))) where ((`a`.`status` = 1) and (`t1`.`status` = 1))

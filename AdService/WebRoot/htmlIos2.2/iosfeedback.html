@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>问题反馈</title>
+<link rel="stylesheet" type="text/css"
+	href="../htmlIos2.2/iosfeedback.css?v=20140618" />
+<script src="../htmlIos2.2/iosfeedback.js?v=20140618"></script>
+</head>
+<body>
+	<!-- 头 部分-->
+	<div class="head_div">
+		<div class="headertitle">问题反馈</div>
+		<img class="head_back" id="head_back" onclick="homeback()"
+			src="../images/other_back.png"> 
+	</div>
+
+	<div class="items">
+		<div class="item1" id="item1" onclick="clickitem1()">
+			<img class="checkbox1" id="checkbox1">&nbsp;&nbsp;获取奖励失败
+		</div>
+
+		<div class="item2" id="item2" onclick="clickitem2()">
+			<img class="checkbox2" id="checkbox2">&nbsp;&nbsp;其他意见建议
+		</div>
+		<div class="item3" id="item3"  style="display: none"
+			onclick="selectAd()">
+			<input type="hidden"   value="abc" id="select" />
+			<span id="selectvalue"   style="width: 180px; float: left;">&nbsp;&nbsp;请选择对应任务</span> 
+			<span style="color: blue; float: right; width: 10px; display: block; margin-right: -10px;">*</span>
+		</div>
+
+	</div>
+
+	<div class="feedback_content">
+		<div>
+			<textarea class="feed_content" id="opinion"
+				onfocus="dothings('opinion')">请描述您遇到的问题或意见，我们将尽快修复并回复您！</textarea>
+			<span
+				style="margin-top: -148px; color: blue; float: right; width: 10px; display: block; margin-right: -15px;">*</span>
+		</div>
+		<div id="emailAddrdiv">
+			<input type="text" class="user_email" id="emailAddr" value="请输入您的邮箱"
+				onfocus="dothings('emailAddr')" /> <span
+				style="margin-top: -20px; color: blue; float: right; width: 10px; display: block; margin-right: -15px;">&nbsp;*</span>
+		</div>
+
+
+		<div class="refer" onclick="submitData()">提交</div>
+	</div>
+
+</body>
+</html>

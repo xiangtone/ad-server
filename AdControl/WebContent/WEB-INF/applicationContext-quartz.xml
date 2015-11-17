@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:task="http://www.springframework.org/schema/task" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+
+	<!--
+	<task:scheduled-tasks>
+		<task:scheduled ref="adActualDayService" method="refreshAdActualDay" cron="30 0/2 * * * ?" />
+		<task:scheduled ref="adActualDayService" method="invalidAdActualDay" cron="15 58 23 * * ?" />
+		<task:scheduled ref="userService" method="userDayHourTaskLog" cron="0 1 * * * ?" />
+		<task:scheduled ref="placementService" method="placementDayHourTaskLog" cron="0 2 * * * ?" />
+		<task:scheduled ref="applicationService" method="applicationDayHourTaskLog" cron="0 3 * * * ?" />
+		<task:scheduled ref="adIosClickService" method="tranceDataIosClick" cron="50 */5 * * * ?" />
+		<task:scheduled ref="iosIncomNumberService" method="tranceDataIosIncomNumber" cron="0 */5 * * * ?" />
+		<task:scheduled ref="devIncomeTaskService" method="tranceDevIncome" cron="0 5 0 * * ?" />
+		<task:scheduled ref="adTaskService" method="adTask" cron="0 */10 * * * ?" />
+		<task:scheduled ref="reportAdByDayTaskService" method="tranceData" cron="0 10 6 * * ?" />
+		<task:scheduled ref="adPackageTaskService" method="doTask" cron="0 0 23 * * ?" />
+		<task:scheduled ref="adEffectAndroidTaskService" method="tranceAndroidData" cron="0 0 7 * * ?" />
+		<task:scheduled ref="adEffectIosTaskService" method="tranceIosData" cron="0 0 9 * * ?" />
+		<task:scheduled ref="iosStaticTaskService" method="tranceDataEffectByDay" cron="0 5 6 * * ?" />
+		<task:scheduled ref="devMonthIncomeTaskService" method="tranceData" cron="0 0 7 5 * ?" />
+	</task:scheduled-tasks>
+	-->
+</beans>

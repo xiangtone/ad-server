@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+    <appender name="consoleLog" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p [%c{1}] %m%n"/>
+        </layout>
+    </appender>
+    <appender name="mainLog" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/usr/local/api/logs/main/api.yijifen.com.log"/> 
+        <param name="Append" value="true"/> 
+        <!-- Rollover at midnight each day -->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p [%c{1}] %m%n"/>
+        </layout>
+   </appender>
+   
+   <appender name="receive_log" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/usr/local/api/logs/receive/receive.log"/> 
+        <param name="Append" value="true"/> 
+        <!-- Rollover at midnight each day -->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss}\t%m%n"/>
+        </layout>
+   </appender>
+   <appender name="action_log" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/usr/local/api/logs/action/action.log"/> 
+        <param name="Append" value="true"/> 
+        <!-- Rollover at midnight each day -->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss}\t%m%n"/>
+        </layout>
+   </appender>
+   
+   <appender name="activite_log" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/usr/local/api/logs/activite/activite.log"/> 
+        <param name="Append" value="true"/> 
+        <!-- Rollover at midnight each day -->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss}\t%m%n"/>
+        </layout>
+   </appender>
+   
+   
+  <logger name="org.apache">
+    <level value="info" />
+  </logger>
+  <logger name="receive">
+	    <level value="info" />
+	    <appender-ref ref="receive_log"/>
+  </logger>
+  <logger name="action">
+	    <level value="info" />
+	    <appender-ref ref="action_log"/>
+  </logger>
+  <logger name="activite">
+	    <level value="info" />
+	    <appender-ref ref="activite_log"/>
+  </logger>
+  <root>
+    <level value="info" />
+    <appender-ref ref="consoleLog" />
+    <appender-ref ref="mainLog" />
+  </root>
+</log4j:configuration>

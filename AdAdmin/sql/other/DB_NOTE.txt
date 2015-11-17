@@ -1,0 +1,22 @@
+2013-09-04数据统计按小时表分表处理
+	1、广告按小时候
+		T_STATIC_AD_BYHOUR13_00（2.1~6.30） 数据10806715条
+		数据操作备份表T_STATIC_AD_BYHOUR_BAK0904
+		T_STATIC_AD_BYHOUR清理七月一号之前的数据
+		[SQL] delete FROM  T_STATIC_AD_BYHOUR where static_date<'2013-07-01'
+		影响的数据栏: 10806715
+		时间: 232.112ms
+	2、应用按小时
+		T_STATIC_APP_BYHOUR13_00（2.1~6.30） 数据787724条
+		数据操作备份表T_STATIC_APP_BYHOUR_BAK0904
+		T_STATIC_APP_BYHOUR 清理七月一号之前的数据
+		[SQL] DELETE  from  T_STATIC_APP_BYHOUR where static_date<'2013-07-01'
+		影响的数据栏: 787724
+		时间: 11.843ms
+
+		
+		
+		
+	
+	
+	

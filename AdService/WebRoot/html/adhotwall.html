@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>推荐墙</title>
+		<script src="../javascript/LazyLoad.js?v=20140411"></script>
+		<script type="text/javascript">
+			LazyLoad.css('../htmlcss/adhotwall.css?v=20140901', null);
+			LazyLoad.js('../javascript/global.js?v=20140901', null);
+			LazyLoad.js('../javascript/adhotwall.js?v=20140901', function() {
+				loadData();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 头 部分-->
+		<div class="header">
+			<div class="head_top">
+				<div class="free_bonus">
+					热门推荐
+				</div>
+			</div>
+			<div class="head_div">
+				<img class="head_logo" >
+			</div>
+		</div>
+		<!-- 数据部分 -->
+		<div id="wallList" class="wall_list">
+			<div class="divider" id="divider0"> </div>
+		</div>
+		<div class="itemtitle1" id="itemtitle1" style="display: none" >
+			暂无推荐应用... 
+		</div>
+	</body>
+</html>
+

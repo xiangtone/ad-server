@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-3.2.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+     http://www.springframework.org/schema/jdbc
+     http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="cn.adwalker.core.log" />
+	<context:component-scan base-package="cn.adwalker.dao" />
+	<context:component-scan base-package="cn.adwalker.model.ad.dao" />
+	<context:component-scan base-package="cn.adwalker.model.app.dao" />
+	<context:component-scan base-package="cn.adwalker.model.channel.dao" />
+	<context:component-scan base-package="cn.adwalker.model.common.dao" />
+	<context:component-scan base-package="cn.adwalker.model.config.dao" />
+	<context:component-scan base-package="cn.adwalker.model.developer.dao" />
+	<context:component-scan base-package="cn.adwalker.model.finance.dao.*" />
+	<context:component-scan base-package="cn.adwalker.model.log.dao" />
+	<context:component-scan base-package="cn.adwalker.model.operation.dao" />
+	<context:component-scan base-package="cn.adwalker.model.news.dao" />
+	<context:component-scan base-package="cn.adwalker.model.qualityChecking.dao" />
+	<context:component-scan base-package="cn.adwalker.model.report.dao" />
+	<context:component-scan base-package="cn.adwalker.model.api.dao" />
+	<context:component-scan base-package="cn.adwalker.model.sys.dao.*" />
+	<context:component-scan base-package="cn.adwalker.manager.dao" />
+	<context:component-scan base-package="cn.adwalker.core.pool" />
+	<context:component-scan base-package="cn.adwalker.admin.report.dao" />
+		<context:component-scan base-package="cn.adwalker.ad.admin.*.service" />
+	<context:component-scan base-package="cn.adwalker.admin.*.service" />
+	<context:component-scan base-package="cn.adwalker.ad.api.*.service" />
+	<!-- 数据库配置 -->
+	<import resource="applicationContext-db.xml" />
+	<!-- 公用服务组件 -->
+	<import resource="applicationContext-service.xml" />
+	<!-- 权限配置 -->
+	<import resource="applicationContext-security.xml" />
+	<!-- 任务调度 -->
+	<import resource="applicationContext-scheduler.xml" />
+
+</beans>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>积分详情页</title>
+<script src="../javascript/LazyLoad.js?v=20140326"></script>
+<script type="text/javascript">
+	LazyLoad.css('../htmlcss/scoredetail.css?v=20140326',function(){
+		window.record.recoreTime('load css end');
+	}, '');
+	LazyLoad.js( '../javascript/global.js?v=20140326',null);
+	LazyLoad.js( '../javascript/scoredetail.js?v=20140326', function () { 
+		loadData();
+	});
+</script>
+</head>
+<body>
+<div class="detail_content">
+<div id="detailjifen">
+	<div id="toptitle" class="toptitle">
+				<div class="backtop" onclick="goBack()">
+					<div class="backtitle">返回</div>
+				</div>
+				<div id="wordtitle" class="wordtitle">
+				</div>
+				<div class="nexttitle">
+					<div id="next" class="next" onclick="requestNextDetail()"><span class="righttrangle">下一个</span></div>
+				</div>
+	</div>
+	<div id="detailcontent" class="detailcontent">	
+		<div id="content" class="content"> 	
+		 	<div class="leftcontent" >
+		 		<img  class="logo" id="logo">
+		 	</div>
+		    <div class="middlecontent">
+		    	<div id="title" class="title"></div>
+				<div id="catagory" class="catagory"></div>
+		    </div>
+			<div class="rightcontent">
+				<div class="update_version" id="update_version"></div>
+			</div>
+		</div>
+		<div id="detailintroduce" class="detailinfo">
+			
+		</div>
+		<div id="banner" class="banner">
+				<div id="item1" class="item1"><img class="itemicon"  id="icon1"></div>
+				<div id="item2" class="item2"><img class="itemicon"  id="icon2"></div>
+				<div id="item3" class="item3"><img class="itemicon"  id="icon3"></div>
+		</div>
+		<div class="softdesc">
+			<span id="softTitle">应用详情</span>
+		</div>
+		
+		<div class="desccontent" id="softContent">
+				<textarea id="bbb" class="textereacontent" disabled="disabled"></textarea>
+		</div>
+		
+<!-- 		<div id="extend" class="extend" onclick="senfe()"><img id="extendImage" class="extendImage" src="../images/jfzhankai.png" ></div> -->
+		<div class="divider2"  onclick="senfe()"><img id="extendImage" class="extendImage" src="../images/android_zhankai.png" ></div>
+		<div id="othercontent" class="othercontent">
+			<div id="otherfirst" class="otherleftcontent"><img  class="otherimage" id="otherimage1" ><div id="otherword1"></div></div>
+			<div id="othersecond" class="otherleftcontent"><img  class="otherimage" id="otherimage2" ><div id="otherword2"></div></div>
+			<div id="otherthird" class="otherleftcontent"><img  class="otherimage" id="otherimage3" ><div id="otherword3"></div></div>
+			<div id="otherfouth" class="otherleftcontent"><img  class="otherimage" id="otherimage4" ><div id="otherword4"></div></div>
+		</div>
+		<div id="blank" class="blank" style="height:80px"></div>
+		
+<!-- 		<div id="bottomId2"> -->
+<!-- 				<div class="downbgroung2" id="downbgroung2"></div> -->
+<!-- 				<div class="downsecond2" id="downsecond2"></div> -->
+<!-- 				<div id="bigDownload2" class="bigdownload2"><span id="downloadword2" class="downloadword">立即下载</span></div> -->
+<!-- 		</div> -->
+	</div>
+</div>
+<!-- 		<div id="bottomId"> -->
+<!-- 				<div class="downbgroung" id="downbgroung"></div> -->
+<!-- 				<div class="downsecond" id="downsecond"></div> -->
+<!-- 				<div id="bigDownload" class="bigdownload"><span id="downloadword" class="downloadword">立即下载</span></div> -->
+<!-- 		</div> -->
+		<input type="hidden" id="adId">
+</div>
+<div id="big_image" class="big_image" ontouchmove="event.preventDefault()">
+	<img id="largeImage" onclick="dismiss()">
+</div>
+</body>
+</html>
