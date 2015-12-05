@@ -1,4 +1,4 @@
-﻿package cn.adwalker.core.repository.bean;
+package cn.adwalker.core.repository.bean;
 
 public class PageInfo {
 	/** 当前页 */

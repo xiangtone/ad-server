@@ -45,10 +45,10 @@ public class TestImages {
 	 * @date 2013-8-15
 	 * @return void
 	 * @version 1.0
-	 * @throws IOException
+	 * @throws Exception 
 	 */
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		ImageUtil.catImg("D:/haha/img/1.jpg", "D:/haha/img/2.jpg", 854, 854);
 		System.out
 				.println(StringUtil

@@ -21,9 +21,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.FileCopyUtils;
 
-import com.sun.image.codec.jpeg.ImageFormatException;
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+//import com.sun.image.codec.jpeg.ImageFormatException;
+//import com.sun.image.codec.jpeg.JPEGCodec;
+//import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
 /**
  * 图片工具类：完成图片的放缩，并根据传入图片路径创建相应的文件夹。 把生成新的图片存入其中。
@@ -184,7 +184,7 @@ public class ImageUtil {
 	}
 
 	public static void catImg(String url, String out, int width, int height)
-			throws IOException {
+			throws Exception {
 		File _file = new File(url);// 创建文件对象
 		BufferedImage image = javax.imageio.ImageIO.read(_file);
 		int _width = image.getWidth(null);
@@ -210,13 +210,14 @@ public class ImageUtil {
 		taGraphics.drawImage(tempImg, left, top, tempwith, tempheight, null);
 		taGraphics.dispose();
 		FileOutputStream outputStream = new FileOutputStream(out);
-		JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(outputStream);
-		encoder.encode(tag);
+//		JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(outputStream);
+//		encoder.encode(tag);
+		ImageIO.write(tag, "jpeg", outputStream);
 		outputStream.close();
 	}
 
 	public final static BufferedImage zoomImage(BufferedImage image, int width,
-			int height) throws ImageFormatException, IOException {
+			int height) throws Exception, IOException {
 		BufferedImage tempImg = new BufferedImage(width, height,
 				BufferedImage.TYPE_INT_RGB);
 		Graphics g = tempImg.getGraphics();
@@ -240,8 +241,9 @@ public class ImageUtil {
 			g.drawImage(src, 0, 0, width, height, null); // 绘制缩小后的图
 			g.dispose();
 			FileOutputStream out = new FileOutputStream(url);
-			JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
-			encoder.encode(tag);
+//			JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
+//			encoder.encode(tag);
+			ImageIO.write(tag, "jpeg", out);
 			out.close();
 		} catch (IOException e) {
 			logger.error("IO错误", e);
