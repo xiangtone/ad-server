@@ -170,6 +170,18 @@
           <exclude>**/*.java</exclude>
         </excludes>
       </resource>
+      <resource>
+        <directory>src/core</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>src/test</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
     </resources>
     <plugins>
       <plugin>
