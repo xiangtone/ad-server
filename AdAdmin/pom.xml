@@ -204,7 +204,7 @@
 					<webResources>
 						<resource>
 							<directory>${runtime.env}</directory>
-							<targetPath>WEB-INF/classes</targetPath>
+							<targetPath>WEB-INF</targetPath>
 						</resource>
 					</webResources>
 				</configuration>

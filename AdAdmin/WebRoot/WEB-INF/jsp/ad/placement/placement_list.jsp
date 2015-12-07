@@ -373,7 +373,7 @@
 								<input type="button" value="投放" onclick="addPlacement('${vo.placement_id}','${vo.id}')" <c:if test="${vo.status!=-30}"> disabled</c:if> <escore:security code="BTN_PLACEMENT_TUFANG" type="button" /> />
 								<input type="button" value="修改素材" onclick="addMaterial('${vo.placement_id}')" <c:if test="${(vo.status!=-20)&&(vo.status!=1)}"> disabled</c:if> <escore:security code="BTN_PLACEMENT_TUFANG" type="button" />/>
 								<input type="button" value="修改方案" onclick="editPlacement('${vo.placement_id}')"  <escore:security code="BTN_PLACEMENT_TUFANG" type="button" /> />
-								<input type="button" value="提交" onclick="submitPlacement('${vo.placement_id}')" <c:if test="${((vo.status!=-18)&&(vo.status!=-17)&&(vo.status!=-19)&&(vo.status!=-20))}"> disabled</c:if> <escore:security code="BTN_PLACEMENT_TUFANG" type="button" /> />
+								<input type="button" value="提交" onclick="submitPlacement('${vo.placement_id}')" <c:if test="${(vo.status!=-18)&&(vo.status!=-17)&&(vo.status!=-19)&&(vo.status!=-20)}"> disabled</c:if> <escore:security code="BTN_PLACEMENT_TUFANG" type="button" /> />
 								<input type="button" value="审核" onclick="auditPlacement('${vo.placement_id}')" <c:if test="${vo.status!=-10}"> disabled</c:if> <escore:security code="BTN_PLACEMENT_AUDIT" type="button" /> />
 							</td>
 						</tr>
