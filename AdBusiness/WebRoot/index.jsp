@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>行云移动广告平台—</title>
+	<title>万家移动广告平台—</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/theme.css" />
@@ -62,7 +62,7 @@
 					<h3 class="sidebar_header"><i class="i_cloud"></i>通知公告<hr class="visible-desktop" /></h3>
 					<p class="description" style="font-size:18px">致亲爱的开发者：</p>
 					<a href="${pageContext.request.contextPath}/notice.jsp">
-						<p class="description" style="color: red">行云平台因系统升级，拟于2014年12月31日对本年度全部媒介费用进行清算。</p>
+						<p class="description" style="color: red">因系统升级，拟于2014年12月31日对本年度全部媒介费用进行清算。</p>
 					</a>
 					<a href="${pageContext.request.contextPath}/notice.jsp" class="btn btn-default">更多</a>
 				</div>

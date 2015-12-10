@@ -50,7 +50,7 @@
             <hr />
             <div class="footer-copy">
 			  <span>
-				<p class="footer-copylineone">Copyright © 2011-2013 北京行者天下科技有限公司 All Rights Reserved.</p>
+				<p class="footer-copylineone">Copyright &copy; 2011-<script>var today = new Date();document.write(today.getFullYear());</script> 万家移动广告 All Rights Reserved.</p>
 			  </span>
 		    </div>
         </div>
