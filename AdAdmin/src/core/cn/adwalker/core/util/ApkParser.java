@@ -54,8 +54,12 @@ public class ApkParser {
 		int index = url.getPath().indexOf("/WEB-INF/"); // 取属性文件的绝对路径
 		String pathPrefix = url.getPath().substring(0, index + 9).replace("%20", " "); // 替换掉空格
 		StringBuilder sb = new StringBuilder(pathPrefix);
-		sb.append("lib/AXMLPrinter2.jar");
+//		sb.append("lib/AXMLPrinter2.jar");
+		sb.append("lib/axmlprinter2-1.0.jar");
 		pathPrefix = sb.toString();
+		if(pathPrefix.indexOf(":/")!=-1&&!pathPrefix.contains("http:/")){
+			pathPrefix=pathPrefix.substring(1, pathPrefix.length());
+		}
 		return pathPrefix;
 	}
 

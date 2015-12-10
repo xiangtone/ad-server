@@ -328,15 +328,17 @@ public class FileUploadTool {
 		String currentTime = sdf.format(new Date());
 		String splitTime[] = currentTime.split("-");
 		StringBuffer path = new StringBuffer();
+		String separator="/";
 		path.append(splitTime[0]);
-		path.append(File.separator);
+		path.append(separator);
 		path.append(splitTime[1]);
-		path.append(File.separator);
+//		path.append(File.separator);
+		path.append(separator);
 		path.append(splitTime[2]);
-		path.append(File.separator);
+		path.append(separator);
 		for (String dir : dirs) {
 			path.append(dir);
-			path.append(File.separator);
+			path.append(separator);
 		}
 		return path.toString();
 	}

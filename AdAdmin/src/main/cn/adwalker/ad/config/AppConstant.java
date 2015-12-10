@@ -96,12 +96,17 @@ public class AppConstant {
 	public static int MIN_SIM_UPLOAD = 1;// 默认同时上传任务数
 
 	// 正则
-	public static String DEFAULT_FILE_EXT = "*.*";// 默认的类型
-	public static String FILE_EXT_MATCH = "^\\*\\.\\*$|^\\*\\.[a-zA-Z]+([;]\\*\\.[a-zA-Z]+)*$";// 文件格式的正则表达式
+//	public static String DEFAULT_FILE_EXT = "*.*";// 默认的类型
+//	public static String FILE_EXT_MATCH = "^\\*\\.\\*$|^\\*\\.[a-zA-Z]+([;]\\*\\.[a-zA-Z]+)*$";// 文件格式的正则表达式
 	public static String FILE_NAME_MATCH = "^([\\u4e00-\\u9fa5\\w\\(\\).-])+\\.[a-zA-Z]+$";
-//			"^([\\u4e00-\\u9fa5\\w.-])+\\.[a-zA-Z]+$";// 上传文件的名称正则表达式
-	public static String IMAGE_NAME_MATCH = "^([\\u4e00-\\u9fa5\\w.-])+\\.[a-zA-Z]+$";// 上传图片的名称正则表达式
-	public static String IMAGE_ZOOM_SIZE_MATCH = "^\\d+_\\d+$";// 切图尺寸格式正则表达式
+	public static String DEFAULT_FILE_EXT = "*.*";// 默认的类型
+	public static String FILE_EXT_MATCH = "^/*/./*$|^/*/.[a-zA-Z]+([;]/*/.[a-zA-Z]+)*$";// 文件格式的正则表达式
+//	public static String FILE_NAME_MATCH = "^([/u4e00-/u9fa5/w/(/).-])+/.[a-zA-Z]+$";
+////			"^([\\u4e00-\\u9fa5\\w.-])+\\.[a-zA-Z]+$";// 上传文件的名称正则表达式
+//	public static String IMAGE_NAME_MATCH = "^([\\u4e00-\\u9fa5\\w.-])+\\.[a-zA-Z]+$";// 上传图片的名称正则表达式
+//	public static String IMAGE_ZOOM_SIZE_MATCH = "^\\d+_\\d+$";// 切图尺寸格式正则表达式
+	public static String IMAGE_NAME_MATCH = "^([/u4e00-/u9fa5/w.-])+/.[a-zA-Z]+$";// 上传图片的名称正则表达式
+	public static String IMAGE_ZOOM_SIZE_MATCH = "^/d+_/d+$";// 切图尺寸格式正则表达式
 	public static String IS_NUM_MATCH = "^[1-9][0-9]*$";// 验证正整数
 
 	// 文件名词策略
