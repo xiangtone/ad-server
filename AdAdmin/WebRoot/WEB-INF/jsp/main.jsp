@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>行云管理平台</title>
+<title>管理平台</title>
 <link href="${pageContext.request.contextPath}/operamasks-ui/css/default/om-default.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.7.1.min.js?v=${version}"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/operamasks-ui/js/operamasks-ui.min.js?v=${version}"></script>
@@ -477,7 +477,7 @@ $(document).ready(function(){
   			<div id="topHeader">
   				<!-- 系统以及工具栏等信息 -->
    				<div id="top_line">
-   					行云管理平台
+   					管理平台
    				</div>
 				<span style="float: right">
 					<div style="clear: both;"></div>
@@ -523,7 +523,7 @@ $(document).ready(function(){
 			</div>
 		</div>
 		<div id="footer">
-			<p>Copyright © 2014-2014 北京行云在线科技有限公司 All Rights Reserved</p>
+			<p>Copyright © 2014-2016 万家移动广告 All Rights Reserved</p>
 		</div>
 	</div>
 </body>
