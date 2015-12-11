@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title></title>
+	<title>管理平台</title>
 	<link rel="shortcut icon"  href="favicon.ico" />
 	<link type="text/css" rel="stylesheet" id="globalStyle"  href="${pageContext.request.contextPath}/css/global.css" />
 	<link type="text/css" rel="stylesheet" id="cssfile" href="${pageContext.request.contextPath}/css/login.css" />
