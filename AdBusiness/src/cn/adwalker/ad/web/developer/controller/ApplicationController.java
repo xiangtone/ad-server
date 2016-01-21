@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.adwalker.ad.config.Role;
+import cn.adwalker.ad.config.util.ConfigManager;
 import cn.adwalker.ad.core.page.IPageInfo;
 import cn.adwalker.ad.core.page.SetPage;
 import cn.adwalker.ad.log.service.AdwalkerLogger;
@@ -330,7 +331,7 @@ public class ApplicationController extends AbstractControllerParent {
 	@RequestMapping("getAndroidSDKUri.action")
 	public String getAndroidSDKUri(String ids, HttpServletResponse response) {
 		String s = null;
-		s = "xingyun-android-sdk.zip";
+		s = ConfigManager.getConfigData("SDK_ANDROID_PACKAGE_NAME");
 		OutputHelper.outPut(response, s);
 		return null;
 	}

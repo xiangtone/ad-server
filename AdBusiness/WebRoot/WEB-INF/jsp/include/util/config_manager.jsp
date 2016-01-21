@@ -12,6 +12,11 @@ String join_us_email_url=ConfigManager.getConfigData("JOIN_US_EMAIL_URL");
 String developer_help_android=ConfigManager.getConfigData("DEVELOPER_HELP_ANDROID");
 String developer_help_ios=ConfigManager.getConfigData("DEVELOPER_HELP_IOS");
 
+String sdk_android_url=ConfigManager.getConfigData("SDK_ANDROID_URL");
+String sdk_android_package_name=ConfigManager.getConfigData("SDK_ANDROID_PACKAGE_NAME");
+String android_demo=ConfigManager.getConfigData("ANDROID_DEMO");
+String sdk_ios_url=ConfigManager.getConfigData("SDK_IOS_URL");
+
 String service_qq=ConfigManager.getConfigData("SERVICE_QQ");
 String service_phone=ConfigManager.getConfigData("SERVICE_PHONE");
 String service_email=ConfigManager.getConfigData("SERVICE_EMAIL");

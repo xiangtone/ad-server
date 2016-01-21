@@ -68,7 +68,7 @@
 							   </div>
 							在线开发文档：<a href="<%=developer_help_android %>" style="color:#06C" target="_blank">点击查看</a><br />
                           <div style="margin-top:36px">
-						    <a href="http://res.adwalker.cn/adres/androidSDK/xingyun-android-sdk.zip" target="_blank">
+						    <a href="<%=sdk_android_url+sdk_android_package_name%>" target="_blank">
 							<img src="${pageContext.request.contextPath}/img/d_android.png"
 							onMouseOver="this.src='${pageContext.request.contextPath}/img/d_android_on.png';"
 							onMouseOut="this.src='${pageContext.request.contextPath}/img/d_android.png';">
@@ -84,7 +84,7 @@
                         <img src="img/erweima.png" style="margin-top:16px">
                         <br>用手机扫码直接下载
 					<div style="margin-top:36px">
-						<a href="http://res.adwalker.cn/adres/androidSDK/Walker_ClientDemo.apk"  target="_blank">
+						<a href="<%=sdk_android_url+android_demo%>"  target="_blank">
 							<img src="${pageContext.request.contextPath}/img/d_demo.png"
 							onMouseOver="this.src='${pageContext.request.contextPath}/img/d_demo_on.png';"
 							onMouseOut="this.src='${pageContext.request.contextPath}/img/d_demo.png';">
@@ -110,7 +110,7 @@
 							   </div>
 							在线开发文档：<a href="<%=developer_help_ios %>" style="color:#06C" target="_blank">点击查看</a><br /> 
                           <div style="margin-top:36px">
-                          	<a href="http://res.adwalker.cn/adres/iOSSDK/xingyun-iOS-sdk.zip" target="_blank">
+                          	<a href="<%=sdk_ios_url%>" target="_blank">
 							<img src="${pageContext.request.contextPath}/img/d_ios.png"
 							onMouseOver="this.src='${pageContext.request.contextPath}/img/d_ios_down.png';"
 							onMouseOut="this.src='${pageContext.request.contextPath}/img/d_ios.png';">

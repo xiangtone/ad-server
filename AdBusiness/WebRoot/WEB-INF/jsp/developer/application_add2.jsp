@@ -39,12 +39,12 @@
 						data:'',
 						dataType:'text',
 						success:function(data){
-							var url='http://res.adwalker.cn/adres/androidSDK/'+data;
+							var url='<%=sdk_android_url%>'+data;
 							download(url);
 						}
 					});
 				} else if(os=='ios') {
-					var url='http://res.adwalker.cn/iOSSDK/iOSSDK/xingyun-iOS-sdk.zip';
+					var url='<%=sdk_ios_url%>';
 					download(url);
 				}
 			}

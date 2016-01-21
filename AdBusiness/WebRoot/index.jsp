@@ -71,10 +71,10 @@
                 <div class="span4 feature">
 					<h3><i class="i_movil"></i>下载中心<hr class="visible-desktop" /></h3>
 					<p class="description">
-						<a href="http://res.adwalker.cn/adres/androidSDK/xingyun-android-sdk.zip" target="_blank"><img src="${pageContext.request.contextPath}/img/android-H.png" onMouseOver="this.src='${pageContext.request.contextPath}/img/android-p.png';" onMouseOut="this.src='${pageContext.request.contextPath}/img/android-H.png';"></a>
+						<a href="<%=sdk_android_url+sdk_android_package_name%>" target="_blank"><img src="${pageContext.request.contextPath}/img/android-H.png" onMouseOver="this.src='${pageContext.request.contextPath}/img/android-p.png';" onMouseOut="this.src='${pageContext.request.contextPath}/img/android-H.png';"></a>
 					</p>
 					<p class="description">
-						<a href="http://res.adwalker.cn/adres/iOSSDK/xingyun-iOS-sdk.zip" target="_blank"><img src="${pageContext.request.contextPath}/img/iOS-H.png" onMouseOver="this.src='${pageContext.request.contextPath}/img/iOS-p.png';" onMouseOut="this.src='${pageContext.request.contextPath}/img/iOS-H.png';"></a>
+						<a href="<%=sdk_ios_url%>" target="_blank"><img src="${pageContext.request.contextPath}/img/iOS-H.png" onMouseOver="this.src='${pageContext.request.contextPath}/img/iOS-p.png';" onMouseOut="this.src='${pageContext.request.contextPath}/img/iOS-H.png';"></a>
 					</p>
 					<a href="${pageContext.request.contextPath}/down_center.jsp" class="btn btn-default">更多</a>
 				</div>
