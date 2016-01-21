@@ -96,7 +96,7 @@
 								</li>
 								<li class="sdk-ul-item">
 									<span class="dib">SDK在线文档：</span>
-									<a class="dib" target="_blank" href="http://res.adwalker.cn/adres/developersAndroidExplain.pdf">查看详情</a>
+									<a class="dib" target="_blank" href="<%=developer_help_android %>">查看详情</a>
 								</li>
 							</ul>
 						</div>
@@ -113,7 +113,7 @@
 								</li>
 								<li class="sdk-ul-item">
 									<span class="dib">SDK在线文档：</span>
-									<a class="dib" target="_blank" href="http://res.adwalker.cn/adres/developersIOSExplain.pdf">查看详情</a>
+									<a class="dib" target="_blank" href="<%=developer_help_ios %>">查看详情</a>
 								</li>
 							</ul>
 						</div>

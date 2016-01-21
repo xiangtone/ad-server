@@ -66,7 +66,7 @@
 							          （1）增加对用户的帮助提示及反馈功能，使产品更人性化；<br />
 							          （2）在积分墙内增加推荐墙，给用户更多选择。<br />
 							   </div>
-							在线开发文档：<a href="http://res.adwalker.cn/adres/developersAndroidExplain.pdf" style="color:#06C" target="_blank">点击查看</a><br />
+							在线开发文档：<a href="<%=developer_help_android %>" style="color:#06C" target="_blank">点击查看</a><br />
                           <div style="margin-top:36px">
 						    <a href="http://res.adwalker.cn/adres/androidSDK/xingyun-android-sdk.zip" target="_blank">
 							<img src="${pageContext.request.contextPath}/img/d_android.png"
@@ -108,7 +108,7 @@
 								2.适配ios8,插屏适配iphone6,iphone6plus <br />
 								3.修复xcode6的一些问题<br />
 							   </div>
-							在线开发文档：<a href="http://res.adwalker.cn/adres/developersIOSExplain.pdf" style="color:#06C" target="_blank">点击查看</a><br /> 
+							在线开发文档：<a href="<%=developer_help_ios %>" style="color:#06C" target="_blank">点击查看</a><br /> 
                           <div style="margin-top:36px">
                           	<a href="http://res.adwalker.cn/adres/iOSSDK/xingyun-iOS-sdk.zip" target="_blank">
 							<img src="${pageContext.request.contextPath}/img/d_ios.png"

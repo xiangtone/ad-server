@@ -110,10 +110,10 @@
 										<li class="sdk-ul-item"><span class="dib">版本号：</span><span>V2.1.0</span></li>
 										<li class="sdk-ul-item"><span class="dib">SDK在线文档：</span>
 											<c:if test="${vo.os=='android'}">
-												<a class="switch-changelog" href="http://res.adwalker.cn/adres/developersAndroidExplain.pdf" target="_blank">查看详情</a>
+												<a class="switch-changelog" href="<%=developer_help_android %>" target="_blank">查看详情</a>
 											</c:if>
 											<c:if test="${vo.os=='ios'}">
-												<a class="switch-changelog" href="http://res.adwalker.cn/adres/developersIOSExplain.pdf" target="_blank">查看详情</a>
+												<a class="switch-changelog" href="<%=developer_help_ios %>" target="_blank">查看详情</a>
 											</c:if>
 										</li>
 									</ul>
