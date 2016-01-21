@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>万家移动广告平台—</title>
+	<title><%=company%>广告平台—</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/theme.css" />
@@ -29,7 +30,7 @@
 									<div class="span6"><img src="${pageContext.request.contextPath}/img/slide1.png" alt="slide1" /></div>
 									<div class="span4">
 										<h1>积分墙广告</h1>
-										<p>行云积分墙是在APP内展示各种广告任务供用户完成并获得虚拟币的页面广告，包括安装使用应用，填表注册等。用户完成任务获取虚拟币的同时APP开发者也随即获得收益</p>
+										<p><%=company%>积分墙是在APP内展示各种广告任务供用户完成并获得虚拟币的页面广告，包括安装使用应用，填表注册等。用户完成任务获取虚拟币的同时APP开发者也随即获得收益</p>
 										<a href="${pageContext.request.contextPath}/developer.jsp" class="btn btn-success btn-large">了解更多</a>
 									</div>
 								</div>
@@ -38,7 +39,7 @@
 								<div class="row">
 									<div class="span4 animated fadeInUpBig">
 										<h1>插屏广告</h1>
-										<p>行云插屏在弹出时机和场景上均可自由设置。采用最新HTML5技术，支持做种展示形式，还有更多丰富的广告内容</p>
+										<p><%=company%>插屏在弹出时机和场景上均可自由设置。采用最新HTML5技术，支持做种展示形式，还有更多丰富的广告内容</p>
 										<a href="${pageContext.request.contextPath}/developer.jsp" class="btn btn-success btn-large">了解更多</a>
 									</div>
 									<div class="span6 animated fadeInDownBig"><img src="${pageContext.request.contextPath}/img/slide2.png" alt="slide2" /></div>
@@ -107,29 +108,36 @@
 					<h3><i class="i_call"></i>联系我们<hr class="visible-desktop" /></h3>
 					<p class="description">
 						<p class="description" style="font-size:18px">
-							开发者联系方式
+						 电话：<%=contact_us_phone%><br />
+						 地址：<%=contact_us_add%><br />
+						 邮编：<%=zip_code%><br />
+</p>
+<!-- </p> -->
+					<!--<p class="description">
+						<p class="description" style="font-size:18px">
+							开发者联系方式   -->
 							<!-- <span style="font-size:12px;float:right">联系电话：12345678</span> -->
-							<p class="description">
+							<!--<p class="description">
 								<span style="padding:0 30px 18px 0">媒介盖梆：<a href="tencent://message/?uin=1977975161&amp;Site=www.adwaler.cn&amp;Menu=yes"><img src="${pageContext.request.contextPath}/img/qq.png"></a></span>
 								<span>媒介小雪：<a href="tencent://message/?uin=1014300145&amp;Site=www.adwaler.cn&amp;Menu=yes"><img src="${pageContext.request.contextPath}/img/qq.png"></a></span>
 							</p>
 							<p class="description">
 								<span style="padding:0 30px 18px 0">媒介小丽：<a href="tencent://message/?uin=745137433&amp;Site=www.adwaler.cn&amp;Menu=yes"><img src="${pageContext.request.contextPath}/img/qq.png"></a></span>
-								<span><!--媒介小拉：<a href="#"><img src="${pageContext.request.contextPath}/img/qq.png"></a>--></span>
+								<span>媒介小拉：<a href="#"><img src="${pageContext.request.contextPath}/img/qq.png"></a></span>
 		                    </p>
 	                    </p>
 						<p class="description" style="font-size:18px">
-							广告主联系方式
-							<!-- <span style="font-size:12px;float:right">联系电话：12345678</span>  -->                 
-						<p class="description">
+							广告主联系方式-->
+							<!-- <span style="font-size:12px;float:right">联系电话：12345678</span>   -->                
+						<!--<p class="description">
 							<span style="padding:0 30px 18px 0">商务海霞：<a href="tencent://message/?uin=1825998992&amp;Site=www.adwaler.cn&amp;Menu=yes"><img src="${pageContext.request.contextPath}/img/qq.png"></a></span>
 							<span>商务安冬：<a href="tencent://message/?uin=2215006476&amp;Site=www.adwaler.cn&amp;Menu=yes"><img src="${pageContext.request.contextPath}/img/qq.png"></a></span>
 						</p>
 						<p class="description">
-							<span style="padding:0 30px 18px 0">商务晶晶：<a href="tencent://message/?uin=2066814324&amp;Site=www.adwaler.cn&amp;Menu=yes"><img src="${pageContext.request.contextPath}/img/qq.png"></a></span>
+							<span style="padding:0 30px 18px 0">商务晶晶：<a href="tencent://message/?uin=2066814324&amp;Site=www.adwaler.cn&amp;Menu=yes"><img src="${pageContext.request.contextPath}/img/qq.png"></a></span>-->
 							<!-- <span>商务小拉：<a href="#"><img src="${pageContext.request.contextPath}/img/qq.png"></a></span> -->
-						</p>
-					</p>
+<!-- 						</p> -->
+<!-- 					</p> -->
 					<a href="${pageContext.request.contextPath}/contactus.jsp" class="btn btn-default">更多</a>
 				</div>
 			</div>

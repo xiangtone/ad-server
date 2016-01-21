@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import cn.adwalker.ad.config.util.ConfigManager;
 import cn.adwalker.ad.model.common.dao.UserLoginDao;
 import cn.adwalker.ad.util.ConfigUtil;
 import cn.adwalker.ad.util.MD5;
@@ -36,11 +37,11 @@ public class LoginService {
 				// 发送邮件
 				try {
 					StringBuilder sb = new StringBuilder();
-					sb.append("<html><head>行云密码重置邮件</head><body><br />尊敬的开发者，您好！<br /><br />此为密码重置邮件，您的密码已经被重置为：");
+					sb.append("<html><head>"+ConfigManager.getConfigData("COMPANY")+"密码重置邮件</head><body><br />尊敬的开发者，您好！<br /><br />此为密码重置邮件，您的密码已经被重置为：");
 					sb.append(pwd);
-					sb.append("，请登录后尽快修改密码。<br />如有任何问题，欢迎查阅行云平台常见问题或直接与我们联系：客服QQ 2776278704，技术支持群 234956451，客服电话010-81088036。<br /><br />行云 服务团队");
+					sb.append("，请登录后尽快修改密码。<br />如有任何问题，欢迎查阅"+ConfigManager.getConfigData("COMPANY")+"平台常见问题或直接与我们联系：客服QQ "+ConfigManager.getConfigData("SERVICE_CHANGE_PASSWORD_QQ")+"，技术支持群 "+ConfigManager.getConfigData("SERVICE_CHANGE_PASSWORD_GROUP")+"，客服电话"+ConfigManager.getConfigData("SERVICE_CHANGE_PASSWORD_PHONE")+"。<br /><br />"+ConfigManager.getConfigData("COMPANY")+" 服务团队");
 					sb.append("</body></html>");
-					SendMail.send("行云 密码重置邮件", ConfigUtil.getString("sendMail"), email, sb.toString());
+					SendMail.send(ConfigManager.getConfigData("COMPANY")+" 密码重置邮件", ConfigUtil.getString("sendMail"), email, sb.toString());
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

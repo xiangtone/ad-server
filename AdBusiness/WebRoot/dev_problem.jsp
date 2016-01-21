@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>开发者常见问题-帮助中心-行云移动广告平台</title>
+	<title>开发者常见问题-帮助中心-<%=company%>广告平台</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Bootstrap -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" />
@@ -66,7 +67,7 @@
                 <div class="span12" style="width:96%;">
                     <div class="faq">
                         <div class="question">
-                     	       行云开发者服务平台支持哪些广告形式？
+                     	       <%=company%>开发者服务平台支持哪些广告形式？
                         </div>
                         <div class="answer">
                         
@@ -119,10 +120,10 @@
                             	开发者提现须知。
                         </div>
                         <div class="answer">
-						（1）平台不限制开发者的提款次数，开发者可以随时提交提款申请，行云平台会在每月月初统一处理本批次的提款申请；   <br /> 
+						（1）平台不限制开发者的提款次数，开发者可以随时提交提款申请，<%=company%>平台会在每月月初统一处理本批次的提款申请；   <br /> 
 						（2）当您的可提款收入高于100元时方可申请提款，最低提款金额是10元。个人开发者每人每次提款最高提款金额为50000元；<br /> 
-						（3）有发票的提款，请尽早提交申请，行云平台将会在收到发票后支付，到账时间取决于您的开户银行的处理时间。  <br /> <br />
-						有发票提款如需开票资质请联系客服QQ：2518349639  <br /> 
+						（3）有发票的提款，请尽早提交申请，<%=company%>平台将会在收到发票后支付，到账时间取决于您的开户银行的处理时间。  <br />
+						
                        </div>
                     </div>
                 </div>

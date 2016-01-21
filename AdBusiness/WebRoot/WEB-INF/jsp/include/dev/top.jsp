@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="adwalker" uri="/WEB-INF/tld/spring.tld"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <adwalker:springBean saveId="currentUser" springId="currentUser" />
 <script type="text/javascript">
 $(document).ready(function() {
@@ -23,23 +24,23 @@ $(document).ready(function() {
 </style>
 <header class="navbar navbar-inverse" role="banner" style="overflow: hidden;">
 	<div class="navbar-header" style="color: green;width: 200px;overflow: hidden;float: left;" >
-		<a class="navbar-brand" href="index.action"><img src="${pageContext.request.contextPath}/img/logo.png"></a>
+		<a class="navbar-brand" href="index.action"><img src="${pageContext.request.contextPath}<%=menu_head_logo %>"></a>
 	</div>
 	 <div style="display: block;width: 850px;float: right;">
 	 	<ul class="nav navbar-nav hidden-xs">
 			<li class="notification-dropdown hidden-xs hidden-sm">
 				<a href="tencent://message/?uin=3048524833&Site=www.adwalker.cn&Menu=yes" target="_blank">
-					<i class="icon-warning-signs1">在线客服<br/>QQ:3048524833</i>
+					<i class="icon-warning-signs1">在线客服<br/>QQ:<%=service_qq %></i>
 				</a>
 			</li>
 			<li class="notification-dropdown hidden-xs hidden-sm">
 				<a href="mailto:service@wifiwalker.com?subject=开发者反馈问题">
-					<i class="icon-warning-signs1">客服邮箱<br/>service@wifiwalker.com</i>
+					<i class="icon-warning-signs1">客服邮箱<br/><%=service_email %></i>
 				</a>
 			</li>
 			<li class="notification-dropdown hidden-xs hidden-sm">
 				<a href="#" class="trigger">
-					<i class="icon-warning-signs">客服电话<br/>010-84249150</i>
+					<i class="icon-warning-signs">客服电话<br/><%=service_phone %></i>
 				</a>
 			</li>
 			<li class="notification-dropdown hidden-xs hidden-sm">

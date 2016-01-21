@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>开发者服务-行云移动广告平台</title>
+	<title>开发者服务-<%=company%>广告平台</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Bootstrap -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" />

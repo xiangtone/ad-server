@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>联系我们-行云移动广告平台</title>
+	<title>联系我们-<%=company%>广告平台</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Bootstrap -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" />
@@ -57,15 +58,14 @@
             <!-- list -->
             <div class="row">
                 <div class="span12" style="width:96%;">
-                    <div class="faq">
+                   <!-- <div class="faq">
                         <div style="color:#2c3339;font-weight:bold;font-size: 17px;">
                   	          媒体合作
                         </div>
                         <div class="answer" style="display:inherit;">                 
-					                            媒介盖梆： <a href="tencent://message/?uin=1977975161&amp;Site=www.yijifen.com&amp;Menu=yes" target="_blank" class="send" style="color:#06C">1977975161</a> <br />
+					                          媒介盖梆： <a href="tencent://message/?uin=1977975161&amp;Site=www.yijifen.com&amp;Menu=yes" target="_blank" class="send" style="color:#06C">1977975161</a> <br />
 					                          媒介小雪：  <a href="tencent://message/?uin=1014300145&amp;Site=www.yijifen.com&amp;Menu=yes" target="_blank" class="send" style="color:#06C">1014300145</a> <br />
 					                          媒介小丽：  <a href="tencent://message/?uin=745137433&amp;Site=www.yijifen.com&amp;Menu=yes" target="_blank" class="send" style="color:#06C">745137433</a> <br />
-					                         技术支持群：234956451<br />
                         </div>
                     </div>
                     <div class="faq">
@@ -73,19 +73,19 @@
                           	广告合作
                         </div>
                         <div class="answer" style="display:inherit;">
-						     商务海霞： <a href="tencent://message/?uin=1825998992&amp;Site=www.yijifen.com&amp;Menu=yes" target="_blank" class="send" style="color:#06C">1825998992</a> <br />
-					               商务安冬：  <a href="tencent://message/?uin=2215006476&amp;Site=www.yijifen.com&amp;Menu=yes" target="_blank" class="send" style="color:#06C">2215006476</a> <br />
+						     商务国宝： <a href="tencent://message/?uin=1825998992&amp;Site=www.yijifen.com&amp;Menu=yes" target="_blank" class="send" style="color:#06C">1825998992</a> <br />
+					         商务安冬：  <a href="tencent://message/?uin=2215006476&amp;Site=www.yijifen.com&amp;Menu=yes" target="_blank" class="send" style="color:#06C">2215006476</a> <br />
 						    商务小健： <a href="tencent://message/?uin=2928476037&amp;Site=www.yijifen.com&amp;Menu=yes" target="_blank" class="send" style="color:#06C">2928476037</a> <br />
                         </div>
-                    </div>
+                    </div> -->
                     <div class="faq">
                         <div style="color:#2c3339;font-weight:bold;font-size: 17px;">
 						公司联系方式                     
 						   </div>
                         <div class="answer" style="display:inherit;">
-						 电话：010-84249150<br />
-						 地址：北京市朝阳区慧中北里天创世缘312号楼B2座1301<br />
-						 邮编：100012<br />                           
+						电话：<%=contact_us_phone%><br />
+						 地址：<%=contact_us_add%><br />
+						 邮编：<%=zip_code%><br />                           
                         </div>
                     </div>
                 </div>

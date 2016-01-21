@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>加入我们-行云移动广告平台</title>
+	<title>加入我们-<%=company%>广告平台</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Bootstrap -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" />
@@ -75,7 +76,7 @@
 						【任职资格】<br />
 						1、善于沟通，总结，能快速反应处理问题，有很强的执行力和团队精神；<br />
 						2、能够有计划主动跟进项目，发现问题并独立解决问题；有相关渠道资源者优先。<br />
-					   可发送简历至：<a href="mailto:malianlian@wifiwalker.com" class="send" style="color:#06C"> malianlian@wifiwalker.com</a><br />
+					   可发送简历至：<a href="<%=join_us_email_url %>" class="send" style="color:#06C"> <%=join_us_email %></a><br />
                         </div>
                     </div>
                     <div class="faq">
@@ -95,7 +96,7 @@
 							4、 具有良好的商务谈判能力、创新意识、协调能力、和交际能力；<br />
 							5、 有团队合作精神，能承担较大工作压力, 富有亲和力和感染力；<br />
 							6、 工作细心，责任心强，有上进心，思维清晰，学习能力强。<br />
-					      可发送简历至：<a href="mailto:malianlian@wifiwalker.com" class="send" style="color:#06C"> malianlian@wifiwalker.com</a><br />                      
+					      可发送简历至：<a href="<%=join_us_email_url %>" class="send" style="color:#06C"><%=join_us_email %></a><br />                      
                         </div>
                     </div>
                     <div class="faq">
@@ -119,7 +120,7 @@
 						6、有3个以上App store上线应用者优先；<br />
 						7、工作认真，细心，有条理，具有较强的沟通能力及团队合作精神；<br />
 						8、喜欢接受挑战，对新产品或新技术有很强的兴趣，喜欢尝试最新技术。<br />
-					  可发送简历至：<a href="mailto:malianlian@wifiwalker.com" class="send" style="color:#06C"> malianlian@wifiwalker.com</a><br />                              
+					  可发送简历至：<a href="<%=join_us_email_url %>" class="send" style="color:#06C"><%=join_us_email %></a><br />                              
                         </div>
                     </div>
                     
@@ -138,7 +139,7 @@
 						4、能快速掌握HTML5 和 Mobile Web开发；<br />  
 						5、熟悉交互设计，对可用性、可访问性等用户体验知识有相当的了解和实践经验； <br /> 
 						6、具备良好的服务意识、责任心、较强的学习能力、优秀的团队沟通与协作能力、能承受一定的工作压力。<br /> 
-					  可发送简历至：<a href="mailto:malianlian@wifiwalker.com" class="send" style="color:#06C"> malianlian@wifiwalker.com</a><br />                              
+					  可发送简历至：<a href="<%=join_us_email_url %>" class="send" style="color:#06C"><%=join_us_email %></a><br />                              
                         </div>
                     </div>
                     

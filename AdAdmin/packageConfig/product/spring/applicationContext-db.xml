@@ -14,8 +14,8 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://192.168.1.221:3306/ad_platform?characterEncoding=UTF8&amp;zeroDateTimeBehavior=convertToNull" />
-		<property name="username" value="fuming" />
-		<property name="password" value="" />
+		<property name="username" value="shirupan" />
+		<property name="password" value="shirupan" />
 
 		<!-- 连接池启动时的初始值 -->
 		<property name="initialSize" value="1" />

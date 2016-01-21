@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>注册账户-行云移动广告平台</title>
+	<title>注册账户-<%=company%>广告平台</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Bootstrap -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" />
@@ -189,8 +190,8 @@
 							<input class="form-control_2" type="text" name="email" placeholder="邮箱" id="email" reg="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" tips="您输入的用户名已存在！" maxlength="30">
 							<input class="form-control_2" type="password" placeholder="密码" name="password" id="password" reg="^(\w){6,15}$"  maxlength="15" tip="请输入6至15位的字母数字 ">
 							<input class="form-control_2" type="password" placeholder="确认密码" name="confimPassword"	id="confimPassword" reg="^(\w){6,15}$" tip="请输入6至15位的字母数字 " tips="您两次输入的密码不一致！" maxlength="15">
-                            <input class="form-control_2"  style="width:36%;" name="code" type="text" id="code" reg="^(\w){4,5}$" placeholder="验证码" tip="请输入验证码" />
-                            <img src="${pageContext.request.contextPath}/jcaptcha?t=1399348101254" name="pic" id="pic_code" border="0" style=" width:110px;height:40px; margin-left:8px; margin-right:8px; margin-top:-16px">
+                            <input class="form-control_2"  style="width:50%;" name="code" type="text" id="code" reg="^(\w){4,5}$" placeholder="验证码" tip="请输入验证码" />
+                            <img src="${pageContext.request.contextPath}/jcaptcha?t=1399348101254" name="pic" id="pic_code" border="0" style=" width:122px;height:40px; margin-left:8px; margin-right:8px; margin-top:-16px">
                             <a href="#" onclick="reloadImage();" title="换一张"><div style="float:right; line-height:40px; margin-right:10px;">换一张</div></a> 
                             <input type="submit" class="btn" onclick="submitForm();" value="注 册" />
                             </form>

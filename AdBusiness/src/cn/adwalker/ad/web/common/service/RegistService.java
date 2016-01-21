@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import cn.adwalker.ad.config.AppConstant;
+import cn.adwalker.ad.config.util.ConfigManager;
 import cn.adwalker.ad.model.common.domain.RegDev;
 import cn.adwalker.ad.model.developer.dao.DeveloperDao;
 import cn.adwalker.ad.model.developer.domain.Developer;
@@ -97,12 +98,12 @@ public class RegistService {
 		url.append(createParament(id, createTime, email));
 		try {
 			StringBuilder mailMessage = new StringBuilder();
-			mailMessage.append("<html><head>行云广告激活邮件</head><body><br />尊敬的开发者，您好！<br /><br />欢迎注册行云平台,请激活账户以完成注册；<br /><br />");
+			mailMessage.append("<html><head>"+ConfigManager.getConfigData("COMPANY")+"广告激活邮件</head><body><br />尊敬的开发者，您好！<br /><br />欢迎注册"+ConfigManager.getConfigData("COMPANY")+"平台,请激活账户以完成注册；<br /><br />");
 			mailMessage.append("<a href='" + url + "'>" + url + "</a>");
-			mailMessage.append("如有任何问题，欢迎查阅行云平台<a href='http://www.adwalker.cn'>常见问题</a>或直接与我们联系，邮件地址：<br /><a href='mailto:service@adwalker.com'>service@adwalker.com;</a>");
-			mailMessage.append("<br />期待与您的合作，谨此致意！<br /><br />行云 服务团队");
+			mailMessage.append("如有任何问题，欢迎查阅"+ConfigManager.getConfigData("COMPANY")+"平台<a href='"+ConfigManager.getConfigData("WEB_URL")+"'>常见问题</a>或直接与我们联系，邮件地址：<br /><a href='mailto:"+ConfigManager.getConfigData("SERVICE_CHANGE_PASSWORD_EMAIL")+"'>"+ConfigManager.getConfigData("SERVICE_CHANGE_PASSWORD_EMAIL")+";</a>");
+			mailMessage.append("<br />期待与您的合作，谨此致意！<br /><br />"+ConfigManager.getConfigData("COMPANY")+" 服务团队");
 			mailMessage.append("</body></html>");
-			SendMail.send("行云 注册激活邮件", ConfigUtil.getString("sendMail"), email, mailMessage.toString());
+			SendMail.send(ConfigManager.getConfigData("COMPANY")+" 注册激活邮件", ConfigUtil.getString("sendMail"), email, mailMessage.toString());
 		} catch (Exception e) {
 			System.out.println("发送邮件时发生异常");
 			e.printStackTrace();

@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>关于我们-行云移动广告平台</title>
+	<title>关于我们-<%=company%>广告平台</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Bootstrap -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" />
@@ -62,11 +63,9 @@
 						公司介绍                   
 						     </div>
                         <div class="answer" style="display:inherit;">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京行者天下科技有限公司，是2014年成立的新概念移动营销机构。致力于移动互联网的品牌传播和应用分发。
-						行云开发者服务平台是移动营销领域第一家将移动app媒体，wifi传播网络，智能手机用户重定向网络以及移动应用分发网络通过大数据整合的高效，
-						全覆盖网络平台。具有大数据，智能化开放化等特点。<br />
-						合作电话：010-51088038<br />
-						 公司地址：北京市朝阳区慧中北里天创世缘312号楼B2座1301  <br />                       
+						<%=company%>广告<br />
+						合作电话：<%=contact_us_phone%><br />
+						 公司地址：<%=contact_us_add%> <br />                       
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           	<a class="brand scroller" href="${pageContext.request.contextPath}/index.jsp">
-                <img src="${pageContext.request.contextPath}/img/logo.png" alt="logo" />
+                <img src="${pageContext.request.contextPath}<%=menu_head_logo%>" alt="logo" />
             </a>
 		  	<div class="nav-collapse collapse">
                 <ul class="nav pull-right">

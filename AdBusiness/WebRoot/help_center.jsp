@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>开发者常见问题-帮助中心-行云移动广告平台</title>
+	<title>开发者常见问题-帮助中心-<%=company%>广告平台</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Bootstrap -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" />
@@ -65,14 +66,14 @@
                 <div class="span12" style="width:96%;">
                     <div class="faq">
                         <div class="question">
-                            如何注册行云开发者服务平台账户？
+                            如何注册<%=company%>开发者服务平台账户？
                         </div>
                         <div class="answer">
                         
-   （1）打开<a href="index.html"target="_blank" style="color:#06C">http://www.adwalker.cn/</a>，点击页面右上角的“注册”按钮，即可弹出注册页面；<br />
+   （1）打开<a href="index.html"target="_blank" style="color:#06C"><%=web_url %></a>，点击页面右上角的“注册”按钮，即可弹出注册页面；<br />
    （2）在注册页面填写相关信息,点击注册按钮即可收到账户激活邮件；<br />
    （3）登录填写的邮箱，打开邮箱中的验证链接来完成邮箱验证。<br />   
-     邮箱激活后就可以使用行云开发者服务平台提供的各项服务了。<br />                            
+     邮箱激活后就可以使用<%=company%>开发者服务平台提供的各项服务了。<br />                            
                         </div>
                     </div>
                     <div class="faq">
@@ -80,7 +81,7 @@
                             忘记密码怎么办？
                         </div>
                         <div class="answer">
-    （1）打开<a href="index.html"target="_blank" style="color:#06C">http://www.adwalker.cn/</a>，点击页面右上角的“登录”按钮，在登录页面中点击“忘记密码”。<br /> 
+    （1）打开<a href="index.html"target="_blank" style="color:#06C"><%=web_url%></a>，点击页面右上角的“登录”按钮，在登录页面中点击“忘记密码”。<br /> 
     （2）输入您注册时填写的邮箱地址，点击“找回密码”按钮。<br />  
     （3）登录您的邮箱，打开邮件中的密码重置，然后使用平台提供的重置密码登录平台，并及时进行密码修改。 <br /> 
                           </div>
@@ -108,7 +109,7 @@
                             被冻结的账户是否还能登录？
                         </div>
                         <div class="answer">
-目前被冻结的账户无法登录行云开发者服务平台，您如果有什么问题可咨询平台客服。   <br />                        </div>
+目前被冻结的账户无法登录<%=company%>开发者服务平台，您如果有什么问题可咨询平台客服。   <br />                        </div>
                     </div>
                 </div>
             </div>

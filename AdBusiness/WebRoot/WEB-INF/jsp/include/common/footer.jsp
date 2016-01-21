@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <style type="text/css">
 
 .footer-link a{color:#fff;}
@@ -26,11 +27,11 @@
 
 	<script language="javascript"> 
 		function openSignupagreement(){
-			window.open ('${pageContext.request.contextPath}/signupagreement.html', 'newwindow', 'height=500, width=400, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no');
+			window.open ('${pageContext.request.contextPath}/signupagreement.jsp', 'newwindow', 'height=500, width=400, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no');
 			}
 		
 		function conceal(){
-			window.open ('${pageContext.request.contextPath}/yinsitiaokuan.html', 'newwindow', 'height=500, width=400, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no');
+			window.open ('${pageContext.request.contextPath}/yinsitiaokuan.jsp', 'newwindow', 'height=500, width=400, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no');
 			}
 		</script>
  <div id="footer">
@@ -50,7 +51,7 @@
             <hr />
             <div class="footer-copy">
 			  <span>
-				<p class="footer-copylineone">Copyright &copy; 2011-<script>var today = new Date();document.write(today.getFullYear());</script> 万家移动广告 All Rights Reserved.</p>
+				<p class="footer-copylineone">Copyright &copy; 2011-<script>var today = new Date();document.write(today.getFullYear());</script> <%=company%>广告 All Rights Reserved.</p>
 			  </span>
 		    </div>
         </div>

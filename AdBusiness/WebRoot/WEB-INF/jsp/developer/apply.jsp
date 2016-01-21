@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>行云广告平台</title>
+		<title><%=company%>广告平台</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<%@include file="/WEB-INF/jsp/include/common/header.jsp"%>
@@ -113,10 +114,10 @@
 					</div>
 					<div class="col-md-3_1 col-xs-12 form-sidebar pull-right">
 					<br/><br/>
-						行云广告平台提款说明：<br/>
+						<%=company%>广告平台提款说明：<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;1.开发者可以随时在后台上提交提款申请，平台默认开发者申请上月提款为本月的5号以后。<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;2.每月的5-20号平台对于开发者的提款进行审核及结算，20号之前完成付款。<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;3.开发者可将提款申请的发票邮寄至"北京行者天下科技有限公司"，发票种类为增值税专用发票。<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;3.开发者可将提款申请的发票邮寄至"<%=company%>"，发票种类为增值税专用发票。<br/>
 					</div>
 				</div>
 			</div>
