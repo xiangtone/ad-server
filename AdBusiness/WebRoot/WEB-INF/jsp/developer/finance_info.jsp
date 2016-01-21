@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
+<%@include file="/WEB-INF/jsp/include/common/header.jsp"%>
 <%@ taglib prefix="adwalker" uri="/WEB-INF/tld/spring.tld"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -7,7 +7,6 @@
 		<title><%=company%>广告平台</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<%@include file="/WEB-INF/jsp/include/common/header.jsp"%>
 		<!-- this page specific styles -->
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/compiled/personal-info.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/compiled/index.css" type="text/css" media="screen" />
