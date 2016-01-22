@@ -523,7 +523,7 @@ $(document).ready(function(){
 			</div>
 		</div>
 		<div id="footer">
-			<p>Copyright © 2014-2016 万家移动广告 All Rights Reserved</p>
+<%-- 			<p>Copyright © 2014-2016 <%=ConfigManager.getConfigData("COMPANY") %>广告 All Rights Reserved</p> --%>
 		</div>
 	</div>
 </body>
