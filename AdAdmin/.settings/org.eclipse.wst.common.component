@@ -5,7 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/core"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
-        <property name="java-output-path" value="/AdAdmin/WebRoot/WEB-INF/classes"/>
         <property name="context-root" value="ad-admin.xtonegame.com"/>
+        <property name="java-output-path" value="/xtone-AdAdmin/target/classes"/>
     </wb-module>
 </project-modules>
