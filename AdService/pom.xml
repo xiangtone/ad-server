@@ -160,7 +160,6 @@
 						</resource>
 					</webResources>
 				</configuration>
-
 			</plugin>
 		</plugins>
 	</build>
@@ -179,7 +178,7 @@
 			<id>test</id>
 			<properties>
 				<runtime.env>packageConfig\test</runtime.env>
-				<final.name>ad-service.xtonegame.com-test</final.name>
+				<final.name>ad-service-test</final.name>
 			</properties>
 		</profile>
 	</profiles>
