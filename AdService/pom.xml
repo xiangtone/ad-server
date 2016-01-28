@@ -175,9 +175,9 @@
 			</activation>
 		</profile>
 		<profile>
-			<id>test</id>
+			<id>alphaTest</id>
 			<properties>
-				<runtime.env>packageConfig\test</runtime.env>
+				<runtime.env>packageConfig\alphaTest</runtime.env>
 				<final.name>ad-service-test</final.name>
 			</properties>
 		</profile>
