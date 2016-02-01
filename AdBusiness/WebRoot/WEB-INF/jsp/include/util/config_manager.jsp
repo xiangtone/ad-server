@@ -1,4 +1,4 @@
-<%@ page import="cn.adwalker.ad.config.util.ConfigManager" %>
+<%@page import="cn.adwalker.ad.config.util.ConfigManager"%>
 <% 
 String contact_us_phone=ConfigManager.getConfigData("CONTACT_US_PHONE");
 String contact_us_add=ConfigManager.getConfigData("CONTACT_US_ADD");

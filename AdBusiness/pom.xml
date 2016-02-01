@@ -29,7 +29,16 @@
 			<artifactId>javax.persistence</artifactId>
 			<version>2.1.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.karaf.assemblies.features</groupId>
+			<artifactId>standard</artifactId>
+			<version>2.4.4</version>
+		</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.directory.studio</groupId>
 			<artifactId>org.apache.commons.lang</artifactId>
@@ -96,6 +105,16 @@
 			<version>1.2.17</version>
 		</dependency>
 		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.29</version>
+		</dependency>
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>3.0-alpha-1</version>
@@ -143,7 +162,7 @@
 					<webResources>
 						<resource>
 							<directory>${runtime.env}</directory>
-							<targetPath>WEB-INF/classes</targetPath>
+							<targetPath>WEB-INF</targetPath>
 						</resource>
 					</webResources>
 				</configuration>
@@ -155,7 +174,7 @@
 			<id>product</id>
 			<properties>
 				<runtime.env>packageConfig\product</runtime.env>
-				<final.name>ad-business.xtonegame.com</final.name>
+				<final.name>ad-business</final.name>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -165,7 +184,7 @@
 			<id>test</id>
 			<properties>
 				<runtime.env>packageConfig\test</runtime.env>
-				<final.name>ad-business.xtonegame.com-test</final.name>
+				<final.name>ad-business-test</final.name>
 			</properties>
 		</profile>
 	</profiles>
