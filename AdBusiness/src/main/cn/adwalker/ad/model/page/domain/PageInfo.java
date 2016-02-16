@@ -1,4 +1,4 @@
-﻿package cn.adwalker.ad.model.page.domain;
+package cn.adwalker.ad.model.page.domain;
 
 public class PageInfo {
 	/** 当前页 */

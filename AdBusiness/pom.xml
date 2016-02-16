@@ -125,6 +125,11 @@
 			<version>1.0</version>
 		</dependency>
 		<dependency>
+			<groupId>rt</groupId>
+			<artifactId>rt</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
 			<groupId>javax.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
 			<version>1.2</version>
@@ -144,6 +149,7 @@
 	</dependencies>
 	<build>
 		<finalName>${final.name}</finalName>
+		<sourceDirectory>src</sourceDirectory>
 		<resources>
 			<resource>
 				<directory>src/main</directory>
