@@ -80,6 +80,21 @@
 			<version>1.0</version>
 		</dependency>
 		<dependency>
+			<groupId>rt</groupId>
+			<artifactId>rt</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jce</groupId>
+			<artifactId>jce-jdk13-120</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>3.0-alpha-1</version>
