@@ -2,3 +2,5 @@
 /AdAdmin/target
 /AdControl/WebContent/WEB-INF/classes
 /AdControl/WebRoot/WEB-INF/classes
+/AdAPI/WebRoot/WEB-INF/classes
+/AdBusiness/WebRoot/WEB-INF/classes
