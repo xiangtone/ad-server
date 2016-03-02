@@ -143,6 +143,7 @@ public class ApkParser {
 	 * 解析XML文件，获取APK包名、版本
 	 */
 	public static ApkParserResult resolve(String strAfterFilePath) {
+		
 		ApkParserResult apkInfo = new ApkParserResult();
 		try {
 			SAXParserFactory parserFactory = SAXParserFactory.newInstance();
@@ -166,7 +167,6 @@ public class ApkParser {
 			by = null;
 			bais.close();
 			parser = null;
-
 			apkInfo.setPackageName(strpackage);
 			apkInfo.setVersionName(strVersionName);
 			apkInfo.setVersionCode(versionCode);

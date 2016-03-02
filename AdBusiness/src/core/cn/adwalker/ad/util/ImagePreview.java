@@ -28,9 +28,7 @@ import org.apache.log4j.Logger;
 
 import sun.misc.BASE64Encoder;
 
-import com.sun.image.codec.jpeg.ImageFormatException;
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+
 
 public class ImagePreview {
 	private final static Logger LOGGER = Logger.getLogger(ImagePreview.class);
@@ -179,15 +177,16 @@ public class ImagePreview {
 
 		ByteArrayOutputStream op = new ByteArrayOutputStream();
 
-		JPEGImageEncoder imageEncoder = JPEGCodec.createJPEGEncoder(op);
+//		JPEGImageEncoder imageEncoder = JPEGCodec.createJPEGEncoder(op);
 
 		try {
 			BufferedImage bufferedImage = new BufferedImage(maxWidth,
 					maxHeight, BufferedImage.TYPE_INT_RGB);
 			bufferedImage.getGraphics().drawImage(itemp, 0, 0, maxWidth, maxHeight,
 					null);
-			imageEncoder.encode(bufferedImage);
-		} catch (ImageFormatException e) {
+//			imageEncoder.encode(bufferedImage);
+			ImageIO.write(bufferedImage, "jpeg", op);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
