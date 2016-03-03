@@ -17,6 +17,8 @@ import java.util.zip.ZipFile;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import jxl.common.Logger;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -29,6 +31,9 @@ import org.xml.sax.helpers.DefaultHandler;
  * @author jiaozhichao
  */
 public class ApkParser {
+  
+  private final static Logger LOG = Logger.getLogger(ApkParser.class);
+  
 	/** 格式化之前地址 */
 	private final static String strBeforeFileName = "AndroidManifest.xml";
 	/** 格式化之后地址 */
@@ -55,6 +60,9 @@ public class ApkParser {
 		StringBuilder sb = new StringBuilder(pathPrefix);
 //		sb.append("lib/AXMLPrinter2.jar");
 		sb.append("lib/axmlprinter2-1.0.jar");
+		if (sb.indexOf(":")!=-1){
+		  sb.deleteCharAt(0);
+		}
 		pathPrefix = sb.toString();
 		return pathPrefix;
 	}
@@ -76,7 +84,6 @@ public class ApkParser {
 	 * @return
 	 */
 	public static ApkParserResult getApkInfo(File file) {
-		System.out.println("Apk解包文件："+getAXMLPrinterPath());
 		return ApkParser.getApkInfo(file, getAXMLPrinterPath());
 	}
 	

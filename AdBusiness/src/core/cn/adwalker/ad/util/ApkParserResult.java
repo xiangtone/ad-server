@@ -23,7 +23,14 @@ public class ApkParserResult {
 	/** 应用包名 */
 	private String packageName;
 	
-	/** 系统版本 */
+	@Override
+  public String toString() {
+    return "ApkParserResult [width=" + width + ", height=" + height + ", versionName=" + versionName + ", versionCode="
+        + versionCode + ", packageName=" + packageName + ", sdkVer=" + sdkVer + ", size=" + size + ", fileName="
+        + fileName + ", path=" + path + "]";
+  }
+
+  /** 系统版本 */
 	private String sdkVer;
 	
 	/** 资源大小  */
