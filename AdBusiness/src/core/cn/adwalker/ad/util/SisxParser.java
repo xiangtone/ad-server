@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.common.util.ad.ApkParserResult;
 
 
 
