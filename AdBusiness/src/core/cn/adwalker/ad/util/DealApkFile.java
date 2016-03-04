@@ -10,6 +10,9 @@ package cn.adwalker.ad.util;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.common.util.ad.ApkParser;
+import org.common.util.ad.ApkParserResult;
+
 
 /**
  * 功能概述：<br>

@@ -12,12 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.common.util.ad.ApkParser;
+import org.common.util.ad.ApkParserResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.adwalker.ad.model.application.domain.Application;
-import cn.adwalker.ad.util.ApkParser;
-import cn.adwalker.ad.util.ApkParserResult;
 import cn.adwalker.ad.util.ConfigUtil;
 import cn.adwalker.ad.util.JacksonMapper;
 import cn.adwalker.ad.web.common.vo.UploadResultVo;
@@ -45,19 +45,16 @@ public class UploadDataUpdateController {
 	@RequestMapping("/updateAppDate.action")
 	public void updateAppDate(long id, String path, HttpServletResponse response) {
 		try {
-			System.out.println("数据更新结束");
 			path = java.net.URLDecoder.decode(path, "UTF-8");
 		} catch (UnsupportedEncodingException e2) {
 			e2.printStackTrace();
 			log.error("编码转换失败！");
 		}
-		System.out.println("数据更新结束");
 		String tar = ConfigUtil.getString("file.path");// 读取文件地址前缀
 		Application developedApp = new Application();
 		developedApp.setId(id);
 		developedApp.setProjectUrl(path);
 		UploadResultVo uploadResultVo = new UploadResultVo();
-		System.out.println("数据更新结束");
 		try {
 			// ========此处解包处理流程start==========
 			ApkParserResult pr = new ApkParserResult();
