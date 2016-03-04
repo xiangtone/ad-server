@@ -16,13 +16,17 @@ public class MathUtil {
 	 * @return
 	 */
 	public static double truncF(Double f, int decimal) {
-		String str = f.toString();
-		if (str.substring(str.indexOf(".")).length() > decimal) {
-			return Double.parseDouble(str.substring(0, str.indexOf(".") + 1
-					+ decimal));
-		} else {
-			return f;
-		}
+	  if (f!=null){
+	    String str = f.toString();
+	    if (str.substring(str.indexOf(".")).length() > decimal) {
+	      return Double.parseDouble(str.substring(0, str.indexOf(".") + 1
+	          + decimal));
+	    } else {
+	      return f;
+	    }
+	  }else{
+	    return 0;
+	  }
 	}
 	
 	/**
