@@ -24,49 +24,53 @@ import org.xml.sax.helpers.DefaultHandler;
 
 
 /**
- * 功能概述：<br>
+ * 鍔熻兘姒傝堪锛�<br>
  *  
- *    解析apk
+ *    瑙ｆ瀽apk
  *
  */
 public class ApkParser {
   
   private final static Logger LOG = Logger.getLogger(ApkParser.class);
-  /** 格式化之前地址 */
+  /** 鏍煎紡鍖栦箣鍓嶅湴鍧� */
   private final static String strBeforeFileName = "AndroidManifest.xml";
-  /** 格式化之后地址 */
+  /** 鏍煎紡鍖栦箣鍚庡湴鍧� */
   private final static String strAfterFileName = "cmdResult.xml";
   
-  /** APK包名 */
+  /** APK鍖呭悕 */
   public static String strpackage = "";
-  /** APK版本名称 */
+  /** APK鐗堟湰鍚嶇О */
   public static String strVersionName = "";
-  /** APK版本号 */
+  /** APK鐗堟湰鍙� */
   public static String versionCode = "";
-  /** 系统版本号 */
+  /** 绯荤粺鐗堟湰鍙� */
   public static String sdkVer = "";
   
   /**
-   * 获取AXMLPrinter2.jar地址
+   * 鑾峰彇AXMLPrinter2.jar鍦板潃
    * 
    * @return
    */
   private static String getAXMLPrinterPath(){
     URL url = ApkParser.class.getResource("");
-    int index = url.getPath().indexOf("/WEB-INF/"); // 取属性文件的绝对路径
-    String pathPrefix = url.getPath().substring(0, index + 9).replace("%20", " "); // 替换掉空格
+    int index = url.getPath().indexOf("/WEB-INF/"); // 鍙栧睘鎬ф枃浠剁殑缁濆璺緞
+    String pathPrefix = url.getPath().substring(0, index + 9).replace("%20", " "); // 鏇挎崲鎺夌┖鏍�
     StringBuilder sb = new StringBuilder(pathPrefix);
 //    sb.append("lib/AXMLPrinter2.jar");
     sb.append("lib/axmlprinter2-1.0.jar");
     pathPrefix = sb.toString();
     if(pathPrefix.startsWith("file:/")){
       pathPrefix=pathPrefix.substring(6, pathPrefix.length());
+
     }
     else if(pathPrefix.indexOf(":/")!=-1&&!pathPrefix.contains("http:/")){
       pathPrefix=pathPrefix.substring(1, pathPrefix.length());
     }
     else if(pathPrefix.indexOf(":/")!=-1){
       pathPrefix=pathPrefix.replace("file:/", "");
+    }
+    if(pathPrefix.startsWith("data")){
+        pathPrefix=pathPrefix.replace("data", "/data");
     }
     return pathPrefix;
   }
@@ -152,7 +156,7 @@ public class ApkParser {
   }
 
   /**
-   * 解析XML文件，获取APK包名、版本
+   * 瑙ｆ瀽XML鏂囦欢锛岃幏鍙朅PK鍖呭悕銆佺増鏈�
    */
   public static ApkParserResult resolve(String strAfterFilePath) {
     ApkParserResult apkInfo = new ApkParserResult();
@@ -192,7 +196,7 @@ public class ApkParser {
   }
 
   /**
-   * 获取文件夹下的文件名
+   * 鑾峰彇鏂囦欢澶逛笅鐨勬枃浠跺悕
    */
   public static ArrayList<String> getFiles(String path) {
     ArrayList<String> listAPKFiles = null;
@@ -218,7 +222,7 @@ public class ApkParser {
 }
 
 /**
- * 过滤文件后缀
+ * 杩囨护鏂囦欢鍚庣紑
  * 
  * @author Administrator
  * 
