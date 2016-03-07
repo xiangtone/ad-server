@@ -22,55 +22,39 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-
-/**
- * 鍔熻兘姒傝堪锛�<br>
- *  
- *    瑙ｆ瀽apk
- *
- */
 public class ApkParser {
-  
+
   private final static Logger LOG = Logger.getLogger(ApkParser.class);
-  /** 鏍煎紡鍖栦箣鍓嶅湴鍧� */
   private final static String strBeforeFileName = "AndroidManifest.xml";
-  /** 鏍煎紡鍖栦箣鍚庡湴鍧� */
   private final static String strAfterFileName = "cmdResult.xml";
-  
-  /** APK鍖呭悕 */
+
   public static String strpackage = "";
-  /** APK鐗堟湰鍚嶇О */
   public static String strVersionName = "";
-  /** APK鐗堟湰鍙� */
   public static String versionCode = "";
-  /** 绯荤粺鐗堟湰鍙� */
   public static String sdkVer = "";
-  
-  /**
-   * 鑾峰彇AXMLPrinter2.jar鍦板潃
-   * 
-   * @return
-   */
-  private static String getAXMLPrinterPath(){
+
+  private static String getAXMLPrinterPath() {
     URL url = ApkParser.class.getResource("");
-    int index = url.getPath().indexOf("/WEB-INF/"); // 鍙栧睘鎬ф枃浠剁殑缁濆璺緞
-    String pathPrefix = url.getPath().substring(0, index + 9).replace("%20", " "); // 鏇挎崲鎺夌┖鏍�
+    int index = url.getPath().indexOf("/WEB-INF/"); 
+    String pathPrefix = url.getPath().substring(0, index + 9).replace("%20", " "); 
     StringBuilder sb = new StringBuilder(pathPrefix);
-//    sb.append("lib/AXMLPrinter2.jar");
+    // sb.append("lib/AXMLPrinter2.jar");
     sb.append("lib/axmlprinter2-1.0.jar");
     pathPrefix = sb.toString();
-    if(pathPrefix.startsWith("file:/")){
-      pathPrefix=pathPrefix.substring(6, pathPrefix.length());
-
+    if (pathPrefix.startsWith("file:/")) {
+      pathPrefix = pathPrefix.substring(5, pathPrefix.length());
+      if (pathPrefix.indexOf(":/")!=-1){ // process window file path
+        pathPrefix = pathPrefix.substring(1, pathPrefix.length());
+      }
+    } else if (pathPrefix.indexOf(":/") != -1 && !pathPrefix.contains("http:/")) {
+      LOG.debug("in branch : 2");
+      pathPrefix = pathPrefix.substring(1, pathPrefix.length());
+    } else if (pathPrefix.indexOf(":/") != -1) {
+      LOG.debug("in branch : 3");
+      pathPrefix = pathPrefix.replace("file:/", "");
     }
-    else if(pathPrefix.indexOf(":/")!=-1&&!pathPrefix.contains("http:/")){
-      pathPrefix=pathPrefix.substring(1, pathPrefix.length());
-    }
-    else if(pathPrefix.indexOf(":/")!=-1){
-      pathPrefix=pathPrefix.replace("file:/", "");
-    }
-    if(pathPrefix.startsWith("data")){
-        pathPrefix=pathPrefix.replace("data", "/data");
+    if (pathPrefix.startsWith("data")) {
+      pathPrefix = pathPrefix.replace("data", "/data");
     }
     return pathPrefix;
   }
@@ -80,12 +64,11 @@ public class ApkParser {
    * @param aXMLPrinterPath
    * @return
    */
-  public static ApkParserResult getApkInfo(String apkFilePath,
-      String aXMLPrinterPath) {
+  public static ApkParserResult getApkInfo(String apkFilePath, String aXMLPrinterPath) {
     File file = new File(apkFilePath);
     return ApkParser.getApkInfo(file, aXMLPrinterPath);
   }
-  
+
   /**
    * @param apkFilePath
    * @param aXMLPrinterPath
@@ -94,7 +77,7 @@ public class ApkParser {
   public static ApkParserResult getApkInfo(File file) {
     return ApkParser.getApkInfo(file, getAXMLPrinterPath());
   }
-  
+
   /**
    * @param apkFilePath
    * @param aXMLPrinterPath
@@ -109,8 +92,7 @@ public class ApkParser {
    * @param aXMLPrinterPath
    * @return
    */
-  public static ApkParserResult getApkInfo(File apkFile,
-      String aXMLPrinterPath) {
+  public static ApkParserResult getApkInfo(File apkFile, String aXMLPrinterPath) {
     ApkParserResult apkInfo = new ApkParserResult();
     try {
       ZipFile zFile = new ZipFile(apkFile);
@@ -124,10 +106,8 @@ public class ApkParser {
       InputStream in = zFile.getInputStream(entry);
       String apkFilePath = apkFile.getAbsolutePath();
       String apkFileName = apkFile.getName();
-      String strBeforeFilePath = apkFilePath.replace(apkFileName,
-          strBeforeFileName);
-      String strAfterFilePath = apkFilePath.replace(apkFileName,
-          strAfterFileName);
+      String strBeforeFilePath = apkFilePath.replace(apkFileName, strBeforeFileName);
+      String strAfterFilePath = apkFilePath.replace(apkFileName, strAfterFileName);
       File file = new File(strBeforeFilePath);
       if (!file.exists()) {
         file.createNewFile();
@@ -141,8 +121,7 @@ public class ApkParser {
       out.close();
       in.close();
       zFile.close();
-      String command = "java -jar " + aXMLPrinterPath + " "
-          + strBeforeFilePath + " > " + strAfterFilePath;
+      String command = "java -jar " + aXMLPrinterPath + " " + strBeforeFilePath + " > " + strAfterFilePath;
       LOG.info(command);
       ExecCommandUtils.execCommand(command, strAfterFilePath);
       apkInfo = resolve(strAfterFilePath);
@@ -167,8 +146,7 @@ public class ApkParser {
       SaxFormat MySaxParserInstance = new SaxFormat();
       String strContent = "";
       String strLine = "";
-      BufferedReader br = new BufferedReader(new InputStreamReader(
-          new FileInputStream(strAfterFilePath)));
+      BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(strAfterFilePath)));
       while ((strLine = br.readLine()) != null) {
         strContent += strLine + "\n";
       }
@@ -241,8 +219,7 @@ class FilterAPKGetWithCMD implements FilenameFilter {
 class SaxFormat extends DefaultHandler {
 
   @Override
-  public void characters(char[] ch, int start, int length)
-      throws SAXException {
+  public void characters(char[] ch, int start, int length) throws SAXException {
     super.characters(ch, start, length);
   }
 
@@ -252,8 +229,7 @@ class SaxFormat extends DefaultHandler {
   }
 
   @Override
-  public void endElement(String uri, String localName, String qName)
-      throws SAXException {
+  public void endElement(String uri, String localName, String qName) throws SAXException {
     super.endElement(uri, localName, qName);
   }
 
@@ -263,8 +239,7 @@ class SaxFormat extends DefaultHandler {
   }
 
   @Override
-  public void startElement(String uri, String localName, String qName,
-      Attributes attributes) throws SAXException {
+  public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
     if (qName.equals("manifest")) {
       for (int i = 0; i < attributes.getLength(); i++) {
         String strQname = attributes.getQName(i);
