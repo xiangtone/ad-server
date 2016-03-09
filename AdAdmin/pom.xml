@@ -9,6 +9,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
+	   <dependency>
+      <groupId>axmlprinter2</groupId>
+      <artifactId>axmlprinter2</artifactId>
+      <version>1.0</version>
+    </dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
@@ -143,11 +148,6 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
-		</dependency>
-		<dependency>
-			<groupId>axmlprinter2</groupId>
-			<artifactId>axmlprinter2</artifactId>
-			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
