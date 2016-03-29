@@ -129,7 +129,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-			<version>2.5.6.SEC03</version>
+			<version>3.2.15.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -194,7 +194,7 @@
 
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.1</version>
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
@@ -233,6 +233,13 @@
 			<properties>
 				<runtime.env>packageConfig\test</runtime.env>
 				<final.name>ad-business-test</final.name>
+			</properties>
+		</profile>
+		<profile>
+			<id>alphaHui</id>
+			<properties>
+				<runtime.env>packageConfig\alphaHui</runtime.env>
+				<final.name>ad-business</final.name>
 			</properties>
 		</profile>
 		<profile>
