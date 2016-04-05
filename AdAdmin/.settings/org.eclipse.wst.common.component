@@ -5,6 +5,9 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/core"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
+        <dependent-module archiveName="x-ad-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/x-AdCommon/x-AdCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ad-admin.xtonegame.com"/>
         <property name="java-output-path" value="/xtone-AdAdmin/target/classes"/>
     </wb-module>

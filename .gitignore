@@ -1,6 +1,22 @@
+#java below
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
 /AdAdmin/WebRoot/WEB-INF/classes
 /AdAdmin/target
-/AdControl/WebContent/WEB-INF/classes
-/AdControl/WebRoot/WEB-INF/classes
 /AdAPI/WebRoot/WEB-INF/classes
 /AdBusiness/WebRoot/WEB-INF/classes
+/AdBusiness/target
+/AdBusiness/packageConfig/alphaHui
+/AdCommon/target
+/AdControl/WebContent/WEB-INF/classes
+/AdControl/WebRoot/WEB-INF/classes

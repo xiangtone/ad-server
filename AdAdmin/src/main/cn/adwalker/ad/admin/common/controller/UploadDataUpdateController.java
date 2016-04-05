@@ -18,11 +18,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.common.util.ad.ApkParser;
+import org.common.util.ad.ApkParserResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cn.adwalker.core.util.ApkParser;
-import cn.adwalker.core.util.ApkParserResult;
 import cn.adwalker.core.util.ConfigUtil;
 import cn.adwalker.core.util.OutputHelper;
 import cn.adwalker.core.util.lang.ObjectUtils;
@@ -45,7 +45,7 @@ import cn.adwalker.ad.admin.common.vo.UploadResultVo;
 @Controller(value = "uploadDataUpdateController")
 public class UploadDataUpdateController {
 
-	private static Log logger = LogFactory
+	private static final Log LOG = LogFactory
 			.getLog(UploadDataUpdateController.class);
 
 	@Resource
@@ -67,8 +67,8 @@ public class UploadDataUpdateController {
 		try {
 			path = java.net.URLDecoder.decode(path, "UTF-8");
 		} catch (UnsupportedEncodingException e2) {
-			logger.error(e2.toString());
-			logger.error("编码转换失败！");
+			LOG.error(e2.toString());
+			LOG.error("编码转换失败！");
 		}
 		String tar = ConfigUtil.getString("file.path");// 读取文件地址前缀
 		Application developedApp = new Application();
@@ -79,17 +79,17 @@ public class UploadDataUpdateController {
 			// ========此处解包处理流程start==========
 			ApkParserResult pr = new ApkParserResult();
 			try {
-				if (logger.isDebugEnabled()) {
-					logger.debug("上传完成路径为:" + tar + path);
-					logger.debug("上传相对路径为:" + path);
+				if (LOG.isDebugEnabled()) {
+					LOG.debug("上传完成路径为:" + tar + path);
+					LOG.debug("上传相对路径为:" + path);
 				}
 				if (path != null) {
 					if (path.toLowerCase().endsWith(".apk")) {
 						pr = ApkParser.getApkInfo(tar + path);
-						logger.debug("android系统解包结束");
+						LOG.debug("android系统解包结束");
 					}
 				} else {
-					logger.error("解包失败,未能获取到path！");
+					LOG.error("解包失败,未能获取到path！");
 					uploadResultVo.setStatus("err");
 					uploadResultVo.setErrMag("解包失败,未能获取到path！");
 				}
@@ -101,7 +101,7 @@ public class UploadDataUpdateController {
 
 			} catch (Exception e1) {
 				e1.printStackTrace();
-				logger.error("解包失败未能更新解包相关信息,path:" + path);
+				LOG.error("解包失败未能更新解包相关信息,path:" + path);
 				uploadResultVo.setStatus("err");
 				uploadResultVo.setErrMag("解包失败未能更新解包相关信息,path:" + path);
 			}
@@ -115,7 +115,7 @@ public class UploadDataUpdateController {
 				applicationService.update(developedApp);// 更新文件信息
 			} catch (Exception e) {
 				e.printStackTrace();
-				logger.error("有错误了" + developedApp.getId());
+				LOG.error("有错误了" + developedApp.getId());
 			}
 
 		} catch (Exception e) {
@@ -139,7 +139,7 @@ public class UploadDataUpdateController {
 			path = java.net.URLDecoder.decode(path, "UTF-8");
 		} catch (UnsupportedEncodingException e2) {
 			e2.printStackTrace();
-			logger.error("编码转换失败！");
+			LOG.error("updateAdDate path decode failure .");
 		}
 		ResultVo vo = null;
 		try {
@@ -147,16 +147,16 @@ public class UploadDataUpdateController {
 			ApkParserResult pr = new ApkParserResult();
 			try {
 				String tar = ConfigUtil.getString("file.path");// 读取文件地址前缀
-				if (logger.isDebugEnabled()) {
-					logger.debug("上传完成路径为:" + tar + path);
-					logger.debug("上传相对路径为:" + path);
+				if (LOG.isDebugEnabled()) {
+					LOG.debug("upload absolute path:" + tar + path);
+					LOG.debug("upload relative path:" + path);
 				}
 				if (path != null) {
 					if (path.toLowerCase().endsWith(".apk")) {
 						pr = ApkParser.getApkInfo(tar + path);
 					}
 				} else {
-					logger.error("解包失败,未能获取到path！");
+					LOG.error("ApkParser error . can not get path！");
 					vo = new ResultErrorVo("解包失败,未能获取到path！");
 				}
 				PackageForm advertisement = new PackageForm();
@@ -178,20 +178,21 @@ public class UploadDataUpdateController {
 				if (ObjectUtils.isNotEmpty(pr.getFileName())) {
 					advertisement.setFileName(pr.getFileName());
 				}
+				LOG.debug("advertisement fill info end ." );
 				PlacementPackageVo entity = placementPackageService
 						.uploadPath(advertisement);// 更新文件信息
-
+				LOG.debug("uploadPath end ." );
 				// ========此处解包处理流程end==========
 				vo = new ResultSuccessVo(entity);
 			} catch (Exception e1) {
-				logger.error("[updateAdDate]" + e1.getMessage());
+				LOG.error("[updateAdDate]" + e1.getMessage());
 				e1.printStackTrace();
-				logger.error("解包失败未能更新解包相关信息,path:" + path);
+				LOG.error("解包失败未能更新解包相关信息,path:" + path);
 				vo = new ResultErrorVo("解包失败未能更新解包相关信息,path:" + path);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			logger.error("文件储存地址更新失败！");
+			LOG.error("文件储存地址更新失败！");
 			vo = new ResultErrorVo("文件储存地址更新失败！");
 		}
 		OutputHelper.writerJSON(vo, response);
@@ -218,7 +219,7 @@ public class UploadDataUpdateController {
 					.getString("images.url.prefix"));
 		} catch (Exception e) {
 			e.printStackTrace();
-			logger.error("icon储存地址更新失败！");
+			LOG.error("icon储存地址更新失败！");
 			uploadResultVo.setStatus("err");
 			uploadResultVo.setErrMag("icon储存地址更新失败！");
 		}
@@ -247,7 +248,7 @@ public class UploadDataUpdateController {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			logger.error("preview储存地址更新失败！");
+			LOG.error("preview储存地址更新失败！");
 			uploadResultVo.setStatus("err");
 			uploadResultVo.setErrMag("preview储存地址更新失败！");
 		}

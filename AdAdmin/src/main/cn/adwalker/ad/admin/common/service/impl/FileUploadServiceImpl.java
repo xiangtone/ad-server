@@ -13,13 +13,13 @@ import java.util.Date;
 import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
+import org.common.util.ad.ApkParser;
+import org.common.util.ad.ApkParserResult;
 import org.springframework.stereotype.Service;
 
 import cn.adwalker.model.app.dao.IApplicationDao;
 import cn.adwalker.model.app.domain.Application;
 import cn.adwalker.ad.admin.common.service.IFileUploadService;
-import cn.adwalker.core.util.ApkParser;
-import cn.adwalker.core.util.ApkParserResult;
 import cn.adwalker.core.util.ConfigUtil;
 import cn.adwalker.core.util.lang.ObjectUtils;
 
