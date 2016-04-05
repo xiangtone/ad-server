@@ -20,3 +20,4 @@ hs_err_pid*
 /AdCommon/target
 /AdControl/WebContent/WEB-INF/classes
 /AdControl/WebRoot/WEB-INF/classes
+/AdAPI/WebRoot/WEB-INF/classes
