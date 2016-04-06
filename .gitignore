@@ -21,3 +21,4 @@ hs_err_pid*
 /AdControl/WebContent/WEB-INF/classes
 /AdControl/WebRoot/WEB-INF/classes
 /AdAPI/WebRoot/WEB-INF/classes
+/AdAdmin/packageConfig/alphaHui
