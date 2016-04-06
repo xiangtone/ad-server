@@ -276,7 +276,7 @@
 				<runtime.env>packageConfig\alphaHui</runtime.env>
 				<final.name>ad-business</final.name>
 				<ftp.server.id>alphaHui</ftp.server.id>
-				<ftp.to.url>ftp://120.76.101.217:29301/apache-tomcat-9.0.0.M4/swapdir/</ftp.to.url>
+				<ftp.to.url>ftp://alphaHui.test:29301/apache-tomcat-9.0.0.M4/swapdir/</ftp.to.url>
 			</properties>
 		</profile>
 		<profile>
