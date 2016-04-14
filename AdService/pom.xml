@@ -176,7 +176,7 @@
             <configuration>
               <!-- <fromDir>${basedir}/target</fromDir> -->
               <!-- <includes>${project.build.finalName}.war</includes> -->
-              <!-- <url>ftp://52.68.232.222:48791</url> -->
+              <!-- <url>ftp://xxx</url> -->
               <!-- <toDir>/home/fuming</toDir> -->
               <!-- <serverId>awstokyo01</serverId> -->
               <fromFile>target/${final.name}.war</fromFile>
@@ -214,6 +214,8 @@
 			<properties>
 				<runtime.env>packageConfig\alphaTest</runtime.env>
 				<final.name>ad-service-test</final.name>
+				<ftp.server.id>alphaOffice</ftp.server.id>
+        <ftp.to.url>ftp://192.168.0.51/server/tomcat-9.0.0/swapDir/</ftp.to.url>
 			</properties>
 		</profile>
 		<profile>
