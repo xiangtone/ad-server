@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/jsp/include/util/config_manager.jsp"%>
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top" style="position:fixed;">
       <div class="navbar-inner">
         <div class="container">
           	<a class="brand scroller" href="${pageContext.request.contextPath}/index.jsp">
@@ -16,7 +16,7 @@
                          	   联系我们
                         </a>
                     </li>
-                   <li><a class="btn-header" href="${pageContext.request.contextPath}/login.jsp">登录</a></li>
+                   <li><a class="btn-header" href="javaScript:;" onclick="alert('账号正在审核中')">登录</a></li>
 				<li><a class="btn-header" href="${pageContext.request.contextPath}/register.jsp">注册</a></li>
                 </ul>
 	        </div>

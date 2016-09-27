@@ -12,14 +12,299 @@
 	<!--[if lt IE 9]>
 		<script src="${pageContext.request.contextPath}/js/html5.js"></script>
 	<![endif]-->
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/theme.js"></script>
+	<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/js/theme.js"></script> --%>
+
+<script src="js/v.js" charset="utf-8"></script>
+<script src="js/hm.js"></script>
+
+<script>
+
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?d4b3e64c9f3cc3b30ab8405384499f62";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<link rel="stylesheet" href="css/index.css">
+
 </head>
 <body>
-	<a href="#" class="scrolltop"><span>up</span></a>
 	<jsp:include page="/WEB-INF/jsp/include/common/top.jsp"></jsp:include>
-	<div id="hero">
+	<div  class="section" >
+		<div class="page page0 ">
+			<div class="m-content">
+				<div  class="content">
+					<!--                <img src="/image/new_index/index-words.png"><br>-->
+					<div class="img" ></div>
+					<a href="default_004.html">了解详情</a>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="page page1 " >
+			<div  class="content">
+				<!--            <h1>Bee<b>Cloud</b></h1>-->
+				<!--            <h2>让支付更简单</h2>-->
+				<!--            <h3>一站式支付解决方案提供商</h3>-->
+				<!--            <h4>点击查看视频<i></i></h4>-->
+
+				<!--            new page1-->
+				<div class="left">
+					<h1>
+						<b>Bee</b><b class="color">Cloud</b><b>全面集成主流支付渠道</b>
+					</h1>
+					<h1>
+						<b class="color">创造更好的支付体验</b>
+					</h1>
+					<div class="down">
+						<p class="logo">
+							<img src="image/logo-beecloud.png">
+						</p>
+						<p class="pay">支付SDK + SaaS管理平台</p>
+						<br>
+
+
+
+					</div>
+					<div class="down">
+						<a href="default_012.html" target="_blank">体验支付</a>
+					</div>
+				</div>
+				<img src="image/img-phone2.png" class="right">
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+		<div class="page page2 ">
+			<div  class="content">
+				<h1>
+					全支付场景覆盖<br>
+					<span>Cover all payment scenarios</span>
+				</h1>
+				<div class="column">
+					<h4>订阅支付</h4>
+					<img src="image/icon_subscription.png">
+					<p>
+						会员订阅服务<br>自动扣费<br>重构用户关系
+					</p>
+					<a href="default_004.html">了解更多&gt;&gt;</a>
+				</div>
+				<div class="column">
+					<h4>手机支付</h4>
+					<img src="image/icon_mobile.png">
+					<p>
+						iOS／Android／HTML5 <br>微信公众号
+					</p>
+					<a href="default_005.html">了解更多&gt;&gt;</a>
+				</div>
+				<div class="column">
+					<h4>PC支付</h4>
+					<img src="image/icon_pc.png">
+					<p>
+						全套PC网页支付解决方案<br>多渠道支付<br>网页和扫码
+					</p>
+					<a href="default_005.html#pc">了解更多&gt;&gt;</a>
+				</div>
+				<div class="column">
+					<h4>线下扫码支付</h4>
+					<img src="image/icon_qr.png">
+					<p>
+						主动扫码支付<br>被动扫码支付<br>支付宝和微信支付双渠道
+					</p>
+					<a href="default_013.html">了解更多&gt;&gt;</a>
+				</div>
+				<div class="column">
+					<h4>企业打款</h4>
+					<img src="image/icon_transfer.png">
+					<p>
+						支持商户向企业/个人帐户打款<br>到账周期短<br>费率低
+					</p>
+					<a href="default_007.html">了解更多&gt;&gt;</a>
+				</div>
+				<div class="clear_float"></div>
+			</div>
+		</div>
+
+		<div class="page page3 ">
+			<div  class="content">
+				<h1>
+					全主流支付渠道支持<br>
+					<span>Support all mainstream payment channels</span>
+				</h1>
+				<div class="users">
+					<span><img src="image/icon_wx.png"></span> <span><img
+						src="image/icon_ali.png"></span> <span><img src="image/icon_yb.png"></span>
+					<span class="nth4"><img src="image/icon_yl.png"></span> <span><img
+						src="image/icon_bd.png"></span> <span><img src="image/icon_paypal.png"></span>
+					<span><img src="image/icon_jd.png"></span> <span class="nth4"><img
+						src="image/icon_kq.png"></span> <span><img
+						src="image/icon_ccmastercard.png"></span> <span><img
+						src="image/icon_visa.png"></span> 
+						<!-- <span class="nth4"> <img
+						="" src="image/icon_ms.png"></span> -->
+					<div class="clear_float"></div>
+				</div>
+			</div>
+		</div>
+		<div class="page page4 " >
+			<div  class="content">
+				<h1>
+					产品优势<br>
+					<span>Features</span>
+				</h1>
+				<dl class="efficiency">
+					<dt>
+						高效<br>
+						<i></i>
+					</dt>
+					<dd>
+						秒支付助你秒开发，半个小时快速接入支付功能，缩短2~4个人月开发周期...<br>
+						<a href="default_014.html">了解更多&gt;&gt;</a>
+					</dd>
+				</dl>
+				<dl class="stable">
+					<dt>
+						稳定<br>
+						<i></i>
+					</dt>
+					<dd>
+						全球10余个城市的分布式云平台，5重数据备份，自动负载均衡，支持突发的高并发流量...<br>
+						<a href="default_014.html#efficiency">了解更多&gt;&gt;</a>
+					</dd>
+				</dl>
+				<dl class="safety">
+					<dt>
+						安全<br>
+						<i></i>
+					</dt>
+					<dd>
+						HTTPS传输加密，REST API调用数字签名验证，ACL 权限控制，严格保护客户数据的安全和隐私...<br>
+						<a href="default_014.html#safety">了解更多&gt;&gt;</a>
+					</dd>
+				</dl>
+				<dl class="fast">
+					<dt>
+						快速<br>
+						<i></i>
+					</dt>
+					<dd>
+						基于CDN技术的最近服务节点，百毫秒级的付款响应时间，7*24小时随时随地的秒级应急响应保障...<br>
+						<a href="default_014.html#fast">了解更多&gt;&gt;</a>
+					</dd>
+				</dl>
+				<div class="clear_float"></div>
+			</div>
+		</div>
+
+		<div class="page page6 " >
+			<div  class="content">
+				<div class="con left" style="margin-top: 161.25px;">
+					<h1>
+						想要了解更多<br>
+						<span>Need more information</span>
+					</h1>
+					<ul>
+						<!--                    <li class="tel">全国免费服务热线：400-628-0728</li>-->
+						<li class="tel">全国免费服务热线：4006280728</li>
+						<li class="tel">研发中心联系电话：4006280728-1</li>
+						<li class="email">support@beecloud.cn</li>
+						<li class="address">
+							<p>苏州工业园区若水路388号 (总部)</p>
+							<p>北京市东城区东四北大街107号</p>
+							<p>深圳软件产业基地4B</p>
+						</li>
+					</ul>
+				</div>
+				<div class="con right" style="margin-top: 161.25px;">
+					<h1>
+						欢迎加入BEECLOUD大家庭<br>
+						<span>Welcome to join BeeCloud</span>
+					</h1>
+					<a href="default_010.html">注册成会员</a>
+					<!--                <div class="search"><input type="text" placeholder="请输入邮箱"><button>注册</button></div>-->
+					<p>BeeCloud 将发送一封验证邮件到你的邮箱，此邮箱将 作为登录用户名，点击按钮，注册账号</p>
+				</div>
+				<div class="clear_float"></div>
+			</div>
+			
+				<jsp:include page="/WEB-INF/jsp/include/common/footer.jsp"></jsp:include>	
+				
+			</div>
+			
+		</div>
+		
+	</div>
+<script type="text/javascript">
+	function active(){
+		var sUserAgent = navigator.userAgent.toLowerCase();
+		
+		
+		var bIsChrome = sUserAgent.match(/chrome/i) == "chrome";
+		if(bIsChrome){
+			$(".section").addClass("hello1");
+		}
+	
+		var bIsFirefox = sUserAgent.match(/firefox/i) == "firefox";
+		if(bIsFirefox){
+			$(".section").addClass("hello");
+		}	
+	}
+	window.onload=active;active();
+</script>
+
+	<div style="top: 256px;" class="tag-list">
+		<ul>
+			<li class="on"><i></i>
+			<div></div></li>
+			<li><i></i>
+			<div></div></li>
+			<li><i></i>
+			<div></div></li>
+			<li><i></i>
+			<div></div></li>
+			<li><i></i>
+			<div></div></li>
+			<li><i></i></li>
+		</ul>
+	</div>
+	<!--<script src="//meiqia.com/js/mechat.js?unitid=5563e1b54eae35e57c000004" charset="UTF-8" async="async"></script>-->
+	<!-- Start of KF5 supportbox script -->
+	<!-- <script src="js/main.js" id="kf5-provide-supportBox"
+		kf5-domain="beecloud.kf5.com"></script>
+	End of KF5 supportbox script
+	<script type="text/javascript">
+        window.bcRegisterTime = "1473240665";
+    </script> -->
+ 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+
+
+	<!-- <iframe style="display: none;" title="" src="index_3.html"></iframe>
+	<link href="css/btn.css" type="text/css" rel="styleSheet">
+	<div id="kf5-support-123456789"
+		class="kf5-support-123456789 kf5-right kf5-style1">
+		<div id="kf5-support-btn" class="kf5-support-btn"
+			style="background: rgb(255, 108, 44) none repeat scroll 0% 0%;">
+			<img src="image/kf5-sbox-icon1.png" alt=""><span>帮助</span>
+		</div>
+		<div id="kf5-support-block" class="kf5-support kf5-support-show "
+			style="display: none;">
+			<a id="kf5-close-btn" class="kf5-close" title="关闭"><i
+				class="kf5-icon-clear"></i></a>
+			<div style="display: none;" id="kf5-loading" class="kf5-loading">
+			</div>
+			<iframe src="index_5.html" id="kf5-widget-iframe" frameborder="0"></iframe>
+		</div>
+	</div> -->
+	<%-- <div id="hero">
 		<div class="container">
 			<div class="row animated fadeInDown">
 				<div class="span12">
@@ -147,7 +432,7 @@
 		<div class="container">
 			<div class="controls"><hr /></div>
 		</div>
-	</div>
-	<jsp:include page="/WEB-INF/jsp/include/common/footer.jsp"></jsp:include>
+	</div> --%>
+	
 </body>
 </html>
