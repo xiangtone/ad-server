@@ -1,7 +1,7 @@
 $(function(){
     var winh = $(window).height(),
         currentpage = 1,  //当前所在位置
-        pagecount = 6,    //总页数
+        pagecount = 5,    //总页数
         isscroll = true;
     var _isMobile = /android|ipad|iphone|midp|rv:1.2.3.4|ucweb|windows ce|windows mobile/i.test(navigator.userAgent); //true：移动设备
     //var ie = !-[1,];  //ie8及以下
@@ -134,14 +134,25 @@ $(function(){
     $(".section .page .content").each(function(index) {
         //alert($(this).height());
 
-        var this_h = $(this).height();
+       /* var this_h = $(this).height();
         if(index == (pagecount-1)){
             $(this).css("padding-top",(winh-this_h-180)/2);
         }else{
             $(this).css("padding-top",(winh-this_h+50)/2);
-        }
+        }*/
         //$(".section .page .content").eq(0).css("padding-top",(winh-this_h+50)/2);
     });
+   /* $(".section .page .content .expe").each(function(index) {
+        //alert($(this).height());
+
+        var this_h = $(this).height();
+        if(index == (pagecount-1)){
+            $(this).css("margin-top",(winh-this_h-180)/2);
+        }else{
+            $(this).css("margin-top",(winh-this_h-350)/2);
+        }
+        //$(".section .page .content").eq(0).css("padding-top",(winh-this_h+50)/2);
+    });*/
     //导航 更多
     if(_isMobile){
         $(".header .nav ul li.more").bind("click",function(){

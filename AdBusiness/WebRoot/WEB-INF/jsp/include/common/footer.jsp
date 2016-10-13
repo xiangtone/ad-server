@@ -36,7 +36,7 @@
 		</script>
  <div id="footer">
         <div class="container">
-            <div class="footer-link">
+            <%-- <div class="footer-link">
 				<span>|</span>
 				<span><a href="${pageContext.request.contextPath}/aboutus.jsp">关于我们</a></span>
 				<span>|</span>
@@ -48,10 +48,10 @@
 				<span>|</span>
                 
             </div>
-            <hr />
+            <hr /> --%>
             <div class="footer-copy">
 			  <span>
-				<p class="footer-copylineone">Copyright &copy; 2011-<script>var today = new Date();document.write(today.getFullYear());</script> <%=company%>广告 All Rights Reserved.</p>
+				<p class="footer-copylineone">合作伙伴<%-- Copyright &copy; 2011-<script>var today = new Date();document.write(today.getFullYear());</script> <%=company%>广告 All Rights Reserved. --%></p>
 			  </span>
 		    </div>
         </div>

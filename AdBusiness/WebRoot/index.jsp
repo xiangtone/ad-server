@@ -31,63 +31,516 @@
 </script>
 
 <link rel="stylesheet" href="css/index.css">
+<style type="text/css">
+.font:hover{
+	color:#006aaa;
+	font-size:18px;
+}
+.font{
+	color:#555555;
+	font-size:18px;
+}
+.font1{
+	color:#006aaa;
+	font-size:18px;
+}
+
+.span4 .img{
+	float:left;
+}
+.thumbnails .span4 .bmbox font{
+	color:#555;
+	font-size:20px;
+}
+
+@media ( min-width : 168px) {
+.bmbox{
+	width:97.9%;
+	height:38px;
+	background-image:url('image/main_middle_36.png');
+	background-size:100%;
+	float:left;
+	margin-top:-15.6%;
+	z-index:1000;
+	opacity:0.8;
+	margin-left:1.35%;
+	line-height:38px;
+}
+.page3 .container ul{
+	padding:0 64px;
+	
+}
+
+.page3 .container ul li{
+	margin-left:68px;
+	padding-top:67px;
+	font-size:20px;
+	color:#555;
+	text-align:center;
+	line-height:50px;
+}
+/* .page4 .content .none{
+	position:absolute;
+	z-index:1000;
+}
+.page4 .content .none1{
+	position:relative;
+	padding-top:215px;
+}
+.page4 .content .none2{
+	position:relative;
+}
+.page4 .content .thumbnails .pic1{
+	margin-left:114px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic2{
+	margin-left:0.5px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic3{
+	margin-left:0px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic4{
+	margin-left:2px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic5{
+	margin-left:114px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic6{
+	margin-left:0.5px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic7{
+	margin-left:0px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic8{
+	margin-left:2px;
+	margin-top:-53px;
+} */
+.footer-record{
+	text-align:center;
+	line-height:66px;
+	font-size:20px;
+	color:#434343;
+}
+}
+@media ( min-width : 520px) {
+.bmbox{
+	width:97.9%;
+	height:38px;
+	background-image:url('image/main_middle_36.png');
+	background-size:100%;
+	float:left;
+	margin-top:-15.6%;
+	z-index:1000;
+	opacity:0.8;
+	margin-left:1.35%;
+	line-height:38px;
+}
+.page3 .container ul{
+	padding:0 64px;	
+}
+
+.page3 .container ul li{
+	margin-left:68px;
+	padding-top:67px;
+	font-size:20px;
+	color:#555;
+	text-align:center;
+	line-height:50px;
+}
+/* .page4 .content .none{
+	position:absolute;
+	z-index:1000;
+}
+.page4 .content .none1{
+	position:relative;
+	padding-top:215px;
+}
+.page4 .content .none2{
+	position:relative;
+}
+.page4 .content .thumbnails .pic1{
+	margin-left:114px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic2{
+	margin-left:0.5px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic3{
+	margin-left:0px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic4{
+	margin-left:2px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic5{
+	margin-left:114px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic6{
+	margin-left:0.5px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic7{
+	margin-left:0px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic8{
+	margin-left:2px;
+	margin-top:-53px;
+} */
+.footer-record{
+	text-align:center;
+	line-height:66px;
+	font-size:20px;
+	color:#434343;
+}
+}
+@media ( min-width : 767px) {
+.bmbox{
+	width:97.9%;
+	height:38px;
+	background-image:url('image/main_middle_36.png');
+	background-size:100%;
+	float:left;
+	margin-top:-17.8%;
+	z-index:1000;
+	opacity:0.8;
+	margin-left:1.35%;
+	line-height:38px;
+}
+
+.page3 .container{
+	width:1000px;
+
+}
+
+.page3 .container ul{
+	padding:292px 0px;
+	
+}
+.page3 .container ul li{
+	margin-left:76px;
+	padding-top:67px;
+	font-size:20px;
+	color:#555;
+	text-align:center;
+	line-height:50px;
+}
+/* .page4 .content .none{
+	position:absolute;
+	z-index:1000;
+}
+.page4 .content .none1{
+	position:relative;
+	padding-top:215px;
+}
+.page4 .content .none2{
+	position:relative;
+}
+.page4 .content .thumbnails .pic1{
+	margin-left:114px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic2{
+	margin-left:0.5px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic3{
+	margin-left:0px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic4{
+	margin-left:2px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic5{
+	margin-left:114px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic6{
+	margin-left:0.5px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic7{
+	margin-left:0px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic8{
+	margin-left:2px;
+	margin-top:-53px;
+} */
+.footer-record{
+	text-align:center;
+	line-height:66px;
+	font-size:20px;
+	color:#434343;
+}
+}
+@media ( min-width : 997px) {
+.bmbox{
+	width:97.9%;
+	height:38px;
+	background-image:url('image/main_middle_36.png');
+	background-size:100%;
+	float:left;
+	margin-top:-16.6%;
+	z-index:1000;
+	opacity:0.8;
+	margin-left:0.9%;
+	line-height:38px;
+}
+.page2 .content ul li{
+	width:23%;
+	margin-left:80px;
+	margin-bottom:0px;
+
+}
+
+.page3 .container ul{
+	padding:277px 0px;
+	
+}
+.page3 .container{
+	width:1050px;
+
+}
+.page3 .container ul li{
+	margin-left:43px;
+	padding-top:67px;
+	font-size:20px;
+	color:#555;
+	text-align:center;
+	line-height:50px;
+}
+/*.page4 .content .none{
+	position:absolute;
+	z-index:1000;
+}
+.page4 .content .none1{
+	position:relative;
+	padding-top:215px;
+}
+.page4 .content .none2{
+	position:relative;
+}
+ .page4 .content .thumbnails .pic1{
+	margin-left:114px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic2{
+	margin-left:0.5px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic3{
+	margin-left:0px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic4{
+	margin-left:2px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic5{
+	margin-left:114px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic6{
+	margin-left:0.5px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic7{
+	margin-left:0px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic8{
+	margin-left:2px;
+	margin-top:-53px;
+} */
+
+.footer-record{
+	text-align:center;
+	line-height:69px;
+	font-size:20px;
+	color:#434343;
+	background-color:#fff;
+}
+#footer{
+	margin-top:60px;
+}
+}
+@media ( min-width : 1200px) {
+.bmbox{
+	width:97.9%;
+	height:38px;
+	background-image:url('image/main_middle_36.png');
+	background-size:100%;
+	float:left;
+	margin-top:-15.6%;
+	z-index:1000;
+	opacity:0.8;
+	margin-left:1.35%;
+	line-height:38px;
+}
+
+
+.page3 .container ul{
+	padding:0 64px;
+	
+}
+.page3 .container{
+	width:1170px;
+	padding-top:20%;
+
+}
+
+.page3 .container ul li{
+	margin-left:68px;
+	padding-top:67px;
+	font-size:20px;
+	color:#555;
+	text-align:center;
+	line-height:50px;
+}
+/*.page4 .content .none{
+	position:absolute;
+	z-index:1000;
+}
+.page4 .content .none1{
+	position:relative;
+	padding-top:215px;
+}
+.page4 .content .none2{
+	position:relative;
+}
+ .page4 .content .thumbnails .pic1{
+	margin-left:114px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic2{
+	margin-left:0.5px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic3{
+	margin-left:0px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic4{
+	margin-left:2px;
+	margin-top:53px;
+}
+.page4 .content .thumbnails .pic5{
+	margin-left:114px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic6{
+	margin-left:0.5px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic7{
+	margin-left:0px;
+	margin-top:-53px;
+}
+.page4 .content .thumbnails .pic8{
+	margin-left:2px;
+	margin-top:-53px;
+} */
+.footer-record{
+	text-align:center;
+	line-height:55px;
+	font-size:20px;
+	color:#434343;
+	background-color:#fff;
+}
+}
+
+
+.page4 .content ul li {
+	text-align:center;
+	
+}
+.page2 .content h1 font{
+	font-size:36px;color:#222;
+}
+.page2 .content p font{
+	font-size:20px;color:#333;
+
+}
+.page2 .content ul .none{
+	width:9%;
+	margin-left:195px;
+
+}
+.page2 .content ul .none1 {
+	width:23%;
+	margin-left:80px;
+	margin-bottom:0px;
+	padding-top:26px;
+}
+
+.page2 .content p{
+	padding-top:26px;
+}
+</style>
 
 </head>
 <body>
-	<jsp:include page="/WEB-INF/jsp/include/common/top.jsp"></jsp:include>
+	
 	<div  class="section" >
-		<div class="page page0 ">
+		<!-- header -->
+		<jsp:include page="/WEB-INF/jsp/include/common/top.jsp"></jsp:include>
+		<!-- <div class="page page0 ">
 			<div class="m-content">
 				<div  class="content">
-					<!--                <img src="/image/new_index/index-words.png"><br>-->
+					               <img src="/image/new_index/index-words.png"><br>
 					<div class="img" ></div>
 					<a href="default_004.html">了解详情</a>
 				</div>
 			</div>
-
-
-		</div>
-
+		</div> -->
+		
+		<!-- page1 -->
 		<div class="page page1 " >
 			<div  class="content">
-				<!--            <h1>Bee<b>Cloud</b></h1>-->
-				<!--            <h2>让支付更简单</h2>-->
-				<!--            <h3>一站式支付解决方案提供商</h3>-->
-				<!--            <h4>点击查看视频<i></i></h4>-->
-
-				<!--            new page1-->
-				<div class="left">
-					<h1>
-						<b>Bee</b><b class="color">Cloud</b><b>全面集成主流支付渠道</b>
-					</h1>
-					<h1>
-						<b class="color">创造更好的支付体验</b>
-					</h1>
-					<div class="down">
-						<p class="logo">
-							<img src="image/logo-beecloud.png">
-						</p>
-						<p class="pay">支付SDK + SaaS管理平台</p>
-						<br>
-
-
-
-					</div>
-					<div class="down">
-						<a href="default_012.html" target="_blank">体验支付</a>
-					</div>
-				</div>
-				<img src="image/img-phone2.png" class="right">
+				<a href="javascript:;"><img  alt="" src="image/start_03.png" style="margin-top:55%;"></a>
 				<div style="clear: both;"></div>
 			</div>
 		</div>
-		<div class="page page2 ">
-			<div  class="content">
-				<h1>
-					全支付场景覆盖<br>
-					<span>Cover all payment scenarios</span>
+		
+		<!-- page2 -->
+		<div class="page page2 " style="background-color:#fff;">
+			<div  class="content" >
+				<h1 >
+					<font>支付通道</font>
 				</h1>
-				<div class="column">
+					<p><font>满足主流支付通道和支付场景，为开发者提供一站式通道解决方案</font></p>
+				<div  style="padding-top:20px;">
+					<ul class="thumbnails">
+						<li class="span4 none"><img alt="unionpay" src="image/unionpay_1.png" ><br><br>
+							<font class="font1">银联支付</font></li>
+						<li class="span4 none"><img alt="wechat" src="image/wechat_1.png" onmouseover="this.src='image/wechat_2.png'" onmouseout="this.src='image/wechat_1.png'"><br><br>
+							<font class="font">微信支付</font></li>
+						<li class="span4 none"><img alt="alipay" src="image/zhifubao_1.png" onmouseover="this.src='image/zhifubao_2.png'" onmouseout="this.src='image/zhifubao_1.png'"><br><br>
+							<font class="font">支付宝支付</font></li>
+					</ul>	
+				</div>
+				<ul class="thumbnails">
+					<li class="span4 none1"><img class="img" src="image/main_17.png"><div class="bmbox"><font>游戏（Games）</font></div></li>
+					<li class="span4 none1"><img class="img" src="image/main_19.png"><div class="bmbox"><font>教育（Education）</font></div></li>
+					<li class="span4 none1"><img class="img" src="image/main_21.png"><div class="bmbox"><font>电商（E-Commerce）</font></div></li>
+					<li class="span4 none1"><img class="img" src="image/main_26.png"><div class="bmbox"><font>金融（Finance）</font></div></li>
+					<li class="span4 none1"><img class="img" src="image/main_27.png"><div class="bmbox"><font>零售（Retail）</font></div></li>
+					<li class="span4 none1"><img class="img" src="image/main_28.png"><div class="bmbox"><font>其他（Others）</font></div></li>
+				</ul>
+				
+				<!-- <div class="column">
 					<h4>订阅支付</h4>
 					<img src="image/icon_subscription.png">
 					<p>
@@ -126,18 +579,20 @@
 						支持商户向企业/个人帐户打款<br>到账周期短<br>费率低
 					</p>
 					<a href="default_007.html">了解更多&gt;&gt;</a>
-				</div>
+				</div> -->
 				<div class="clear_float"></div>
 			</div>
 		</div>
-
+		
+		<!-- page3 -->
 		<div class="page page3 ">
 			<div  class="content">
-				<h1>
-					全主流支付渠道支持<br>
-					<span>Support all mainstream payment channels</span>
-				</h1>
-				<div class="users">
+				<div>
+					<font style="font-size:36px;color:#222;">快速接入</font>
+				</div>
+				<div style="font-size:20px;color:#333;padding-top:25px;">4个步骤一站式接入，简单易用操作从此触手可及</div>
+				
+				<!-- <div class="users">
 					<span><img src="image/icon_wx.png"></span> <span><img
 						src="image/icon_ali.png"></span> <span><img src="image/icon_yb.png"></span>
 					<span class="nth4"><img src="image/icon_yl.png"></span> <span><img
@@ -146,19 +601,69 @@
 						src="image/icon_kq.png"></span> <span><img
 						src="image/icon_ccmastercard.png"></span> <span><img
 						src="image/icon_visa.png"></span> 
-						<!-- <span class="nth4"> <img
-						="" src="image/icon_ms.png"></span> -->
+						<span class="nth4"> <img
+						="" src="image/icon_ms.png"></span>
 					<div class="clear_float"></div>
-				</div>
+				</div> -->
+				
+				
+				
 			</div>
+			<div class="container">
+			<ul class="thumbnails">
+					<li class="span3"><img class="img" src="image/main_icon_03.png"><br><br>
+					商户注册</li>
+					<li class="span3"><img class="img" src="image/main_icon_05.png"><br><br>
+					线上测试</li>
+					<li class="span3"><img class="img" src="image/main_icon_07.png"><br><br>
+					参数配置</li>
+					<li class="span3"><img class="img" src="image/main_icon_09.png"><br><br>
+					完成接入</li>
+				</ul>
+				
+				
 		</div>
-		<div class="page page4 " >
-			<div  class="content">
-				<h1>
-					产品优势<br>
-					<span>Features</span>
-				</h1>
-				<dl class="efficiency">
+				
+			
+		</div>
+		
+		
+		<!-- page4 -->
+		<div class="page page4 " style="background-color:#fff;">
+			<div  class="content" >
+				<div>
+					<font style="font-size:36px;color:#222;">产品优势</font>
+				</div>
+				<div style="font-size:20px;color:#333;padding-top:30px;">一次对接、一个账单、一个平台，应对任何行业和场景的商业需求</div>
+				<div style="margin-top:6%;width:100%;height:auto;">
+				<img alt="" src="image/chanpin.png">
+				</div>
+				 <!--<ul class="thumbnails none">
+				 	
+					<li class="span3 pic1"><img class="img1" src="image/main_bottom_16.png"></li>
+					<li class="span3 pic2"><img class="img2" src="image/main_bottom_18.png"></li>
+					<li class="span3 pic3"><img class="img3" src="image/main_bottom_20.png"></li>
+					<li class="span3 pic4"><img class="img4" src="image/main_bottom_22.png"></li>
+					</ul>
+					<ul class="thumbnails none1"> 
+					<li class="span2"><img class="img" src="image/main_bottom0_16.png"></li>
+					<li class="span2"><img class="img" src="image/main_bottom0_18.png"></li>
+					<li class="span2"><img class="img" src="image/main_bottom0_20.png"></li>
+					<li class="span2"><img class="img" src="image/main_bottom0_22.png"></li>
+					<li class="span2"><img class="img" src="image/main_bottom0_24.png"></li>
+					 </ul>
+					<ul class="thumbnails none2"> 
+					<li class="span3 pic5"><img class="img" src="image/main_bottom_28.png"></li>
+					<li class="span3 pic6"><img class="img" src="image/main_bottom_29.png"></li>
+					<li class="span3 pic7"><img class="img" src="image/main_bottom_30.png"></li>
+					<li class="span3 pic8"><img class="img" src="image/main_bottom_32.png"></li>
+				</ul> -->
+						
+
+				
+				
+				
+				<!-- <dl class="efficiency">
 					<dt>
 						高效<br>
 						<i></i>
@@ -197,49 +702,49 @@
 						基于CDN技术的最近服务节点，百毫秒级的付款响应时间，7*24小时随时随地的秒级应急响应保障...<br>
 						<a href="default_014.html#fast">了解更多&gt;&gt;</a>
 					</dd>
-				</dl>
+				</dl> -->
 				<div class="clear_float"></div>
 			</div>
+			<!-- <div class="container" style="background:url(image/chanpin.png) no-repeat;min-height:885px;margin-top:-553px;"></div> -->
+			 
 		</div>
-
-		<div class="page page6 " >
-			<div  class="content">
-				<div class="con left" style="margin-top: 161.25px;">
-					<h1>
-						想要了解更多<br>
-						<span>Need more information</span>
-					</h1>
+		
+		<!-- page5 -->
+		<div class="page page6 " style="background:url(image/foot_bg_02.png) no-repeat;">
+			<div  class="content" >
+				<div >
+					<font style="font-size:36px;color:#222;">联系我们</font>
+				</div>
+				<div style="font-size:20px;color:#333;padding-top:30px;">如有疑问或定制化需求，请联系我们</div>
+				
+				<div class="con left" style="margin-top: 4%;">
 					<ul>
-						<!--                    <li class="tel">全国免费服务热线：400-628-0728</li>-->
-						<li class="tel">全国免费服务热线：4006280728</li>
-						<li class="tel">研发中心联系电话：4006280728-1</li>
-						<li class="email">support@beecloud.cn</li>
+						<li class="company">深圳市浩天投资有限公司 </li>
+						<li class="email">13002459732</li>
+						<li class="tel">wjgame@bjxiangtone.com</li>
 						<li class="address">
-							<p>苏州工业园区若水路388号 (总部)</p>
-							<p>北京市东城区东四北大街107号</p>
-							<p>深圳软件产业基地4B</p>
+							深圳市南山区高新园三道中科大厦21-B1
 						</li>
 					</ul>
 				</div>
-				<div class="con right" style="margin-top: 161.25px;">
-					<h1>
-						欢迎加入BEECLOUD大家庭<br>
-						<span>Welcome to join BeeCloud</span>
-					</h1>
-					<a href="default_010.html">注册成会员</a>
+				<div class="con right" style="margin-top: 4%;">
+					
+					<a href="default_010.html"><img alt="" src="image/login.png"></a>
 					<!--                <div class="search"><input type="text" placeholder="请输入邮箱"><button>注册</button></div>-->
-					<p>BeeCloud 将发送一封验证邮件到你的邮箱，此邮箱将 作为登录用户名，点击按钮，注册账号</p>
+					<p>将发送一封验证邮件到您的邮箱，此邮箱将作为登录用户名，欢迎点击按钮注册账号。</p>
 				</div>
 				<div class="clear_float"></div>
 			</div>
 			
+			<!-- footer -->
+
 				<jsp:include page="/WEB-INF/jsp/include/common/footer.jsp"></jsp:include>	
-				
+				<p class="footer-record">浩天支付&copy;2016 - 粤ICP备12058124号</p>
 			</div>
-			
+
 		</div>
 		
-	</div>
+
 <script type="text/javascript">
 	function active(){
 		var sUserAgent = navigator.userAgent.toLowerCase();
@@ -258,7 +763,7 @@
 	window.onload=active;active();
 </script>
 
-	<div style="top: 256px;" class="tag-list">
+	<!-- <div style="top: 256px;" class="tag-list">
 		<ul>
 			<li class="on"><i></i>
 			<div></div></li>
@@ -272,7 +777,7 @@
 			<div></div></li>
 			<li><i></i></li>
 		</ul>
-	</div>
+	</div> -->
 	<!--<script src="//meiqia.com/js/mechat.js?unitid=5563e1b54eae35e57c000004" charset="UTF-8" async="async"></script>-->
 	<!-- Start of KF5 supportbox script -->
 	<!-- <script src="js/main.js" id="kf5-provide-supportBox"
