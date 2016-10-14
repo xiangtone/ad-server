@@ -23,6 +23,55 @@
 	color:#ccc;
 	text-decoration:none;
 }
+@media ( min-width : 168px) {
+.footer-record{
+	text-align:center;
+	line-height:66px;
+	font-size:20px;
+	color:#434343;
+	margin-bottom:0px;
+}
+}
+@media ( min-width : 520px) {
+.footer-record{
+	text-align:center;
+	line-height:66px;
+	font-size:20px;
+	color:#434343;
+	margin-bottom:0px;
+}
+}
+@media ( min-width : 767px) {
+.footer-record{
+	text-align:center;
+	line-height:66px;
+	font-size:20px;
+	color:#434343;
+	margin-bottom:0px;
+}
+}
+@media ( min-width : 997px) {
+
+.footer-record{
+	text-align:center;
+	line-height:69px;
+	font-size:20px;
+	color:#434343;
+	background-color:#fff;
+	margin-bottom:0px;
+}
+}
+@media ( min-width : 1200px) {
+.footer-record{
+	text-align:center;
+	line-height:60px;
+	font-size:20px;
+	color:#434343;
+	background-color:#fff;
+	margin-bottom:0px;
+	height:60px;
+}
+}
 </style>
 
 	<script language="javascript"> 
@@ -52,7 +101,26 @@
             <div class="footer-copy">
 			  <span>
 				<p class="footer-copylineone">合作伙伴<%-- Copyright &copy; 2011-<script>var today = new Date();document.write(today.getFullYear());</script> <%=company%>广告 All Rights Reserved. --%></p>
+			 	
 			  </span>
 		    </div>
+		   
         </div>
     </div>
+     <p class="footer-record">浩天支付&copy;2016 - 粤ICP备12058124号</p>
+     <script type="text/javascript">
+
+function active(){
+	
+	var url = this.location.href;
+	var htmlName = url.split("/");
+	var name=htmlName[htmlName.length - 1].split("?")[0]; 
+	if (name == "index.jsp"||name == "") {
+		$("#footer").css("min-height","141px");	
+	}else {
+		$("#footer").css("min-height","130px");
+	}
+}	
+	window.onload=active;active();
+
+</script>

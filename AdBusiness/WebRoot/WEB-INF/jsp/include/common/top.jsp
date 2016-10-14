@@ -11,7 +11,7 @@
 </style>
 
 
-<div class="navbar navbar-fixed-top" style="position:fixed;">
+<div class="navbar navbar-fixed-top topp" >
       <div class="navbar-inner">
         <div class="container">
           	<a style="margin-left:15%" class="brand scroller" href="${pageContext.request.contextPath}/index.jsp">
@@ -28,10 +28,26 @@
                         </a>
                     </li> --%>
                     <li style="margin-right:15px;"><a style="color:#000;font-size:20px;padding:2px 28px 2px;" href="${pageContext.request.contextPath}/register.jsp">注册</a></li>
-                   <li><a style="color:#000;padding:2px 28px 2px;" class="login" href="javaScript:;" onclick="alert('账号正在审核中')"><font >登入</font></a></li>
+                   <li><a style="color:#000;padding:2px 28px 2px;" class="login" href="${pageContext.request.contextPath}/login.jsp"><font >登入</font></a></li>
 				
                 </ul>
 	        </div>
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+
+function active(){
+	
+	var url = this.location.href;
+	var htmlName = url.split("/");
+	var name=htmlName[htmlName.length - 1].split("?")[0]; 
+	if (name == "index.jsp"||name == "index.action" ||name == "") {
+		$(".topp").css("position","fixed");	
+	}else {
+		$(".topp").css("position","relative");
+	}
+}	
+	window.onload=active;active();
+
+</script>

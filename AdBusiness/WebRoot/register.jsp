@@ -30,6 +30,7 @@
 				padding-left: 30px;
 				line-height: 20px;
 			}
+			
 		</style>
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -177,7 +178,7 @@
     <!-- ends navbar -->
 
     <div id="box_sign">
-        <div class="container" style="margin-bottom:220px">
+        <div class="container" style="margin-bottom:106px">
             <div class="span12 box_wrapper">
                 <div class="span12 box">
                     <div>
@@ -205,5 +206,6 @@
     </div>
     <!-- starts footer -->
    	<jsp:include page="/WEB-INF/jsp/include/common/footer.jsp"></jsp:include>
+
 </body>
 </html>

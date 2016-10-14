@@ -73,6 +73,7 @@ $(function(){
             common();
         })
     });
+    
 
     //上下键监听
     $(document).keydown(function(event){
@@ -130,29 +131,60 @@ $(function(){
         }
     });
 
-
+    //根据屏幕高度设定
     $(".section .page .content").each(function(index) {
         //alert($(this).height());
-
-       /* var this_h = $(this).height();
-        if(index == (pagecount-1)){
-            $(this).css("padding-top",(winh-this_h-180)/2);
-        }else{
-            $(this).css("padding-top",(winh-this_h+50)/2);
-        }*/
-        //$(".section .page .content").eq(0).css("padding-top",(winh-this_h+50)/2);
-    });
-   /* $(".section .page .content .expe").each(function(index) {
-        //alert($(this).height());
+        //alert(winh);
 
         var this_h = $(this).height();
         if(index == (pagecount-1)){
-            $(this).css("margin-top",(winh-this_h-180)/2);
+            $(this).css("padding-top",(winh)/12);
         }else{
-            $(this).css("margin-top",(winh-this_h-350)/2);
+            $(this).css("padding-top",(winh)/12);
         }
-        //$(".section .page .content").eq(0).css("padding-top",(winh-this_h+50)/2);
-    });*/
+    });
+    $(".section .page1 .content .immg").each(function(index) {
+        $(this).css("margin-top",(5*(winh-(winh/12)))/7);
+    });
+    $(".section .page2 .content .pay").each(function(index) {
+        $(this).css("padding-top",winh/16);
+    });
+    $(".section .page2 .content .thumbnails").each(function(index) {
+        $(this).css("padding-top",winh/60);
+    });
+    $(".section .page2 .content .none1").each(function(index) {
+        $(this).css("padding-top",winh/30);
+    });
+    $(".section .page3 .content").each(function(index) {
+        $(this).css("padding-top",winh/16);
+    });
+    $(".section .page3 .content .uul").each(function(index) {
+        $(this).css("padding-top",(winh)/2.8);
+    });
+    $(".section .page4 .production").each(function(index) {
+    
+    	$(this).css("padding-top",(winh- $(".section .page4 .content").height()-(winh/12)-517)/2);
+    });
+    $(".section .page6 .content").each(function(index) {
+            $(this).css("padding-bottom",(winh)/12);
+    });
+    $(".section .page6 .content .contact").each(function(index) {
+        $(this).css("padding-top",(winh)/20);
+    });
+    $(".section .page6 .content .con").each(function(index) {
+        $(this).css("margin-top",(winh)/20);
+    });
+   
+    $("#footer").each(function(index) {
+    	
+        $(this).css("margin-top",winh-$(".section .page6 .content").height()-$(this).height()-$(".section .page6 .footer-record").height()-(winh/12)-(winh/20)-(winh/20)+5);
+    });
+   
+    
+    
+    
+    
+    
     //导航 更多
     if(_isMobile){
         $(".header .nav ul li.more").bind("click",function(){
