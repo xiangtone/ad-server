@@ -15,7 +15,7 @@
       <div class="navbar-inner">
         <div class="container">
           	<a style="margin-left:15%" class="brand scroller" href="${pageContext.request.contextPath}/index.jsp">
-                <img  src="${pageContext.request.contextPath}<%=menu_head_logo%>" alt="logo" width="85%" />
+                <img  src="${pageContext.request.contextPath}<%=menu_head_logo%>" alt="logo" style="width:85%" />
             </a>
 		  	<div class="nav-collapse collapse">
                 <ul class="nav pull-right">
@@ -43,7 +43,7 @@ function active(){
 	var htmlName = url.split("/");
 	var name=htmlName[htmlName.length - 1].split("?")[0]; 
 	if (name == "index.jsp"||name == "index.action" ||name == "") {
-		$(".topp").css("position","fixed");	
+		$(".topp").css("position","absolute");	
 	}else {
 		$(".topp").css("position","relative");
 	}

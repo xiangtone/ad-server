@@ -6,6 +6,10 @@
 <head>
 <title><%=company%>广告平台—</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta name="renderer" content="webkit">
+<meta name="renderer" content="ie-comp">
+<meta name="renderer" content="ie-stand">
 <link href="${pageContext.request.contextPath}/css/bootstrap.css"
 	rel="stylesheet" />
 <link rel="stylesheet" type="text/css"
@@ -24,6 +28,8 @@
 
 <script src="js/v.js" charset="utf-8"></script>
 <script src="js/hm.js"></script>
+
+
 
 <script>
 	var _hmt = _hmt || [];
@@ -177,6 +183,7 @@
 	text-align: center;
 }
 
+
 .page2 .content h1 font {
 	font-size: 36px;
 	color: #222;
@@ -186,15 +193,20 @@
 	font-size: 20px;
 	color: #333;
 }
+.page2 .container{
+	text-align:center;
+	width:1000px;
+	margin:0px auto;
+}
 
-.page2 .content ul .none {
+.page2 .container ul .none {
 	width: 9%;
 	margin-left: 195px;
 }
 
-.page2 .content ul .none1 {
+.page2 .container ul .none1 {
 	width: 23%;
-	margin-left: 80px;
+	margin-left: 85px;
 	margin-bottom: 0px;
 }
 
@@ -206,6 +218,11 @@
 	height: 517px;
 	text-align: center;
 }
+.gotop{
+	position:fixed;
+	right:2%;
+}
+
 </style>
 
 
@@ -215,7 +232,7 @@
 	<div class="section">
 		<!-- header -->
 
-		<jsp:include page="/WEB-INF/jsp/include/common/top.jsp"></jsp:include>
+		
 
 		<!-- <div class="page page0 ">
 			<div class="m-content">
@@ -228,7 +245,8 @@
 		</div> -->
 
 		<!-- page1 -->
-		<div class="page page1 ">
+		<div class="page page1 " id="page1">
+			<jsp:include page="/WEB-INF/jsp/include/common/top.jsp"></jsp:include>
 			<div class="content">
 				<a href="javascript:;"><img class="immg" alt=""
 					src="image/start_03.png"></a>
@@ -239,6 +257,7 @@
 		<!-- page2 -->
 		<div class="page page2 "
 			style="background-color: #fff; overflow: hidden;">
+			
 			<div class="content">
 				<h1>
 					<font>支付通道</font>
@@ -268,41 +287,45 @@
 						</div></li>
 					</ul>
 				</div>
+				
+				
+				<div class="clear_float"></div>
+			</div>
+			<div class="container">
 				<ul class="thumbnails">
-					
-					<li class="span4 none1"><img class="img"
+					<li class="span4 none1" ><img class="img"
 						src="image/main_17.png">
 					<div class="bmbox">
 							<font>游戏（Games）</font>
 						</div></li>
-					<li class="span4 none1"><img class="img"
+					<li class="span4 none1" ><img class="img"
 						src="image/main_19.png">
 					<div class="bmbox">
 							<font>教育（Education）</font>
 						</div></li>
-					<li class="span4 none1"><img class="img"
+					<li class="span4 none1" ><img class="img"
 						src="image/main_21.png">
 					<div class="bmbox">
 							<font>电商（E-Commerce）</font>
 						</div></li>
-					<li class="span4 none1"><img class="img"
+					<li class="span4 none1" ><img class="img"
 						src="image/main_26.png">
 					<div class="bmbox">
 							<font>金融（Finance）</font>
 						</div></li>
-					<li class="span4 none1"><img class="img"
+					<li class="span4 none1" ><img class="img"
 						src="image/main_27.png">
 					<div class="bmbox">
 							<font>零售（Retail）</font>
 						</div></li>
-					<li class="span4 none1"><img class="img"
+					<li class="span4 none1" ><img class="img"
 						src="image/main_28.png">
 					<div class="bmbox">
 							<font>其他（Others）</font>
 						</div></li>
-				</ul>
-				<div class="clear_float"></div>
+				</ul>		
 			</div>
+	
 		</div>
 		<script type="text/javascript">
 			document.getElementById("unionpayt").onmouseover = function() {
@@ -414,7 +437,7 @@
 					</ul>
 				</div>
 				<div class="con right" style="margin-top: 4%;">
-					<a href="${pageContext.request.contextPath}/register.jsp"><img alt="" src="image/login.png"></a>            
+					<a href="register.jsp"><img alt="" src="image/login.png"></a>            
 					<p>将发送一封验证邮件到您的邮箱，此邮箱将作为登录用户名，欢迎点击按钮注册账号。</p>
 				</div>
 				<div class="clear_float"></div>
@@ -436,12 +459,26 @@
 			var bIsFirefox = sUserAgent.match(/firefox/i) == "firefox";
 			if (bIsFirefox) {
 				$(".section").addClass("hello");
-			}
-			
+			}	
 		}
 		window.onload = active;
 		active();
 	</script>
+	<div style="top: 256px;" class="tag-list">
+		<ul>
+			<li class="on"><i></i>
+			<div></div></li>
+			<li><i></i>
+			<div></div></li>
+			<li><i></i>
+			<div></div></li>
+			<li><i></i>
+			<div></div></li>
+			<!-- <li><i></i>
+			<div></div></li> -->
+			<li><i></i></li>
+		</ul>
+	</div>
 
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.min.js"></script>
